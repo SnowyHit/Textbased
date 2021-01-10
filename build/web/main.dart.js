@@ -38634,7 +38634,7 @@ N.Pz.prototype={
 $1:function(a){return!0},
 $S:23}
 F.uo.prototype={
-M:function(a,b){return new S.nq(new F.nB("Flutter Demo Home Page",null),"Flutter Demo",X.UZ(null,C.lv,X.a0T()),null)}}
+M:function(a,b){return new S.nq(new F.nB("Flutter Demo Home Page",null),"The Game",X.UZ(null,C.lv,X.a0T()),null)}}
 F.nB.prototype={
 aM:function(){return new F.pO(C.n)}}
 F.pO.prototype={
