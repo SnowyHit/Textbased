@@ -5,6 +5,7 @@ INJECTED from C:\D\Flutter_projects\textbased\android\app\src\main\AndroidManife
 INJECTED from C:\D\Flutter_projects\textbased\android\app\src\main\AndroidManifest.xml:1:1-47:12
 INJECTED from C:\D\Flutter_projects\textbased\android\app\src\main\AndroidManifest.xml:1:1-47:12
 MERGED from [:firebase_auth] C:\D\Flutter_projects\textbased\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
+MERGED from [:shared_preferences] C:\D\Flutter_projects\textbased\build\shared_preferences\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
 MERGED from [:cloud_firestore] C:\D\Flutter_projects\textbased\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] C:\D\Flutter_projects\textbased\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
 MERGED from [com.google.firebase:firebase-auth:20.0.1] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\a199371cd11b35750a8d8efb6940aa06\jetified-firebase-auth-20.0.1\AndroidManifest.xml:17:1-83:12
@@ -135,6 +136,8 @@ INJECTED from C:\D\Flutter_projects\textbased\android\app\src\main\AndroidManife
 INJECTED from C:\D\Flutter_projects\textbased\android\app\src\main\AndroidManifest.xml
 MERGED from [:firebase_auth] C:\D\Flutter_projects\textbased\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] C:\D\Flutter_projects\textbased\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\D\Flutter_projects\textbased\build\shared_preferences\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\D\Flutter_projects\textbased\build\shared_preferences\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] C:\D\Flutter_projects\textbased\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] C:\D\Flutter_projects\textbased\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] C:\D\Flutter_projects\textbased\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44

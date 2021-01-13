@@ -426,6 +426,7 @@ Referenced Strings:
   FlutterJNI
   FlutterLoader
   FlutterRenderer
+  FlutterSharedPreferences
   FlutterSplashView
   FlutterSurfaceView
   FlutterTextureView
@@ -908,6 +909,7 @@ Referenced Strings:
   SmsRetrieverHelper
   Ssl_Guard
   Starting
+  StorageError
   StorageHelpers
   Subchannel
   SupportLifecycleFragmentImpl
@@ -1137,6 +1139,9 @@ Referenced Strings:
   VERIFY
   VERIFY_BEFORE_UPDATE_EMAIL
   VERIFY_EMAIL
+  VGhpcyBpcyB0aGUgcHJlZml4IGZvciBCaWdJb...
+  VGhpcyBpcyB0aGUgcHJlZml4IGZvciBEb3VibGUu
+  VGhpcyBpcyB0aGUgcHJlZml4IGZvciBhIGxpc3Qu
   VISIBLE_PASSWORD
   VOID
   ViewCompat
@@ -1377,6 +1382,7 @@ Referenced Strings:
   claims
   class
   classes_to_restore
+  clear
   clearFocus
   cleartextTrafficPermitted
   click
@@ -1506,6 +1512,7 @@ Referenced Strings:
   com.google.protobuf.UnknownFieldSetSc...
   com.google.protobuf.UnsafeUtil
   commands
+  commit
   commitTime_
   committed
   common_google_play_services_api_unava...
@@ -1690,6 +1697,7 @@ Referenced Strings:
   firestore.googleapis.com
   flags
   flutter
+  flutter.
   flutter/accessibility
   flutter/isolate
   flutter/keyevent
@@ -1727,6 +1735,7 @@ Referenced Strings:
   gender
   get
   getAccessToken
+  getAll
   getAlpnSelectedProtocol
   getApplicationProtocol
   getBoolean
@@ -2103,6 +2112,7 @@ Referenced Strings:
   plugins.flutter.io/firebase_firestore...
   plugins.flutter.io/firebase_firestore...
   plugins.flutter.io/firebase_firestore...
+  plugins.flutter.io/shared_preferences
   po
   pokeByte
   pokeByteArray
@@ -2285,12 +2295,17 @@ Referenced Strings:
   set
   setAlpnProtocols
   setApplicationProtocols
+  setBool
   setDirection
+  setDouble
   setHostname
   setInitialRoute
+  setInt
   setLocale
   setNpnProtocols
   setRemoveOnCancelPolicy
+  setString
+  setStringList
   setUseSessionTickets
   setValue
   severity

@@ -20,7 +20,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
+  _DeleteCounter() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      prefs.clear();
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +76,9 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
-
+      floatingActionButton: FloatingActionButton(
+        onPressed: _DeleteCounter,
+      ),
     );
   }
 }

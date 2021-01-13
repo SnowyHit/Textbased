@@ -1,7 +1,7 @@
 # compiler: R8
 # compiler_version: 1.5.64
 # min_api: 16
-# pg_map_id: 4de4368
+# pg_map_id: 68322b9
 androidx.activity.Cancellable -> androidx.activity.a:
 androidx.activity.ComponentActivity -> androidx.activity.ComponentActivity:
     androidx.activity.OnBackPressedDispatcher mOnBackPressedDispatcher -> f
@@ -17152,6 +17152,7 @@ io.flutter.plugin.common.MessageCodec -> c.a.c.a.h:
 io.flutter.plugin.common.MethodCall -> c.a.c.a.i:
     java.lang.Object arguments -> b
     java.lang.String method -> a
+    java.lang.Object argument(java.lang.String) -> a
     java.lang.Object arguments() -> a
 io.flutter.plugin.common.MethodChannel -> c.a.c.a.j:
     io.flutter.plugin.common.MethodCodec codec -> c
@@ -18046,6 +18047,24 @@ io.flutter.plugins.firebase.firestore.streamhandler.TransactionStreamHandler$OnT
     void onStarted(com.google.firebase.firestore.Transaction) -> a
 io.flutter.plugins.firebase.firestore.utils.ExceptionConverter -> io.flutter.plugins.firebase.firestore.v.a:
     java.util.Map createDetails(java.lang.Exception) -> a
+io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl -> io.flutter.plugins.a.a:
+    android.content.SharedPreferences preferences -> a
+    void commitAsync(android.content.SharedPreferences$Editor,io.flutter.plugin.common.MethodChannel$Result) -> a
+    java.util.List decodeList(java.lang.String) -> a
+    java.lang.String encodeList(java.util.List) -> a
+    java.util.Map getAllPrefs() -> a
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> a
+io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl$1 -> io.flutter.plugins.a.a$a:
+    android.content.SharedPreferences$Editor val$editor -> a
+    io.flutter.plugin.common.MethodChannel$Result val$result -> b
+    java.lang.Boolean doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Boolean) -> a
+io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin -> io.flutter.plugins.a.b:
+    io.flutter.plugin.common.MethodChannel channel -> a
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> a
+    void setupChannel(io.flutter.plugin.common.BinaryMessenger,android.content.Context) -> a
+    void teardownChannel() -> a
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> b
 io.flutter.util.PathUtils -> c.a.d.a:
     java.lang.String getCacheDirectory(android.content.Context) -> a
     java.lang.String getDataDirectory(android.content.Context) -> b
