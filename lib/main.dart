@@ -13,26 +13,11 @@ void main() {
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  QuestionSection();
-  }
-}
-
-class QuestionSection extends StatefulWidget {
-  @override
-  _QuestionSectionState createState() => _QuestionSectionState();
-}
-
-class _QuestionSectionState extends State<QuestionSection> {
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
-
       body: QuestionWidget(),
     );
   }
 }
-
 
 class SomethingWentWrong extends StatelessWidget {
   @override
