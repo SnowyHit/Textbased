@@ -12,50 +12,55 @@ class _QuestionWidgetState extends State<QuestionWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Container(
-            padding: EdgeInsets.all(20),
-            color : Colors.black12,
-            child: Text(
-              "${root.value.line}" ,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 30  ,
+    return Scaffold(
+      appBar: AppBar(
+
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+              padding: EdgeInsets.all(20),
+              color : Colors.black12,
+              child: Text(
+                "${root.value.line}" ,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 30  ,
+                ),
+              )
+          ) ,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Column(
+                children: root.value.answers.asMap().entries.map<Widget>((answer) {
+                  return FlatButton(
+                    onPressed: (){
+                      setState(() {
+                        if(root.haschildren)
+                          {root = root.children[answer.key] ; }
+
+                        print(answer.key);
+                      });
+
+                    },
+                    padding: EdgeInsets.all(20) ,
+                    child : Text(
+                      "${answer.value}" ,
+                      style: TextStyle(
+                        fontSize: 30  ,
+                      ),
+                    ) ,
+                  );
+                }).toList(),
               ),
-            )
-        ) ,
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Column(
-              children: root.value.answers.asMap().entries.map<Widget>((answer) {
-                return FlatButton(
-                  onPressed: (){
-                    setState(() {
-                      if(root.haschildren)
-                        {root = root.children[answer.key] ; }
-
-                      print(answer.key);
-                    });
-
-                  },
-                  padding: EdgeInsets.all(20) ,
-                  child : Text(
-                    "${answer.value}" ,
-                    style: TextStyle(
-                      fontSize: 30  ,
-                    ),
-                  ) ,
-                );
-              }).toList(),
-            ),
-          ],
-        )
-      ],
+            ],
+          )
+        ],
+      ),
     );
   }
 }

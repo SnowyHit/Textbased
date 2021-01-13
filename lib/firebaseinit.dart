@@ -30,3 +30,18 @@ class App extends StatelessWidget {
     );
   }
 }
+
+
+class SomethingWentWrong extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class Loading extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
