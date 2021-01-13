@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar : AppBar(
-        title : Text("Oyuna Hoşgeldiniz.") ,
+        title : Text("Double Moon Drive") ,
         centerTitle: true,
       ) ,
       body: Row(

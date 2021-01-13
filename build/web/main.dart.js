@@ -39978,7 +39978,7 @@ case 2:q.as(new p.PR(b))
 return P.a9(null,r)}})
 return P.aa($async$ke,r)},
 K:function(a,b){var s=null,r=t.t
-return M.XX(E.W4(!0,L.pc("Oyuna Ho\u015fgeldiniz.",s,s)),T.XU(H.d([T.WI(T.E5(H.d([M.mN(s,L.pc("Oyun hakk\u0131nda k\u0131sa bir a\xe7\u0131klama ve \xf6ns\xf6z. Sa\u011f Taraftan Oyunu ba\u015flatabilirsiniz",s,s),s,s,s,s,s,s)],r),C.d_,C.dL),9),T.WI(T.E5(H.d([M.mN(s,new D.tU(new F.PS(b),s,A.TE(s,new V.cv(C.kz,t.hE),s,s,s,s,s,s,s,s,s,s,s,s,s),C.a_,s,!1,L.WW(C.ud,C.k,20),s),s,s,s,s,s,s)],r),C.ia,C.dL),1)],r),C.d_,C.dL,C.jp),E.WM(s,!1,this.gBk()))}}
+return M.XX(E.W4(!0,L.pc("Double Moon Drive",s,s)),T.XU(H.d([T.WI(T.E5(H.d([M.mN(s,L.pc("Oyun hakk\u0131nda k\u0131sa bir a\xe7\u0131klama ve \xf6ns\xf6z. Sa\u011f Taraftan Oyunu ba\u015flatabilirsiniz",s,s),s,s,s,s,s,s)],r),C.d_,C.dL),9),T.WI(T.E5(H.d([M.mN(s,new D.tU(new F.PS(b),s,A.TE(s,new V.cv(C.kz,t.hE),s,s,s,s,s,s,s,s,s,s,s,s,s),C.a_,s,!1,L.WW(C.ud,C.k,20),s),s,s,s,s,s,s)],r),C.ia,C.dL),1)],r),C.d_,C.dL,C.jp),E.WM(s,!1,this.gBk()))}}
 F.PR.prototype={
 $0:function(){J.Tq(this.a.a)
 V.UI().R(0)},
