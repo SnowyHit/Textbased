@@ -1,424 +1,69 @@
 android.content.res.Resources#getIdentifier present: true
 Web content present: false
 Referenced Strings:
-  Ȉ
-  Ț
-  2
-  Ȉ
-  Ț
-  Ȉ
-  Ȉ
-  Ȉ
-  $ClientProvider
-  $Provider
-  $ServerProvider
-  %.4g
-  %8s
-  %s
   %s.%sParcelizer
-  .%09d
-  .ModuleDescriptor
-  .tmp
-  /%s.properties
   /cmdline
-  /createAuthUri
-  /deleteAccount
-  /emailLinkSignin
-  /getAccountInfo
-  /getOobConfirmationCode
-  /index.html
-  /mfaEnrollment:finalize
-  /mfaEnrollment:start
-  /mfaEnrollment:withdraw
-  /mfaSignIn:finalize
-  /mfaSignIn:start
   /proc/
-  /resetPassword
-  /sendVerificationCode
-  /setAccountInfo
-  /signupNewUser
-  /token
-  /verifyAssertion
-  /verifyCustomToken
-  /verifyPassword
-  /verifyPhoneNumber
   0
-  0.15.0
   0.6.0
-  0123456789ABCDEF
-  0123456789ABCDEFGHIJKLMNOPQRSTUV
-  0123456789abcdef
-  0x%02x
   0x%08x
-  1.28.0
-  1157920892103562487626974469494075735...
-  1157920892103562487626974469494075735...
   19.5.0
-  2
-  20.0.1
-  200
-  204
-  206
-  22.0.1
-  3
-  304
-  400
-  404
-  4fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce3...
-  500
-  5ac635d8aa3a93e7b3ebbd55769886bc651d0...
-  6b17d1f2e12c4247f8bce6e563a440f277037...
-  :authority
-  :host
-  :method
-  :path
-  :scheme
-  :status
-  :version
-  A::
-  ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
-  ABORTED
   ACCESSIBLE_NAVIGATION
-  ACK
   ACTION_ARGUMENT_EXTEND_SELECTION_BOOLEAN
   ACTION_ARGUMENT_MOVEMENT_GRANULARITY_INT
   ACTION_ARGUMENT_SELECTION_END_INT
   ACTION_ARGUMENT_SELECTION_START_INT
-  ADD
-  ADDED
-  ADMIN_ONLY_OPERATION
-  AES
-  AES/CTR/NOPADDING
-  AES/CTR/NoPadding
-  AES/ECB/NOPADDING
-  AES/ECB/NoPadding
-  AES/GCM/NoPadding
   ALERT
-  ALL
-  ALPN_AND_NPN
-  ALREADY_EXISTS
-  AND
-  API_NOT_CONNECTED
-  API_UNAVAILABLE
-  API_VERSION_UPDATE_REQUIRED
-  APPEND_MISSING_ELEMENTS
-  APP_CURRENT_USER
-  APP_LANGUAGE_CODE
-  ARRAY_CONTAINS
-  ARRAY_CONTAINS_ANY
-  ARRAY_VALUE
-  ASCENDING
-  ASYMMETRIC_PRIVATE
-  ASYMMETRIC_PUBLIC
-  ASYNC
-  ATTACH
-  AUTHORIZATION_CODE
   AccessibilityBridge
   AccessibilityChannel
-  AccountAccessor
-  Added
-  Android/%s/%s
-  AndroidChannelBuilder
   AndroidKeyProcessor
-  AndroidKeyStore
-  AndroidOpenSSL
   AppLifecycleState.detached
   AppLifecycleState.inactive
   AppLifecycleState.paused
   AppLifecycleState.resumed
-  Argument
-  ArrayArgument
-  AsyncSink.flush
-  AsyncSink.write
-  Authorization
-  B:
-  BEGIN_ARRAY
-  BEGIN_OBJECT
-  BIDI_STREAMING
   BITMAP
   BITMAP_MASKABLE
-  BLACK
-  BLOCKING
-  BODY
-  BOOL
-  BOOLEAN
-  BOOLEAN_VALUE
-  BOOL_LIST
-  BOOL_LIST_PACKED
   BOTH
   BOTTOM_OVERLAYS
-  BUILD_MESSAGE_INFO
-  BYTES
-  BYTES_LIST
-  BYTES_VALUE
-  BYTE_STRING
-  Backoff
-  BaseEncoding.
-  BasePendingResult
-  BatchGetDocuments
-  Bearer
+  BanParcelableUsage
   Brightness.dark
   Brightness.light
-  ByteString
-  Bytes
-  C:
-  CACHE
-  CANCEL
-  CANCELED
-  CANCELLED
   CHARACTERS
   CLICK
-  CLIENT_STREAMING
   CLIP_PATH
   CLIP_RECT
   CLIP_RRECT
-  COMBINED
-  COMMITTED_MUTATIONS
-  COMPOSITE_FILTER
-  COMPRESSED
-  COMPRESSION_ERROR
-  CONDITIONTYPE_NOT_SET
-  CONNECTING
-  CONNECTIVITY_ATTEMPT_TIMER
-  CONNECT_ERROR
-  CONTINUATION
   COPY
   CREATED
-  CREDENTIAL_MISMATCH
-  CREDENTIAL_TOO_OLD_LOGIN_AGAIN
-  CRUNCHY
-  CT_ERROR
-  CT_INFO
-  CT_UNKNOWN
-  CT_WARNING
-  CURRENT
-  CURVE25519
   CUSTOM_ACTION
   CUT
-  CallbackT:
-  CallbackT::
-  Cancelled
-  Channel
-  Class
-  ClientCall$Listener.headersRead
-  ClientCall$Listener.messagesAvailable
-  ClientCall$Listener.onClose
-  ClientCall$Listener.onReady
-  ClientCall.cancel
-  ClientCall.halfClose
-  ClientCall.request
-  ClientCall.sendMessage
-  ClientCall.start
-  ClientStreamListener.closed
-  ClientStreamListener.headersRead
-  ClientStreamListener.messagesAvailable
-  ClientStreamListener.onReady
+  ClickableViewAccessibility
   Clipboard.getData
   Clipboard.hasStrings
   Clipboard.setData
-  Commit
   ComponentDiscovery
-  ConnectionStatusConfig
-  ConnectionTracker
-  Conscrypt
-  Context.DirectExecutor
-  CrashUtils
-  Current
-  D:
   DARK
   DATA
-  DATA_LOSS
   DATETIME
-  DEADLINE_EXCEEDED
-  DEAD_CLIENT
-  DEBUG
   DECREASE
-  DEFAULT
-  DELETE
-  DESCENDING
   DESTROYED
-  DETACH
-  DEVELOPER_ERROR
   DID_GAIN_ACCESSIBILITY_FOCUS
   DID_LOSE_ACCESSIBILITY_FOCUS
-  DIRECTION_UNSPECIFIED
-  DISABLED
   DISABLE_ANIMATIONS
-  DISCONNECTED
   DISMISS
-  DISPLAY_NAME
-  DOCUMENT
-  DOCUMENTS
-  DOCUMENTTYPE_NOT_SET
-  DOCUMENT_CHANGE
-  DOCUMENT_DELETE
-  DOCUMENT_REMOVE
-  DOUBLE
-  DOUBLE_LIST
-  DOUBLE_LIST_PACKED
-  DOUBLE_VALUE
-  DO_NOT_USE_CRUNCHY_UNCOMPRESSED
-  DRIVE_EXTERNAL_STORAGE_REQUIRED
-  DROPPED
-  DYNAMIC_LINK_NOT_ACTIVATED
   DartExecutor
   DartMessenger
-  DataBuffer
-  Default
-  DefaultAuthUserInfo
-  DefaultQueryEngine
   Destroying.
   DeviceOrientation.landscapeLeft
   DeviceOrientation.landscapeRight
   DeviceOrientation.portraitDown
   DeviceOrientation.portraitUp
-  DialogRedirect
-  DocumentChangeType.added
-  DocumentChangeType.modified
-  DocumentChangeType.removed
-  DocumentSnapshot
-  DynamiteModule
-  EC
-  ECDH
-  EMAIL
   EMAIL_ADDRESS
-  EMAIL_CHANGE_NEEDS_VERIFICATION
-  EMAIL_EXISTS
-  EMAIL_NOT_FOUND
-  EMAIL_SIGNIN
-  ENABLED
-  ENABLE_PUSH
-  END_ARRAY
-  END_DOCUMENT
-  END_HEADERS
-  END_OBJECT
-  END_STREAM
-  ENHANCE_YOUR_CALM
-  ENUM
-  ENUM_LIST
-  ENUM_LIST_PACKED
-  EQUAL
-  ERROR
-  ERROR_ACCOUNT_EXISTS_WITH_DIFFERENT_C...
-  ERROR_ADMIN_RESTRICTED_OPERATION
-  ERROR_API_NOT_AVAILABLE
-  ERROR_API_NOT_AVAILABLE_WITHOUT_GOOGL...
-  ERROR_APP_NOT_AUTHORIZED
-  ERROR_CREDENTIAL_ALREADY_IN_USE
-  ERROR_CUSTOM_TOKEN_MISMATCH
-  ERROR_DYNAMIC_LINK_NOT_ACTIVATED
-  ERROR_EMAIL_ALREADY_IN_USE
-  ERROR_EMAIL_CHANGE_NEEDS_VERIFICATION
-  ERROR_EXPIRED_ACTION_CODE
-  ERROR_INTERNAL_SUCCESS_SIGN_OUT
-  ERROR_INVALID_ACTION_CODE
-  ERROR_INVALID_CERT_HASH
-  ERROR_INVALID_CREDENTIAL
-  ERROR_INVALID_CUSTOM_TOKEN
-  ERROR_INVALID_DYNAMIC_LINK_DOMAIN
-  ERROR_INVALID_EMAIL
-  ERROR_INVALID_MESSAGE_PAYLOAD
-  ERROR_INVALID_MULTI_FACTOR_SESSION
-  ERROR_INVALID_PHONE_NUMBER
-  ERROR_INVALID_PROVIDER_ID
-  ERROR_INVALID_RECIPIENT_EMAIL
-  ERROR_INVALID_SENDER
-  ERROR_INVALID_TENANT_ID
-  ERROR_INVALID_USER_TOKEN
-  ERROR_INVALID_VERIFICATION_CODE
-  ERROR_INVALID_VERIFICATION_ID
-  ERROR_MAXIMUM_SECOND_FACTOR_COUNT_EXC...
-  ERROR_MISSING_CLIENT_IDENTIFIER
-  ERROR_MISSING_CONTINUE_URI
-  ERROR_MISSING_EMAIL
-  ERROR_MISSING_MULTI_FACTOR_INFO
-  ERROR_MISSING_MULTI_FACTOR_SESSION
-  ERROR_MISSING_OR_INVALID_NONCE
-  ERROR_MISSING_PASSWORD
-  ERROR_MISSING_PHONE_NUMBER
-  ERROR_MISSING_VERIFICATION_CODE
-  ERROR_MISSING_VERIFICATION_ID
-  ERROR_MULTI_FACTOR_INFO_NOT_FOUND
-  ERROR_OPERATION_NOT_ALLOWED
-  ERROR_PHONE_NUMBER_NOT_FOUND
-  ERROR_QUOTA_EXCEEDED
-  ERROR_REJECTED_CREDENTIAL
-  ERROR_REQUIRES_RECENT_LOGIN
-  ERROR_RETRY_PHONE_AUTH
-  ERROR_SECOND_FACTOR_ALREADY_ENROLLED
-  ERROR_SECOND_FACTOR_REQUIRED
-  ERROR_SESSION_EXPIRED
-  ERROR_TENANT_ID_MISMATCH
-  ERROR_UNSUPPORTED_FIRST_FACTOR
-  ERROR_UNSUPPORTED_TENANT_OPERATION
-  ERROR_UNVERIFIED_EMAIL
-  ERROR_USER_CANCELLED
-  ERROR_USER_DISABLED
-  ERROR_USER_MISMATCH
-  ERROR_USER_NOT_FOUND
-  ERROR_USER_TOKEN_EXPIRED
-  ERROR_WEAK_PASSWORD
-  ERROR_WEB_CONTEXT_ALREADY_PRESENTED
-  ERROR_WEB_CONTEXT_CANCELED
-  ERROR_WEB_INTERNAL_ERROR
-  ERROR_WEB_STORAGE_UNSUPPORTED
-  ERROR_WRONG_PASSWORD
-  ESTIMATE
-  ET::
-  EXCLUDE
-  EXISTENCE_FILTER_MISMATCH
-  EXISTS
-  EXPIRED_OOB_CODE
-  Error
-  FAILED_PRECONDITION
-  FALSE
-  FEDERATED_USER_ID_ALREADY_LINKED
-  FIELD_FILTER
-  FILTER
-  FILTERTYPE_NOT_SET
-  FIXED32
-  FIXED32_LIST
-  FIXED32_LIST_PACKED
-  FIXED64
-  FIXED64_LIST
-  FIXED64_LIST_PACKED
-  FLOAT
-  FLOAT_LIST
-  FLOAT_LIST_PACKED
-  FLOW_CONTROL_ERROR
-  FLTFirebaseAuthPlugin
-  FLTFirebaseFirestore
-  FLTFirestoreMsgCodec
-  FOUND
   FRAMEWORK_CLIENT
-  FRAME_SIZE_ERROR
-  FRAME_TOO_LARGE
-  FT::
-  FUTURE
-  Fallback
-  FederatedAuthReceiver
-  Field
-  FieldValue.arrayRemove
-  FieldValue.arrayUnion
-  FieldValue.delete
-  FieldValue.increment
-  FieldValue.serverTimestamp
   FirebaseApp
   FirebaseAppHeartBeat
   FirebaseAppHeartBeatStorage
-  FirebaseAuth
-  FirebaseAuth:
-  FirebaseAuthCredentialsProvider
-  FirebaseAuthFallback:
-  FirebaseFirestore
   FirebaseInitProvider
-  FirebearCryptoHelper
-  Firestore
-  FirestoreCallCredentials
-  FirestoreClient
-  FirestoreOnStopObserverFragment
-  FirestoreOnStopObserverSupportFragment
-  FirestoreWorker
   FlutterActivity
   FlutterActivityAndFragmentDelegate
   FlutterEngine
@@ -431,135 +76,20 @@ Referenced Strings:
   FlutterSurfaceView
   FlutterTextureView
   FlutterView
-  FragmentActivity
-  FragmentManager
-  GARBAGE_COLLECTION
-  GCM
-  GEO_POINT_VALUE
-  GET
-  GET_DEFAULT_INSTANCE
-  GET_MEMOIZED_IS_INITIALIZED
-  GET_PARSER
-  GLOBAL
-  GOAWAY
-  GREATER_THAN
-  GREATER_THAN_OR_EQUAL
-  GROUP
-  GROUP_LIST
-  GRPC_PROXY_EXP
   GeneratedPluginsRegister
-  GenericIdpActivity
-  GenericIdpKeyset
-  GetAuthDomainTask
-  GetAuthDomainTaskResponseHandler
-  GetTokenResultFactory
-  GmsClient
-  GmsClientSupervisor
-  GmsCore_OpenSSL
-  GoogleApiActivity
-  GoogleApiAvailability
-  GoogleApiHandler
-  GoogleApiManager
-  GoogleCertificates
-  GooglePlayServicesErrorDialog
-  GooglePlayServicesUtil
-  GoogleSignatureVerifier
-  GrpcCallProvider
-  H
   HAS_CHECKED_STATE
   HAS_ENABLED_STATE
   HAS_IMPLICIT_SCROLLING
   HAS_TOGGLED_STATE
-  HEADER
-  HEADERS
-  HEADER_COMMENT
-  HEADER_CRC
-  HEADER_EXTRA
-  HEADER_EXTRA_LEN
-  HEADER_NAME
-  HEADER_TABLE_SIZE
   HEAVY_IMPACT
-  HIDE
-  HMAC
-  HMACSHA1
-  HMACSHA256
-  HMACSHA384
-  HMACSHA512
-  HTTP/1.
-  HTTP/1.0
-  HTTP/1.1
-  HTTP_1_0
-  HTTP_1_1
-  HTTP_1_1_REQUIRED
-  HTTP_2
-  HTTP_20_HEADERS
   HapticFeedback.vibrate
   HapticFeedbackType.heavyImpact
   HapticFeedbackType.lightImpact
   HapticFeedbackType.mediumImpact
   HapticFeedbackType.selectionClick
-  HmacSha1
-  HmacSha256
-  HmacSha512
-  Host
-  I
-  IDLE
-  IDLE_AND_PING_SENT
   II
-  IN
-  INADEQUATE_SECURITY
-  INBOUND
-  INCLUDE
   INCREASE
-  INCREMENT
-  INFLATER_NEEDS_INPUT
-  INFLATING
-  INFO
   INITIALIZED
-  INITIALIZE_INFLATER
-  INITIAL_WINDOW_SIZE
-  INSTANCE
-  INT
-  INT32
-  INT32_LIST
-  INT32_LIST_PACKED
-  INT64
-  INT64_LIST
-  INT64_LIST_PACKED
-  INTEGER_VALUE
-  INTEGRITY
-  INTERNAL
-  INTERNAL_ERROR
-  INTERNAL_SUCCESS_SIGN_OUT
-  INTERRUPTED
-  INVALID_ACCOUNT
-  INVALID_APP_CREDENTIAL
-  INVALID_ARGUMENT
-  INVALID_CERT_HASH
-  INVALID_CODE
-  INVALID_CREDENTIAL
-  INVALID_CREDENTIALS
-  INVALID_CUSTOM_TOKEN
-  INVALID_DYNAMIC_LINK_DOMAIN
-  INVALID_EMAIL
-  INVALID_HOST
-  INVALID_IDENTIFIER
-  INVALID_IDP_RESPONSE
-  INVALID_ID_TOKEN
-  INVALID_MESSAGE_PAYLOAD
-  INVALID_MFA_PENDING_CREDENTIAL
-  INVALID_OOB_CODE
-  INVALID_PASSWORD
-  INVALID_PENDING_TOKEN
-  INVALID_PHONE_NUMBER
-  INVALID_PORT
-  INVALID_PROVIDER_ID
-  INVALID_RECIPIENT_EMAIL
-  INVALID_SENDER
-  INVALID_SESSION_INFO
-  INVALID_STREAM
-  INVALID_TENANT_ID
-  INVALID_VERIFICATION_PROOF
   INVERT_COLORS
   IS_BUTTON
   IS_CHECKED
@@ -572,132 +102,37 @@ Referenced Strings:
   IS_IN_MUTUALLY_EXCLUSIVE_GROUP
   IS_LINK
   IS_LIVE_REGION
-  IS_NAN
-  IS_NOT_NAN
-  IS_NOT_NULL
-  IS_NULL
   IS_OBSCURED
   IS_READ_ONLY
   IS_SELECTED
   IS_TEXT_FIELD
   IS_TOGGLED
   IconCompat
-  Index:
-  Initial
-  InternalFirebaseAuth.FIREBASE_AUTH_API
-  J
-  JJ
-  JJZ
-  JSONParser
-  JZZ
-  JwtToken
+  InlinedApi
   KeyEventChannel
-  KeyProtoT::
-  KeyT:
   LANDSCAPE_LEFT
   LANDSCAPE_RIGHT
   LEFT
-  LEGACY
-  LESS_THAN
-  LESS_THAN_OR_EQUAL
-  LICENSE_CHECK_FAILED
   LIGHT
   LIGHT_IMPACT
-  LIMBO_RESOLUTION
-  LIMIT_TO_FIRST
-  LIMIT_TO_LAST
-  LISTEN
-  LISTEN_STREAM_CONNECTION_BACKOFF
-  LISTEN_STREAM_IDLE
-  LOCAL
-  LOCAL_MUTATIONS
-  LONG
   LONG_PRESS
   LTR
-  LayoutInflaterCompatHC
-  LibraryVersion
-  LibraryVersionContainer
   LifecycleChannel
-  LifecycleFragmentImpl
-  List
-  Listen
-  LoaderManager
-  Loaders:
-  LocalBroadcastManager
-  LocalClient
-  LocalStore
   LocalizationChannel
-  LruGarbageCollector
-  M
-  MAP
-  MAP_VALUE
-  MAXIMUM
-  MAX_CONCURRENT_STREAMS
-  MAX_FRAME_SIZE
-  MAX_HEADER_LIST_SIZE
   MEDIUM_IMPACT
-  MESSAGE
-  MESSAGE_LIST
-  METADATA
-  MFA_ENROLLMENT_NOT_FOUND
-  MINIMUM
-  MISSING
-  MISSING_CLIENT_IDENTIFIER
-  MISSING_CODE
-  MISSING_CONTINUE_URI
-  MISSING_EMAIL
-  MISSING_MFA_ENROLLMENT_ID
-  MISSING_MFA_PENDING_CREDENTIAL
-  MISSING_OR_INVALID_NONCE
-  MISSING_PASSWORD
-  MISSING_PHONE_NUMBER
-  MISSING_SCHEME
-  MISSING_SESSION_INFO
-  MODIFIED
-  MODULE_ID
-  MODULE_VERSION
   MOVE_CURSOR_BACKWARD_BY_CHARACTER
   MOVE_CURSOR_BACKWARD_BY_WORD
   MOVE_CURSOR_FORWARD_BY_CHARACTER
   MOVE_CURSOR_FORWARD_BY_WORD
   MULTILINE
-  Map
-  MergeSet
-  MetadataValueReader
-  Method
   MouseCursorChannel
   NAME
   NAMES_ROUTE
-  NETWORK_ERROR
-  NEW_BUILDER
-  NEW_MUTABLE_INSTANCE
-  NIST_P256
-  NIST_P384
-  NIST_P521
   NONE
-  NOT_EQUAL
-  NOT_FOUND
-  NOT_IN
-  NO_CHANGE
-  NO_CURRENT_USER
-  NO_DOCUMENT
-  NO_ERROR
-  NO_RESOLUTION
-  NO_SUCH_PROVIDER
   NO_TARGET
-  NPN
-  NULL
-  NULL_VALUE
   NUMBER
   NavigationChannel
-  NoChange
-  NoPadding
-  NotificationCompat
-  O:
-  OFFLINE
-  OK
-  ONLINE
-  ONLINE_STATE_TIMEOUT
+  NewApi
   ON_ANY
   ON_CREATE
   ON_DESTROY
@@ -706,213 +141,38 @@ Referenced Strings:
   ON_START
   ON_STOP
   OPACITY
-  OPERATION_NOT_ALLOWED
-  OPERATION_NOT_SET
-  OPERATOR_UNSPECIFIED
-  OP_SET_MAX_LIFECYCLE
-  OUTBOUND
-  OUT_OF_RANGE
-  OkHttpClientStream$Sink.cancel
-  OkHttpClientStream$Sink.request
-  OkHttpClientStream$Sink.writeFrame
-  OkHttpClientStream$Sink.writeHeaders
-  OkHttpClientTransport
-  OkHttpClientTransport$ClientFrameHand...
-  OkHttpClientTransport$ClientFrameHand...
-  OkHttpClientTransport$ClientFrameHand...
-  OnlineStateTracker
-  Open
-  Operations:
-  OrBuilderList
-  P:
-  PACKED_VECTOR
-  PADDED
-  PASSWORD
-  PASSWORD_LOGIN_DISABLED
-  PASSWORD_RESET
+  Override
   PASTE
-  PENDING
-  PERMISSION_DENIED
   PHONE
-  PHOTO_URL
-  PING
-  PING_DELAYED
-  PING_SCHEDULED
-  PING_SENT
-  PLAINTEXT
   PLAIN_TEXT
   PLATFORM_VIEW
   PORTRAIT_DOWN
   PORTRAIT_UP
-  POST
   POSTAL_ADDRESS
-  PREVIOUS
-  PRIORITY
-  PRIVACY_AND_INTEGRITY
-  PROCESSED
-  PROTO2
-  PROTO3
-  PROTOCOL_ERROR
-  PUSH_PROMISE
-  PhoneAuthActivityStopCallback
-  PhoneAuthProvider
-  PhoneMultiFactorInfo
   PlatformChannel
   PlatformViewsChannel
   PlatformViewsController
-  ProviderInstaller
-  PublicKeyProtoT::
-  QUERY
-  QUOTA_EXCEEDED
-  R::
-  RAW
-  REACHABLE
-  READY
-  RECOVER_EMAIL
-  RED
-  REFERENCE_VALUE
-  REFRESH_TOKEN
-  REFUSED
-  REFUSED_STREAM
-  REJECTED_CREDENTIAL
-  REMOTE
-  REMOVE
-  REMOVED
-  REMOVE_ALL_FROM_ARRAY
-  REPLACE
-  REQUEST_TIME
-  REQUEST_TYPE_UNSET_ENUM_VALUE
-  REQUIRES_SECOND_FACTOR_AUTH
-  RESET
-  RESET_PASSWORD_EXCEED_LIMIT
-  RESOLUTION_REQUIRED
+  PrivateApi
   RESOURCE
-  RESOURCE_EXHAUSTED
-  RESPONSETYPE_NOT_SET
-  RESTRICTED_PROFILE
-  RESULT_NOT_SET
   RESUMED
-  RETRY_TRANSACTION
-  REVERT_SECOND_FACTOR_ADDITION
-  RFC2253
   RIGHT
-  RST_STREAM
   RTL
-  RemoteStore
-  Removed
-  Reset
-  RespT:
-  ResponseT:
   RestorationChannel
-  ResultT:
-  S
-  SAFE_PARCELABLE_NULL_STRING
-  SCALAR
+  RestrictedApi
   SCOPES_ROUTE
   SCROLL_DOWN
   SCROLL_LEFT
   SCROLL_RIGHT
   SCROLL_UP
-  SDK
-  SDK_INT
-  SECOND_FACTOR_EXISTS
-  SECOND_FACTOR_LIMIT_EXCEEDED
   SELECTION_CLICK
   SENTENCES
-  SERVER
-  SERVER_STREAMING
-  SERVER_VALUE_UNSPECIFIED
-  SERVICE_DISABLED
-  SERVICE_INVALID
-  SERVICE_MISSING
-  SERVICE_MISSING_PERMISSION
-  SERVICE_UPDATING
-  SERVICE_VERSION_UPDATE_REQUIRED
-  SESSION_EXPIRED
-  SET
-  SETTINGS
-  SETTINGS_TIMEOUT
-  SET_MEMOIZED_IS_INITIALIZED
-  SET_PRIMARY_NAV
   SET_SELECTION
-  SET_TO_SERVER_VALUE
-  SFIXED32
-  SFIXED32_LIST
-  SFIXED32_LIST_PACKED
-  SFIXED64
-  SFIXED64_LIST
-  SFIXED64_LIST_PACKED
-  SHA1
-  SHA256
-  SHA384
-  SHA512
-  SHOW
   SHOW_ON_SCREEN
-  SHUTDOWN
-  SIGN_IN_FAILED
-  SIGN_IN_REQUIRED
-  SINT32
-  SINT32_LIST
-  SINT32_LIST_PACKED
-  SINT64
-  SINT64_LIST
-  SINT64_LIST_PACKED
-  SPDY_3
-  SPDY_HEADERS
-  SPDY_REPLY
-  SPDY_SYN_STREAM
-  SQLiteSchema
-  SSL_
-  SSL_3_0
-  SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA
-  SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA
-  SSL_DHE_DSS_WITH_DES_CBC_SHA
-  SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
-  SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA
-  SSL_DHE_RSA_WITH_DES_CBC_SHA
-  SSL_DH_anon_EXPORT_WITH_DES40_CBC_SHA
-  SSL_DH_anon_EXPORT_WITH_RC4_40_MD5
-  SSL_DH_anon_WITH_3DES_EDE_CBC_SHA
-  SSL_DH_anon_WITH_DES_CBC_SHA
-  SSL_DH_anon_WITH_RC4_128_MD5
-  SSL_RSA_EXPORT_WITH_DES40_CBC_SHA
-  SSL_RSA_EXPORT_WITH_RC4_40_MD5
-  SSL_RSA_WITH_3DES_EDE_CBC_SHA
-  SSL_RSA_WITH_DES_CBC_SHA
-  SSL_RSA_WITH_NULL_MD5
-  SSL_RSA_WITH_NULL_SHA
-  SSL_RSA_WITH_RC4_128_MD5
-  SSL_RSA_WITH_RC4_128_SHA
-  SSLv3
   STANDARD
   STARTED
-  STATE_INFO
-  STREAM_ALREADY_CLOSED
-  STREAM_CLOSED
-  STREAM_IN_USE
-  STRING
-  STRING_LIST
-  STRING_VALUE
-  SUCCESS
-  SUCCESS_CACHE
-  SYMMETRIC
-  SYNCED
-  SafetyNet.API
   Samsung
-  Set
   SettingsChannel
-  SignIn.API
-  SignIn.INTERNAL_API
-  SignInClientImpl
-  SignInCoordinator
-  SmsRetriever.API
-  SmsRetrieverHelper
-  Ssl_Guard
-  Starting
   StorageError
-  StorageHelpers
-  Subchannel
-  SupportLifecycleFragmentImpl
   SystemChannel
   SystemChrome.restoreSystemUIOverlays
   SystemChrome.setApplicationSwitcherDe...
@@ -925,131 +185,10 @@ Referenced Strings:
   SystemSoundType.click
   SystemUiOverlay.bottom
   SystemUiOverlay.top
-  T
-  T:
   TAP
-  TARGETTYPE_NOT_SET
-  TARGET_CHANGE
-  TContinuationResult:
   TEXT
-  TIMEOUT
-  TIMESTAMP_VALUE
-  TINK
-  TLS
-  TLS_
-  TLS_1_0
-  TLS_1_1
-  TLS_1_2
-  TLS_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA
-  TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA
-  TLS_DHE_DSS_WITH_AES_128_CBC_SHA
-  TLS_DHE_DSS_WITH_AES_128_CBC_SHA256
-  TLS_DHE_DSS_WITH_AES_128_GCM_SHA256
-  TLS_DHE_DSS_WITH_AES_256_CBC_SHA
-  TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
-  TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
-  TLS_DHE_DSS_WITH_DES_CBC_SHA
-  TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
-  TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA
-  TLS_DHE_RSA_WITH_AES_128_CBC_SHA
-  TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
-  TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
-  TLS_DHE_RSA_WITH_AES_256_CBC_SHA
-  TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
-  TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-  TLS_DHE_RSA_WITH_DES_CBC_SHA
-  TLS_DH_anon_EXPORT_WITH_DES40_CBC_SHA
-  TLS_DH_anon_EXPORT_WITH_RC4_40_MD5
-  TLS_DH_anon_WITH_3DES_EDE_CBC_SHA
-  TLS_DH_anon_WITH_AES_128_CBC_SHA
-  TLS_DH_anon_WITH_AES_128_CBC_SHA256
-  TLS_DH_anon_WITH_AES_128_GCM_SHA256
-  TLS_DH_anon_WITH_AES_256_CBC_SHA
-  TLS_DH_anon_WITH_AES_256_CBC_SHA256
-  TLS_DH_anon_WITH_AES_256_GCM_SHA384
-  TLS_DH_anon_WITH_DES_CBC_SHA
-  TLS_DH_anon_WITH_RC4_128_MD5
-  TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA
-  TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
-  TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
-  TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
-  TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
-  TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
-  TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
-  TLS_ECDHE_ECDSA_WITH_NULL_SHA
-  TLS_ECDHE_ECDSA_WITH_RC4_128_SHA
-  TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA
-  TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
-  TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
-  TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-  TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
-  TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
-  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-  TLS_ECDHE_RSA_WITH_NULL_SHA
-  TLS_ECDHE_RSA_WITH_RC4_128_SHA
-  TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA
-  TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA
-  TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256
-  TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256
-  TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA
-  TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384
-  TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384
-  TLS_ECDH_ECDSA_WITH_NULL_SHA
-  TLS_ECDH_ECDSA_WITH_RC4_128_SHA
-  TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA
-  TLS_ECDH_RSA_WITH_AES_128_CBC_SHA
-  TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256
-  TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256
-  TLS_ECDH_RSA_WITH_AES_256_CBC_SHA
-  TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384
-  TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384
-  TLS_ECDH_RSA_WITH_NULL_SHA
-  TLS_ECDH_RSA_WITH_RC4_128_SHA
-  TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA
-  TLS_ECDH_anon_WITH_AES_128_CBC_SHA
-  TLS_ECDH_anon_WITH_AES_256_CBC_SHA
-  TLS_ECDH_anon_WITH_NULL_SHA
-  TLS_ECDH_anon_WITH_RC4_128_SHA
-  TLS_EMPTY_RENEGOTIATION_INFO_SCSV
-  TLS_FALLBACK_SCSV
-  TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5
-  TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA
-  TLS_KRB5_EXPORT_WITH_RC4_40_MD5
-  TLS_KRB5_EXPORT_WITH_RC4_40_SHA
-  TLS_KRB5_WITH_3DES_EDE_CBC_MD5
-  TLS_KRB5_WITH_3DES_EDE_CBC_SHA
-  TLS_KRB5_WITH_DES_CBC_MD5
-  TLS_KRB5_WITH_DES_CBC_SHA
-  TLS_KRB5_WITH_RC4_128_MD5
-  TLS_KRB5_WITH_RC4_128_SHA
-  TLS_RSA_EXPORT_WITH_DES40_CBC_SHA
-  TLS_RSA_EXPORT_WITH_RC4_40_MD5
-  TLS_RSA_WITH_3DES_EDE_CBC_SHA
-  TLS_RSA_WITH_AES_128_CBC_SHA
-  TLS_RSA_WITH_AES_128_CBC_SHA256
-  TLS_RSA_WITH_AES_128_GCM_SHA256
-  TLS_RSA_WITH_AES_256_CBC_SHA
-  TLS_RSA_WITH_AES_256_CBC_SHA256
-  TLS_RSA_WITH_AES_256_GCM_SHA384
-  TLS_RSA_WITH_DES_CBC_SHA
-  TLS_RSA_WITH_NULL_MD5
-  TLS_RSA_WITH_NULL_SHA
-  TLS_RSA_WITH_NULL_SHA256
-  TLS_RSA_WITH_RC4_128_MD5
-  TLS_RSA_WITH_RC4_128_SHA
-  TLSv1
-  TLSv1.1
-  TLSv1.2
-  TOKEN_EXPIRED
-  TOO_MANY_ATTEMPTS_TRY_LATER
   TOP_OVERLAYS
-  TRAILER
   TRANSFORM
-  TRANSFORMTYPE_NOT_SET
-  TRANSIENT_FAILURE
-  TRUE
-  TT
-  Terminated
   TextCapitalization.characters
   TextCapitalization.none
   TextCapitalization.sentences
@@ -1089,159 +228,37 @@ Referenced Strings:
   TextInputType.text
   TextInputType.url
   TextInputType.visiblePassword
-  Theme.Dialog.Alert
-  TokenRefresher
-  Type:
-  U:
-  UB:
-  UINT32
-  UINT32_LIST
-  UINT32_LIST_PACKED
-  UINT64
-  UINT64_LIST
-  UINT64_LIST_PACKED
-  UNARY
-  UNARY_FILTER
-  UNAUTHENTICATED
-  UNAVAILABLE
-  UNCOMPRESSED
-  UNFINISHED
-  UNIMPLEMENTED
   UNKNOWN
-  UNKNOWN_CURVE
-  UNKNOWN_DOCUMENT
-  UNKNOWN_FORMAT
-  UNKNOWN_HASH
-  UNKNOWN_KEYMATERIAL
-  UNKNOWN_PREFIX
-  UNKNOWN_STATUS
-  UNREACHABLE
-  UNRECOGNIZED
-  UNSET_PRIMARY_NAV
-  UNSUPPORTED_FIRST_FACTOR
-  UNSUPPORTED_SCHEME
-  UNSUPPORTED_TENANT_OPERATION
-  UNSUPPORTED_VERSION
-  UNVERIFIED_EMAIL
-  UPDATE
-  UPDATE_TIME
   URI
   URL
-  USER_CANCELLED
-  USER_DISABLED
-  USER_NOT_FOUND
-  UT:
   UTF8
-  Update
   V:
-  VALUETYPE_NOT_SET
-  VECTOR
-  VERIFY
-  VERIFY_BEFORE_UPDATE_EMAIL
-  VERIFY_EMAIL
   VGhpcyBpcyB0aGUgcHJlZml4IGZvciBCaWdJb...
   VGhpcyBpcyB0aGUgcHJlZml4IGZvciBEb3VibGUu
   VGhpcyBpcyB0aGUgcHJlZml4IGZvciBhIGxpc3Qu
   VISIBLE_PASSWORD
-  VOID
-  ViewCompat
-  WARN
-  WARNING
-  WEAK_PASSWORD
-  WEB_CONTEXT_ALREADY_PRESENTED
-  WEB_CONTEXT_CANCELED
-  WEB_INTERNAL_ERROR
-  WEB_INTERNAL_ERROR:
-  WEB_NETWORK_REQUEST_FAILED
-  WEB_STORAGE_UNSUPPORTED
-  WINDOW_UPDATE
   WORDS
-  WRITE_STREAM_CONNECTION_BACKOFF
-  WRITE_STREAM_IDLE
-  Write
-  WriteRunnable.runFlush
-  WriteRunnable.runWrite
-  X
-  X%s
-  Z
   _
-  _LifecycleAdapter
-  __
-  __local_write_time__
-  __name__
-  __previous_value__
-  __type__
-  _grpc_config.
-  _grpclb._tcp.
-  a
-  a0
-  a5
-  a:
-  aborted
-  accept
-  accepts
-  accessToken
-  access_token
   accessibility
-  acknowledged
   action
-  actionCodeSettings
-  actionIntent
   actionLabel
   activateSystemCursor
-  add
   addView
-  additionalData
-  additionalUserInfo
-  address
   addressCity
   addressCountry
-  addressGroups
   addressLocality
   addressRegion
   addressState
-  addresses
-  addrs
-  advice
-  age
   alias
-  allDescendants_
-  allProviders
   allScroll
-  allow
   alwaysUse24HourFormat
   android
-  android.
-  android.app.ActivityOptions
-  android.app.Application
-  android.car.EXTENSIONS
   android.hardware.type.automotive
   android.hardware.type.embedded
-  android.hardware.type.iot
   android.hardware.type.television
   android.hardware.type.watch
   android.intent.action.RUN
   android.intent.action.USER_UNLOCKED
-  android.intent.action.VIEW
-  android.net.Network
-  android.net.TrafficStats
-  android.net.conn.CONNECTIVITY_CHANGE
-  android.os.Build$VERSION
-  android.os.SystemProperties
-  android.people
-  android.settings.APPLICATION_DETAILS_...
-  android.support.action.semanticAction
-  android.support.action.showsUserInter...
-  android.support.actionExtras
-  android.support.allowGeneratedReplies
-  android.support.customtabs.action.Cus...
-  android.support.dataRemoteInputs
-  android.support.groupKey
-  android.support.isGroupSummary
-  android.support.localOnly
-  android.support.remoteInputs
-  android.support.sortKey
-  android.support.useSideChannel
   android.util.LongArray
   android.view.View
   android.widget.Button
@@ -1253,86 +270,20 @@ Referenced Strings:
   android.widget.ScrollView
   android.widget.SeekBar
   android.widget.Switch
-  android:backStackId
-  android:cancelable
-  android:savedDialogState
-  android:showsDialog
-  android:style
-  android:support:fragments
-  android:support:next_request_index
-  android:support:request_fragment_who
-  android:support:request_indicies
-  android:target_req_state
-  android:target_state
-  android:theme
-  android:user_visible_hint
-  android:view_state
-  androidInstallApp
-  androidMinimumVersion
-  androidPackageName
-  androidx.lifecycle.BundlableSavedStat...
-  androidx.lifecycle.LifecycleDispatche...
-  androidx.lifecycle.ViewModelProvider....
   androidx.savedstate.Restarter
-  androidx.transition.FragmentTransitio...
-  anim
   announce
-  anonymous
-  api
   apiKey
-  api_force_staging
-  apn
-  appExecutor
   appId
   appName
-  appSignatureHash
-  application/grpc
-  application/json
   applicationId
-  applicationName
-  applyActionCode
-  arch_disk_io_%d
   args
-  arrayBaseOffset
-  arrayIndexScale
-  array_contains
-  array_contains_any
-  asc
-  attributes
-  attrs
-  aud
-  auth
-  authCredential
-  authTimestamp
-  authType
-  authUri
-  auth_time
-  authority
-  authorization
-  authorization_code
-  authorizedDomains
   auto
-  autoCreate
-  autoLoadBalancerFactory
-  autoRetrievalInfo
-  autoRetrievedSmsCodeForTesting
   autocorrect
   autofill
-  available
-  b
-  b.a.a.a.e.d.an
-  b:
   background
   background_mode
-  backoffMultiplier
-  balancerAddresses
-  balancerRpcExecutorPool
   base
-  baseWrites_
   basic
-  basicIntegrity
-  batchId_
-  before_
   birthDateDay
   birthDateFull
   birthDateMonth
@@ -1341,360 +292,62 @@ Referenced Strings:
   birthdayDay
   birthdayMonth
   birthdayYear
-  bp
-  buf
-  buffer
-  bufferAllocator
-  buffered_nanos
-  bundleId
-  bytes
-  c
-  c.b.k1.c0
-  c.b.k1.o1
-  c.b.l1.e
-  c.b.l1.f
-  c.b.o1.b
-  c5
-  cache
-  cacheSizeBytes
-  cachedTokenState
   cached_engine_id
-  callCredentials
-  callOptions
-  callback
-  canHandleCodeInApp
-  cancel
-  cancellationListener
-  cancelled
-  category
-  cause
-  cause_
   cell
-  channel
-  channelLogger
-  channelRef
-  channelTracer
   character
-  charset
-  checkActionCode
-  checkedAdd
-  circles
-  claims
-  class
-  classes_to_restore
   clear
   clearFocus
   cleartextTrafficPermitted
   click
-  clientHostname
-  clientLanguage
   clipboard
-  closed
-  cn
-  cn.google
-  code
   codePoint
-  code_
-  collectionId_
-  collection_index
-  collection_parents
-  com.android.
-  com.android.browser.application_id
-  com.android.org.conscrypt.OpenSSLProv...
-  com.android.org.conscrypt.OpenSSLSock...
-  com.android.vending
-  com.google
-  com.google.android.clockwork.home.UPD...
-  com.google.android.gms
-  com.google.android.gms.auth.api.phone...
-  com.google.android.gms.auth.api.phone...
-  com.google.android.gms.auth.api.phone...
-  com.google.android.gms.auth.api.phone...
-  com.google.android.gms.auth.api.phone...
-  com.google.android.gms.auth.api.phone...
-  com.google.android.gms.availability
-  com.google.android.gms.chimera
-  com.google.android.gms.chimera.contai...
-  com.google.android.gms.common.interna...
-  com.google.android.gms.common.interna...
-  com.google.android.gms.common.interna...
-  com.google.android.gms.common.interna...
-  com.google.android.gms.common.interna...
-  com.google.android.gms.common.securit...
-  com.google.android.gms.dynamic.IObjec...
-  com.google.android.gms.dynamite.IDyna...
-  com.google.android.gms.dynamite.IDyna...
-  com.google.android.gms.dynamite.descr...
-  com.google.android.gms.dynamiteloader...
-  com.google.android.gms.org.conscrypt....
-  com.google.android.gms.safetynet.inte...
-  com.google.android.gms.safetynet.inte...
-  com.google.android.gms.safetynet.serv...
-  com.google.android.gms.signin
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.interna...
-  com.google.android.gms.signin.service...
-  com.google.android.gms.version
-  com.google.android.libraries.stitch.s...
-  com.google.android.safetynet.ATTEST_A...
-  com.google.android.wearable.app
-  com.google.app.id
-  com.google.common.base.Strings
-  com.google.crypto.tink.Registry
-  com.google.crypto.tink.aead.AeadWrapp...
-  com.google.crypto.tink.hybrid.HybridD...
-  com.google.crypto.tink.mac.MacWrapper...
-  com.google.crypto.tink.subtle.EngineF...
-  com.google.devtools.build.android.des...
-  com.google.firebase.auth
-  com.google.firebase.auth.ACTION_RECEI...
-  com.google.firebase.auth.API_KEY
-  com.google.firebase.auth.FIREBASE_USER
-  com.google.firebase.auth.GET_TOKEN_RE...
-  com.google.firebase.auth.KEY_API_KEY
-  com.google.firebase.auth.KEY_CUSTOM_A...
-  com.google.firebase.auth.KEY_FIREBASE...
-  com.google.firebase.auth.KEY_PROVIDER...
-  com.google.firebase.auth.KEY_PROVIDER_ID
-  com.google.firebase.auth.KEY_PROVIDER...
-  com.google.firebase.auth.KEY_TENANT_ID
-  com.google.firebase.auth.LIBRARY_VERSION
-  com.google.firebase.auth.api.Store.%s
-  com.google.firebase.auth.api.crypto.%s
-  com.google.firebase.auth.api.gms.conf...
-  com.google.firebase.auth.api.gms.serv...
-  com.google.firebase.auth.api.internal...
-  com.google.firebase.auth.api.internal...
-  com.google.firebase.auth.internal.ACT...
-  com.google.firebase.auth.internal.CLI...
-  com.google.firebase.auth.internal.Def...
-  com.google.firebase.auth.internal.EVE...
-  com.google.firebase.auth.internal.EVE...
-  com.google.firebase.auth.internal.EVE...
-  com.google.firebase.auth.internal.EVE...
-  com.google.firebase.auth.internal.EXT...
-  com.google.firebase.auth.internal.FIR...
-  com.google.firebase.auth.internal.KEY...
-  com.google.firebase.auth.internal.KEY...
-  com.google.firebase.auth.internal.NON...
-  com.google.firebase.auth.internal.NON...
-  com.google.firebase.auth.internal.NON...
-  com.google.firebase.auth.internal.OPE...
-  com.google.firebase.auth.internal.Pro...
-  com.google.firebase.auth.internal.REC...
-  com.google.firebase.auth.internal.STATUS
-  com.google.firebase.auth.internal.VER...
-  com.google.firebase.auth.internal.bro...
   com.google.firebase.common.prefs:
   com.google.firebase.components.Compon...
   com.google.firebase.components:
   com.google.firebase.firebaseinitprovider
-  com.google.protobuf.CodedOutputStream
-  com.google.protobuf.DescriptorMessage...
-  com.google.protobuf.ExtensionRegistry
-  com.google.protobuf.ExtensionSchemaFull
-  com.google.protobuf.GeneratedMessage
-  com.google.protobuf.GeneratedMessageV3
-  com.google.protobuf.MapFieldSchemaFull
-  com.google.protobuf.NewInstanceSchema...
-  com.google.protobuf.UnknownFieldSetSc...
-  com.google.protobuf.UnsafeUtil
-  commands
   commit
-  commitTime_
-  committed
-  common_google_play_services_api_unava...
-  common_google_play_services_invalid_a...
-  common_google_play_services_invalid_a...
-  common_google_play_services_network_e...
-  common_google_play_services_network_e...
-  common_google_play_services_resolutio...
-  common_google_play_services_resolutio...
-  common_google_play_services_restricte...
-  common_google_play_services_restricte...
-  common_google_play_services_sign_in_f...
-  common_google_play_services_sign_in_f...
-  complete
   composingBase
   composingExtent
-  compressor
-  compressorName
-  compressorRegistry
-  conditionTypeCase_
-  conditionType_
-  config
-  confirmPasswordReset
-  connectionSpec
-  connectivity
-  consistencySelectorCase_
-  consistencySelector_
-  content
-  content://com.google.android.gms.chim...
   contextMenu
-  continueUri
-  continueUrl
-  cookie
   copy
-  copyMemory
-  count_
   countryName
   create
-  createTime_
-  createUserWithEmailAndPassword
-  createdAt
-  creationTime
-  creationTimestamp
-  credential
   creditCardExpirationDate
   creditCardExpirationDay
   creditCardExpirationMonth
   creditCardExpirationYear
   creditCardNumber
   creditCardSecurityCode
-  currentDocument_
-  custom
-  customOptions
-  customParameters
-  d
-  dalvik.
   dark
   data
   databaseURL
   databaseUrl
-  database_
-  databases
-  date
-  deadline
-  debugString
   decimal
-  decompressor
-  decompressorRegistry
-  decrypt
-  defaultGoogleSignInAccount
-  defaultPath
-  defaultPolicy
-  defaultPort
   default_input_method
   deferred
-  delegate
-  delegateBuilder
-  delete
-  deleteAttribute
-  deleteProvider
-  desc
-  description
   destroy_engine_with_activity
-  details
-  details_
   deviceId
   direct
   direction
-  direction_
   display
-  displayName
   dispose
-  dns
-  documentChanges
-  documentTypeCase_
-  documentType_
-  document_
-  document_mutations
-  documents
-  documents_
   domain
-  drainedSubstreams
-  drop
-  dynamicLinkDomain
-  e
-  eagAttributes
   editingValue
-  effectiveDirectAddress
-  eid
   email
   emailAddress
-  emailLink
-  emailVerified
   embedded
-  emulator/auth/handler
   enableSuggestions
   enable_state_restoration
   enabled
-  encryptionEnabled
-  endAt
-  endAt_
-  endBefore
-  enrolledAt
-  enrollmentTimestamp
-  ensureKeyManagerInsertable
   error
-  errorMessage
-  error_
-  error_code
-  etag
-  eventId
-  exceptionHandler
-  executor
-  executorPool
-  exp
-  expect
-  expirationTime
-  expirationTimestamp
-  expires
-  expiresIn
-  expires_in
   extendedAddress
   extendedPostalCode
   extent
-  extras
-  facebook.com
-  factorIdKey
-  failing_client_id
-  failureCause
-  false
   familyName
-  feature
-  federatedId
-  fetchSignInMethodsForEmail
-  fieldPath_
-  fieldPaths_
-  fieldTransforms_
-  field_
   fields
-  fields_
-  filterTypeCase_
-  filterType_
-  filters_
-  find
-  firebase
-  firebaseAppName
-  firebaseError
-  firebaseUserUid
-  firebase_auth
-  firebase_auth_aidl_migration
-  firebase_auth_multi_factor_auth
   firebase_core
   firebase_data_collection_default_enabled
   firebase_database_url
-  firebase_firestore
-  firebaseapp.com
-  firebear.identityToolkit
-  firebear.identityToolkitV2
-  firebear.secureToken
-  firestore
-  firestore.
-  firestore.googleapis.com
   flags
   flutter
   flutter.
@@ -1712,372 +365,86 @@ Referenced Strings:
   flutter/system
   flutter/textinput
   flutter_assets
-  fn
-  forExistingProvider
   forbidden
-  forceRefresh
-  forceResendingToken
-  fragment
-  frame
-  frameLogger
-  frameWriter
   framework
-  from
-  from_
-  fullMethodName
-  fullServiceName
   fullStreetAddress
-  future
   ga_trackingId
   gcmSenderId
   gcm_defaultSenderId
-  gcore_
   gender
   get
-  getAccessToken
   getAll
-  getAlpnSelectedProtocol
-  getApplicationProtocol
-  getBoolean
-  getByte
   getChildId
-  getClientInterceptor
-  getDouble
-  getEmptyRegistry
-  getFloat
-  getHostString
-  getInstance
-  getInt
-  getJavaLangAccess
-  getLong
-  getNpnSelectedProtocol
-  getObject
   getParentNodeId
-  getProjectConfig
   getResId
   getResPackage
   getSourceNodeId
-  getStackTraceDepth
-  getStackTraceElement
-  github.com
   givenName
-  gn
-  google.com
-  google.firestore.v1.Firestore
-  googleSignInAccount
   google_api_key
   google_app_id
   google_storage_bucket
-  gp
   grab
   grabbing
-  grantType
-  grantedScopes
-  guava.concurrent.generate_cancellatio...
-  gzip
-  h
-  h2
-  handle
-  handleCodeInApp
-  handleOnlineStateChange
-  handleRejectedListen
-  handleRejectedWrite
-  handleRemoteEvent
-  handleSuccessfulWrite
   handled
-  handler
-  has
-  hasCommittedMutations_
-  hasPassword
-  hasPendingWrites
-  header
-  headers
-  hedgingDelay
-  hedgingDelayNanos
-  hedgingPolicy
-  hedgingPolicyProvider
   height
   help
-  helper
-  helperImpl
   hints
-  hl
-  host
-  http
-  http/1.0
-  http/1.1
-  http://
-  http://localhost
-  https
-  https://
-  https://plus.google.com/
   hybrid
-  iOS
-  iat
-  icon
   id
-  idToken
-  id_token
-  idempotent
-  identifier
-  identity
-  identitytoolkit.googleapis.com/v2/acc...
   image
-  in
-  includeMetadataChanges
   includeSubdomains
-  index
-  inefficientWriteStringNoTag
-  initialBackoff
-  initialBackoffNanos
-  input
   inputAction
   inputType
   input_method
-  insertProvider
-  installApp
-  interceptor
-  internal
-  interrupted
-  invisible_actions
   io.flutter.Entrypoint
   io.flutter.InitialRoute
   io.flutter.embedding.android.NormalTheme
   io.flutter.embedding.android.SplashSc...
   io.flutter.plugins.GeneratedPluginReg...
-  io.grpc.EquivalentAddressGroup.author...
-  io.grpc.LoadBalancer.loadBalancingConfig
-  io.grpc.ManagedChannel.enableAllocati...
-  io.grpc.Status.failOnEqualsForTest
-  io.grpc.census.InternalCensusStatsAcc...
-  io.grpc.census.InternalCensusTracingA...
-  io.grpc.grpclb.lbAddrAuthority
-  io.grpc.grpclb.lbAddrs
-  io.grpc.grpclb.lbProvidedBackend
-  io.grpc.internal.CALL_OPTIONS_RPC_OWN...
-  io.grpc.internal.DnsNameResolverProvi...
-  io.grpc.internal.DnsNameResolverProvi...
-  io.grpc.internal.DnsNameResolverProvi...
-  io.grpc.internal.DnsNameResolverProvi...
-  io.grpc.internal.GrpcAttributes.clien...
-  io.grpc.internal.GrpcAttributes.secur...
-  io.grpc.internal.JndiResourceResolver...
-  io.grpc.netty.NettyChannelProvider
-  io.grpc.override.ContextStorageOverride
-  io.perfmark.impl.SecretPerfMarkImpl$P...
-  iosAppStoreId
-  iosBundleId
-  ip
-  is
-  isAnonymous
   isAutomaticDataCollectionEnabled
-  isCollectionGroup
-  isEmailVerified
-  isFromCache
-  isNewUser
-  is_anonymous
-  iss
-  issuedAtTimestamp
-  issued_at
-  j0
-  java
   java.
-  java.util.concurrent.atomic.LongAdder
-  javax.
-  javax.crypto.spec.GCMParameterSpec
-  keepAlivePinger
   key
   keyCode
   keydown
   keymap
   keyup
   kind
-  kn
   kotlin
-  kp
-  l0
   label
-  labels_
-  languageCode
-  lastLimboFreeSnapshotVersion_
-  lastListenSequenceNumber_
-  lastLoginAt
-  lastSignInTime
-  lastSignInTimestamp
-  latitude_
-  layout_inflater
-  lenientToString
-  level
   libapp.so
-  libcore.io.Memory
   libflutter.so
   light
-  limit
-  limitToLast
-  limit_
-  line.separator
-  link
-  linkEmailAuthCredential
-  linkFederatedCredential
-  linkPhoneAuthCredential
-  list
-  listen
-  listener
-  loadBalancingConfig
-  loadBalancingPolicy
-  loadBalancingPolicyConfig
-  loaderVersion
-  localId
-  localWriteTime_
-  localhost
-  location
-  lock
-  log
-  logId
-  logger
-  login
   longPress
-  longitude_
-  m
   mChildNodeIds
-  mFactory2
   mH
   mNextServedView
-  mOnKeyListener
   mServedView
   main
-  managedChannelServiceConfig
-  market://details
-  marshaller
-  mask_
-  maxAttempts
-  maxBackoff
-  maxBackoffNanos
-  maxInboundMessageSize
-  maxOutboundMessageSize
-  maxRequestMessageBytes
-  maxResponseMessageBytes
-  maxTokens
   memoryPressure
-  merge
-  mergeFields
   message
-  messageInfoFactory
-  messageType
-  message_
   messagingSenderId
   metaState
-  metadata
-  metadatas
   method
-  methodConfig
-  methodName
-  mfaEnrollmentId
-  mfaInfo
-  mfaPendingCredential
-  mfaProvider
   middleInitial
   middleName
-  min
-  minimumVersion
-  mode
-  modeCase_
-  mode_
   move
-  ms
-  mutation_queues
-  mutations
-  n
   name
   namePrefix
   nameSuffix
-  name_
-  nanos_
-  needConfirmation
-  needEmail
-  networkaddress.cache.ttl
-  newAddressGroups
-  newEmail
-  newIndex
   newPassword
-  newPicker
-  newState
   newUsername
-  no
   noDrop
   nodeId
-  nonFatalStatusCodes
-  nonce
   none
-  noop
-  nope
-  not_in
-  notification
-  notifyLocalViewChanges
-  notify_manager
-  ns
-  null
-  oauth
-  oauthAccessToken
-  oauthIdToken
-  oauthTokenSecret
-  oauth_token_secret
-  obfuscatedIdentifier
-  objectFieldOffset
   obscureText
-  observe
-  observer
-  offloadExecutorPool
-  offset_
-  okhttp
-  oldIndex
-  onCodeSent
-  onMenuKeyEvent
-  once_
   oneTimeCode
-  oobCode
-  op_
   opaque
-  open
-  operandTypeCase_
-  operandType_
-  operation
-  operationCase_
-  operation_
   optional
   options
-  orderBy
-  orderBy_
-  org.apache.harmony.xnet.provider.jsse...
-  org.apache.harmony.xnet.provider.jsse...
-  org.conscrypt.OpenSSLProvider
-  org.eclipse.jetty.alpn.ALPN
-  org.robolectric.Robolectric
   other
-  out
-  output
   overlay
-  p
-  package
-  packageName
-  panicPickResult
-  parameters
   params
-  parent_
   password
-  passwordHash
-  path
-  paths
-  pcampaignid
-  peekByte
-  peekByteArray
-  peekInt
-  peekLong
-  pendingIntent
-  pendingToken
-  pending_intent
-  percentage
-  persistenceEnabled
   personFamilyName
   personGivenName
   personMiddleInitial
@@ -2085,130 +452,36 @@ Referenced Strings:
   personName
   personNamePrefix
   personNameSuffix
-  phone
   phoneCountryCode
-  phoneEnrollmentInfo
-  phoneInfo
   phoneNational
   phoneNumber
   phoneNumberDevice
-  phoneResponseInfo
-  phoneSessionInfo
-  phoneSignInInfo
-  phoneVerificationInfo
-  photoURL
-  photoUrl
-  pick_first
   plainCodePoint
-  platform
   platformBrightness
-  playgames.google.com
   pluginConstants
   plugins
-  plugins.flutter.io/firebase_auth
   plugins.flutter.io/firebase_core
-  plugins.flutter.io/firebase_firestore
-  plugins.flutter.io/firebase_firestore...
-  plugins.flutter.io/firebase_firestore...
-  plugins.flutter.io/firebase_firestore...
-  plugins.flutter.io/firebase_firestore...
   plugins.flutter.io/shared_preferences
-  po
-  pokeByte
-  pokeByteArray
-  pokeInt
-  pokeLong
-  policy
-  policyName
   popRoute
-  postBody
   postalAddress
   postalAddressExtended
   postalAddressExtendedPostalCode
   postalCode
   precise
-  previousEmail
   primaryColor
-  priority
   productId
-  profile
-  progress
   projectId
   project_id
-  projects
-  projects/%s/databases/%s
-  projects/%s/databases/%s/documents/%s
-  protocolSelected
-  protocols
   provider
-  providerData
-  providerId
-  providerUserInfo
-  providerinstaller
-  providers
-  proxyAddr
-  proxyAddress
-  proxyDetector
-  publicKey
   push
   put
-  putBoolean
-  putByte
-  putDouble
-  putFloat
-  putInt
-  putLong
-  putObject
-  query
-  queryTypeCase_
-  queryType_
-  range
-  rawConfig
-  rawConfigValue
-  rawNonce
-  rawPassword
-  rawServiceConfig
-  rawUserInfo
   read
-  readTime_
-  read_time_nanos
-  read_time_seconds
-  reason
-  reauthenticateWithCredential
-  reauthenticateWithCredentialWithData
-  reauthenticateWithEmailLinkWithData
-  reauthenticateWithEmailPasswordWithData
-  reauthenticateWithPhoneCredentialWith...
-  recaptchaToken
-  recoverEmail
-  redacted
-  reference
-  referer
-  refresh
-  refreshToken
-  refresh_token
-  registerAsymmetricKeyManagers
-  registerPrimitiveWrapper
   registerWith
-  registered
-  registry
-  reload
-  remoteInputs
-  remote_addr
-  remote_documents
   remove
-  removeObserver
   removeView
   removeViewImmediate
-  removed
-  removedTargetIds_
   repeatCount
-  reqType
-  requestMarshaller
-  requestType
-  requestUri
   required
-  resetPassword
   resize
   resizeColumn
   resizeDown
@@ -2223,328 +496,73 @@ Referenced Strings:
   resizeUpLeftDownRight
   resizeUpRight
   resizeUpRightDownLeft
-  resolution
-  resolver
-  responseMarshaller
-  responseTypeCase_
-  responseType_
-  restricted_profile
-  result
-  resultCase_
-  result_
-  resumeToken_
-  resumeTypeCase_
-  resumeType_
-  retryPolicy
-  retryPolicyProvider
-  retryThrottling
-  retryTransaction_
-  retryableStatusCodes
-  returnIdpCredential
-  returnSecureToken
-  returns
-  revertSecondFactorAddition
-  ro
-  round_robin
   route
-  runnable
-  s
-  sClassLoader
-  safe
-  safetyNetToken
-  sampledToLocalTracing
   samsung
-  savedListener
   scanCode
-  scheduledExecutorService
-  scheduler
-  schema
-  schemaDescriptor
-  scopes
-  screen_name
-  seconds
-  seconds_
-  secret
-  securetoken.googleapis.com/v1
-  select
-  selectProtocol
-  select_
-  selected
   selectionBase
   selectionExtent
-  semanticAction
-  sendEmailVerification
-  sendPasswordResetEmail
-  sendSignInLinkToEmail
-  sequence_number
-  server
-  serverAuthCode
-  server_timestamp
-  service
-  serviceActionBundleKey
-  serviceConfig
-  serviceConfigParser
-  serviceIntentCall
-  serviceMap
-  serviceMethodMap
-  serviceResponseIntentKey
-  service_esmobile
-  service_googleme
-  sessionId
-  sessionInfo
   set
-  setAlpnProtocols
-  setApplicationProtocols
   setBool
   setDirection
   setDouble
-  setHostname
   setInitialRoute
   setInt
   setLocale
-  setNpnProtocols
-  setRemoveOnCancelPolicy
   setString
   setStringList
-  setUseSessionTickets
-  setValue
-  severity
-  sha1Cert
-  showsUserInterface
-  signIn
-  signInAnonymously
-  signInMethod
-  signInProvider
-  signInSecondFactor
-  signInWithCredential
-  signInWithCustomToken
-  signInWithEmailAndPassword
-  signInWithPhoneNumber
-  signInWithRedirect
-  sign_in_provider
-  sign_in_second_factor
   signed
-  signinMethods
-  sink
-  smsCode
   smsOTPCode
-  sms_code_autofill
-  sms_retrieve
-  snapshotVersion_
-  socket
   source
-  spdy/3.1
-  spec
-  sslEnabled
-  sslSocketFactory
-  startAfter
-  startAt
-  startAt_
-  startMfaEnrollmentWithPhoneNumber
-  startMfaSignInWithPhoneNumber
-  statsTraceCtx
-  status
   statusBarColor
   statusBarIconBrightness
-  statusCode
-  statusMessage
-  stopListening
-  stopwatch
-  stopwatchSupplier
   storageBucket
-  stream
-  streamId_
-  streamToken_
-  streamTracerFactories
-  streamTracerFactory
   streetAddress
   string
-  sub
-  subchannel
-  subchannelRef
-  sum
-  sun.misc.JavaLangAccess
-  sun.misc.SharedSecrets
-  supports
-  supportsUnsafeArrayOperations
-  supportsUnsafeByteBufferOperations
   surface
-  syncContext
   systemNavigationBarColor
   systemNavigationBarDividerColor
   systemNavigationBarIconBrightness
-  t
-  tagSocket
   tap
-  target
-  targetAddr
-  targetAddress
-  targetChangeCase_
-  targetChangeType_
-  targetChange_
-  targetId_
-  targetIds_
-  targetPath
-  targetTypeCase_
-  targetType_
-  target_count
-  target_documents
-  target_globals
-  targets
-  task
-  te
   telephoneNumber
   telephoneNumberCountryCode
   telephoneNumberDevice
   telephoneNumberNational
-  temporaryProof
-  tenant
-  tenantId
   text
   text/plain
   textCapitalization
   textScaleFactor
   texture
-  tid
-  time
-  timeProvider
-  timeout
-  timeoutNanos
-  timestamp
-  timestampNanos
-  title
-  toAttach
-  toProviderList
-  token
-  tokenId
-  tokenOnly
-  tokenRatio
-  token_type
-  tooManyPingsRunnable
-  too_many_pings
   tooltip
   touch
-  tracer
   trackingId
-  trailer
-  trailers
-  transactionId
-  transaction_
   transform
-  transformResults_
-  transformTypeCase_
-  transformType_
   transition_animation_scale
   transparent
-  transport
-  transportAttrs
-  transportExceptionHandler
-  transportExecutor
-  transportTracer
-  transportTracerFactory
-  true
   tv
-  twitter.com
-  txtRecords
   type
-  type.googleapis.com/google.crypto.tin...
-  type.googleapis.com/google.crypto.tin...
-  type.googleapis.com/google.crypto.tin...
-  type.googleapis.com/google.crypto.tin...
-  type.googleapis.com/google.crypto.tin...
-  type.googleapis.com/google.crypto.tin...
-  type.googleapis.com/google.crypto.tin...
-  type.googleapis.com/google.crypto.tin...
-  type.googleapis.com/google.crypto.tin...
-  type.googleapis.com/google.crypto.tin...
-  type.googleapis.com/google.crypto.tin...
-  type.googleapis.com/google.crypto.tin...
-  type.googleapis.com/google.crypto.tin...
-  typeName
-  typeUrl_
-  u
-  uid
-  unauthenticated
-  unavailable
-  uncaughtExceptionHandler
-  unimplemented
   uniqueIdentifier
-  units
-  unknown
-  unlinkEmailCredential
-  unlinkFederatedCredential
-  unobfuscatedPhoneInfo
-  unsupported
-  untagSocket
-  uo
-  updateEmail
-  updateMask_
-  updatePassword
-  updatePhoneNumber
-  updateProfile
-  updateTime_
   updateViewLayout
-  url
-  user
-  userId
-  userInfos
-  userMetadata
-  userMultiFactorInfo
-  user_consent
   username
-  users
-  v
   value
-  valueTypeCase_
-  valueType_
-  value_
-  values_
-  vary
   vendorId
-  verificationId
-  verifyApp
-  verifyAssertionRequest
-  verifyBeforeChangeEmail
-  verifyBeforeUpdateEmail
-  verifyEmail
-  verifyMac
-  verifyPasswordResetCode
-  verifyPhoneNumber
-  version
-  version_
   verticalText
-  via
   viewFocused
   viewType
   wait
-  waitForReady
-  waiting_for_connection
   watch
-  web.app
-  where
-  where_
   width
   window
-  wo
   write
-  writeMutations
-  writeResults_
-  writes
-  writes_
-  www.googleapis.com/identitytoolkit/v3...
   x
-  x0
-  xlb
-  xn
-  z4
   zoomIn
   zoomOut
-  zzb
-  zze
-  zzf
-  zzg
-  zzh
-  μs
+Marking id:action_container:2131034145 used because its prefix matches string pool constant action
+Marking id:action_divider:2131034146 used because its prefix matches string pool constant action
+Marking id:action_image:2131034147 used because its prefix matches string pool constant action
+Marking id:action_text:2131034148 used because its prefix matches string pool constant action
+Marking id:actions:2131034149 used because its prefix matches string pool constant action
+Marking id:text:2131034175 used because its prefix matches string pool constant text
+Marking id:text2:2131034176 used because its prefix matches string pool constant text
 Marking id:accessibility_action_clickable_span:2131034112 used because its prefix matches string pool constant accessibility
 Marking id:accessibility_custom_action_0:2131034113 used because its prefix matches string pool constant accessibility
 Marking id:accessibility_custom_action_1:2131034114 used because its prefix matches string pool constant accessibility
@@ -2578,19 +596,6 @@ Marking id:accessibility_custom_action_6:2131034141 used because its prefix matc
 Marking id:accessibility_custom_action_7:2131034142 used because its prefix matches string pool constant accessibility
 Marking id:accessibility_custom_action_8:2131034143 used because its prefix matches string pool constant accessibility
 Marking id:accessibility_custom_action_9:2131034144 used because its prefix matches string pool constant accessibility
-Marking id:time:2131034185 used because its prefix matches string pool constant time
-Marking id:light:2131034164 used because its prefix matches string pool constant light
-Marking id:title:2131034186 used because its prefix matches string pool constant title
-Marking layout:custom_dialog:2131165184 used because its prefix matches string pool constant custom
-Marking id:action_container:2131034145 used because its prefix matches string pool constant action
-Marking id:action_divider:2131034146 used because its prefix matches string pool constant action
-Marking id:action_image:2131034147 used because its prefix matches string pool constant action
-Marking id:action_text:2131034148 used because its prefix matches string pool constant action
-Marking id:actions:2131034149 used because its prefix matches string pool constant action
-Marking id:text:2131034183 used because its prefix matches string pool constant text
-Marking id:text2:2131034184 used because its prefix matches string pool constant text
-Marking integer:status_bar_notification_info_maxnum:2131099649 used because its prefix matches string pool constant status
-Marking string:status_bar_notification_info_overflow:2131296274 used because its prefix matches string pool constant status
 Marking attr:android_color:-1 used because its prefix matches string pool constant android
 Marking attr:android_alpha:-1 used because its prefix matches string pool constant android
 Marking attr:android_fontStyle:-1 used because its prefix matches string pool constant android
@@ -2611,121 +616,45 @@ Marking attr:android_endX:-1 used because its prefix matches string pool constan
 Marking attr:android_endY:-1 used because its prefix matches string pool constant android
 Marking attr:android_tileMode:-1 used because its prefix matches string pool constant android
 Marking attr:android_offset:-1 used because its prefix matches string pool constant android
-Marking color:notification_action_color_filter:2130837515 used because its prefix matches string pool constant notification
-Marking color:notification_icon_bg_color:2130837516 used because its prefix matches string pool constant notification
-Marking dimen:notification_action_icon_size:2130903047 used because its prefix matches string pool constant notification
-Marking dimen:notification_action_text_size:2130903048 used because its prefix matches string pool constant notification
-Marking dimen:notification_big_circle_margin:2130903049 used because its prefix matches string pool constant notification
-Marking dimen:notification_content_margin_start:2130903050 used because its prefix matches string pool constant notification
-Marking dimen:notification_large_icon_height:2130903051 used because its prefix matches string pool constant notification
-Marking dimen:notification_large_icon_width:2130903052 used because its prefix matches string pool constant notification
-Marking dimen:notification_main_column_padding_top:2130903053 used because its prefix matches string pool constant notification
-Marking dimen:notification_media_narrow_margin:2130903054 used because its prefix matches string pool constant notification
-Marking dimen:notification_right_icon_size:2130903055 used because its prefix matches string pool constant notification
-Marking dimen:notification_right_side_padding_top:2130903056 used because its prefix matches string pool constant notification
-Marking dimen:notification_small_icon_background_padding:2130903057 used because its prefix matches string pool constant notification
-Marking dimen:notification_small_icon_size_as_large:2130903058 used because its prefix matches string pool constant notification
-Marking dimen:notification_subtext_size:2130903059 used because its prefix matches string pool constant notification
-Marking dimen:notification_top_pad:2130903060 used because its prefix matches string pool constant notification
-Marking dimen:notification_top_pad_large_text:2130903061 used because its prefix matches string pool constant notification
-Marking drawable:notification_action_background:2130968598 used because its prefix matches string pool constant notification
-Marking drawable:notification_bg:2130968599 used because its prefix matches string pool constant notification
-Marking drawable:notification_bg_low:2130968600 used because its prefix matches string pool constant notification
-Marking drawable:notification_bg_low_normal:2130968601 used because its prefix matches string pool constant notification
-Marking drawable:notification_bg_low_pressed:2130968602 used because its prefix matches string pool constant notification
-Marking drawable:notification_bg_normal:2130968603 used because its prefix matches string pool constant notification
-Marking drawable:notification_bg_normal_pressed:2130968604 used because its prefix matches string pool constant notification
-Marking drawable:notification_icon_background:2130968605 used because its prefix matches string pool constant notification
-Marking drawable:notification_template_icon_bg:2130968606 used because its prefix matches string pool constant notification
-Marking drawable:notification_template_icon_low_bg:2130968607 used because its prefix matches string pool constant notification
-Marking drawable:notification_tile_bg:2130968608 used because its prefix matches string pool constant notification
-Marking id:notification_background:2131034169 used because its prefix matches string pool constant notification
-Marking id:notification_main_column:2131034170 used because its prefix matches string pool constant notification
-Marking id:notification_main_column_container:2131034171 used because its prefix matches string pool constant notification
-Marking layout:notification_action:2131165185 used because its prefix matches string pool constant notification
-Marking layout:notification_action_tombstone:2131165186 used because its prefix matches string pool constant notification
-Marking layout:notification_template_custom_big:2131165187 used because its prefix matches string pool constant notification
-Marking layout:notification_template_icon_group:2131165188 used because its prefix matches string pool constant notification
-Marking layout:notification_template_part_chronometer:2131165189 used because its prefix matches string pool constant notification
-Marking layout:notification_template_part_time:2131165190 used because its prefix matches string pool constant notification
-Marking id:icon:2131034159 used because its prefix matches string pool constant icon
-Marking id:icon_group:2131034160 used because its prefix matches string pool constant icon
-Marking id:icon_only:2131034161 used because its prefix matches string pool constant icon
-Marking attr:imageAspectRatio:2130771982 used because its prefix matches string pool constant image
-Marking attr:imageAspectRatioAdjust:2130771983 used because its prefix matches string pool constant image
-Marking id:auto:2131034153 used because its prefix matches string pool constant auto
-Marking id:none:2131034167 used because its prefix matches string pool constant none
-Marking id:dark:2131034156 used because its prefix matches string pool constant dark
 Resource Reference Graph:
-color:common_google_signin_btn_text_dark:2130837504 => [color:common_google_signin_btn_text_dark_disabled:2130837506, color:common_google_signin_btn_text_dark_pressed:2130837508, color:common_google_signin_btn_text_dark_focused:2130837507, color:common_google_signin_btn_text_dark_default:2130837505]
-color:common_google_signin_btn_text_light:2130837509 => [color:common_google_signin_btn_text_light_disabled:2130837511, color:common_google_signin_btn_text_light_pressed:2130837513, color:common_google_signin_btn_text_light_focused:2130837512, color:common_google_signin_btn_text_light_default:2130837510]
-color:notification_action_color_filter:2130837515 => [color:secondary_text_default_material_light:2130837518]
+color:notification_action_color_filter:2130837504 => [color:secondary_text_default_material_light:2130837507]
 dimen:notification_media_narrow_margin:2130903054 => [dimen:notification_content_margin_start:2130903050]
-drawable:common_google_signin_btn_icon_dark:2130968577 => [drawable:common_google_signin_btn_icon_disabled:2130968581, drawable:common_google_signin_btn_icon_dark_focused:2130968578, drawable:common_google_signin_btn_icon_dark_normal:2130968579]
-drawable:common_google_signin_btn_icon_dark_focused:2130968578 => [drawable:common_google_signin_btn_icon_dark_normal:2130968579]
-drawable:common_google_signin_btn_icon_dark_normal:2130968579 => [drawable:common_google_signin_btn_icon_dark_normal_background:2130968580, drawable:googleg_standard_color_18:2130968596]
-drawable:common_google_signin_btn_icon_disabled:2130968581 => [drawable:googleg_disabled_color_18:2130968595]
-drawable:common_google_signin_btn_icon_light:2130968582 => [drawable:common_google_signin_btn_icon_disabled:2130968581, drawable:common_google_signin_btn_icon_light_focused:2130968583, drawable:common_google_signin_btn_icon_light_normal:2130968584]
-drawable:common_google_signin_btn_icon_light_focused:2130968583 => [drawable:common_google_signin_btn_icon_light_normal:2130968584]
-drawable:common_google_signin_btn_icon_light_normal:2130968584 => [drawable:common_google_signin_btn_icon_light_normal_background:2130968585, drawable:googleg_standard_color_18:2130968596]
-drawable:common_google_signin_btn_text_dark:2130968586 => [drawable:common_google_signin_btn_text_disabled:2130968590, drawable:common_google_signin_btn_text_dark_focused:2130968587, drawable:common_google_signin_btn_text_dark_normal:2130968588]
-drawable:common_google_signin_btn_text_dark_focused:2130968587 => [drawable:common_google_signin_btn_text_dark_normal:2130968588]
-drawable:common_google_signin_btn_text_dark_normal:2130968588 => [drawable:common_google_signin_btn_text_dark_normal_background:2130968589, drawable:googleg_standard_color_18:2130968596]
-drawable:common_google_signin_btn_text_disabled:2130968590 => [drawable:googleg_disabled_color_18:2130968595]
-drawable:common_google_signin_btn_text_light:2130968591 => [drawable:common_google_signin_btn_text_disabled:2130968590, drawable:common_google_signin_btn_text_light_focused:2130968592, drawable:common_google_signin_btn_text_light_normal:2130968593]
-drawable:common_google_signin_btn_text_light_focused:2130968592 => [drawable:common_google_signin_btn_text_light_normal:2130968593]
-drawable:common_google_signin_btn_text_light_normal:2130968593 => [drawable:common_google_signin_btn_text_light_normal_background:2130968594, drawable:googleg_standard_color_18:2130968596]
-drawable:notification_action_background:2130968598 => [color:ripple_material_light:2130837517, dimen:compat_button_inset_vertical_material:2130903041, dimen:compat_button_inset_horizontal_material:2130903040, dimen:compat_control_corner_material:2130903044, dimen:compat_button_padding_vertical_material:2130903043, dimen:compat_button_padding_horizontal_material:2130903042]
-drawable:notification_bg:2130968599 => [drawable:notification_bg_normal_pressed:2130968604, drawable:notification_bg_normal:2130968603]
-drawable:notification_bg_low:2130968600 => [drawable:notification_bg_low_pressed:2130968602, drawable:notification_bg_low_normal:2130968601]
-drawable:notification_icon_background:2130968605 => [color:notification_icon_bg_color:2130837516]
-drawable:notification_tile_bg:2130968608 => [drawable:notify_panel_notification_icon_bg:2130968609]
+drawable:notification_action_background:2130968577 => [color:ripple_material_light:2130837506, dimen:compat_button_inset_vertical_material:2130903041, dimen:compat_button_inset_horizontal_material:2130903040, dimen:compat_control_corner_material:2130903044, dimen:compat_button_padding_vertical_material:2130903043, dimen:compat_button_padding_horizontal_material:2130903042]
+drawable:notification_bg:2130968578 => [drawable:notification_bg_normal_pressed:2130968583, drawable:notification_bg_normal:2130968582]
+drawable:notification_bg_low:2130968579 => [drawable:notification_bg_low_pressed:2130968581, drawable:notification_bg_low_normal:2130968580]
+drawable:notification_icon_background:2130968584 => [color:notification_icon_bg_color:2130837505]
+drawable:notification_tile_bg:2130968587 => [drawable:notify_panel_notification_icon_bg:2130968588]
 layout:notification_action:2131165185 => [style:Widget_Compat_NotificationActionContainer:2131361799, dimen:notification_action_icon_size:2130903047, style:Widget_Compat_NotificationActionText:2131361800]
 layout:notification_action_tombstone:2131165186 => [style:Widget_Compat_NotificationActionContainer:2131361799, dimen:notification_action_icon_size:2130903047, style:Widget_Compat_NotificationActionText:2131361800]
 layout:notification_template_custom_big:2131165187 => [dimen:notification_large_icon_height:2130903051, dimen:notification_large_icon_width:2130903052, dimen:notification_main_column_padding_top:2130903053, dimen:notification_content_margin_start:2130903050, dimen:notification_right_side_padding_top:2130903056, layout:notification_template_part_time:2131165190, layout:notification_template_part_chronometer:2131165189, style:TextAppearance_Compat_Notification_Info:2131361795, layout:notification_template_icon_group:2131165188]
 layout:notification_template_icon_group:2131165188 => [dimen:notification_large_icon_height:2130903051, dimen:notification_large_icon_width:2130903052, dimen:notification_big_circle_margin:2130903049, dimen:notification_right_icon_size:2130903055]
 layout:notification_template_part_chronometer:2131165189 => [style:TextAppearance_Compat_Notification_Time:2131361797]
 layout:notification_template_part_time:2131165190 => [style:TextAppearance_Compat_Notification_Time:2131361797]
-style:LaunchTheme:2131361792 => [drawable:launch_background:2130968597]
+style:LaunchTheme:2131361792 => [drawable:launch_background:2130968576]
 style:TextAppearance_Compat_Notification_Info:2131361795 => [style:TextAppearance_Compat_Notification:2131361794, style:TextAppearance_Compat:-1, style:TextAppearance:-1]
 style:TextAppearance_Compat_Notification_Line2:2131361796 => [style:TextAppearance_Compat_Notification_Info:2131361795]
 style:TextAppearance_Compat_Notification_Time:2131361797 => [style:TextAppearance_Compat_Notification:2131361794, style:TextAppearance_Compat:-1, style:TextAppearance:-1]
-style:Widget_Compat_NotificationActionContainer:2131361799 => [drawable:notification_action_background:2130968598]
-style:Widget_Compat_NotificationActionText:2131361800 => [color:secondary_text_default_material_light:2130837518, dimen:notification_action_text_size:2130903048]
+style:Widget_Compat_NotificationActionContainer:2131361799 => [drawable:notification_action_background:2130968577]
+style:Widget_Compat_NotificationActionText:2131361800 => [color:secondary_text_default_material_light:2130837507, dimen:notification_action_text_size:2130903048]
+color:common_google_signin_btn_text_dark:-1 => [color:common_google_signin_btn_text_dark_disabled:-1, color:common_google_signin_btn_text_dark_pressed:-1, color:common_google_signin_btn_text_dark_focused:-1, color:common_google_signin_btn_text_dark_default:-1]
+color:common_google_signin_btn_text_light:-1 => [color:common_google_signin_btn_text_light_disabled:-1, color:common_google_signin_btn_text_light_pressed:-1, color:common_google_signin_btn_text_light_focused:-1, color:common_google_signin_btn_text_light_default:-1]
+drawable:common_google_signin_btn_icon_dark:-1 => [drawable:common_google_signin_btn_icon_disabled:-1, drawable:common_google_signin_btn_icon_dark_focused:-1, drawable:common_google_signin_btn_icon_dark_normal:-1]
+drawable:common_google_signin_btn_icon_disabled:-1 => [drawable:googleg_disabled_color_18:-1]
+drawable:common_google_signin_btn_icon_dark_focused:-1 => [drawable:common_google_signin_btn_icon_dark_normal:-1]
+drawable:common_google_signin_btn_icon_dark_normal:-1 => [drawable:common_google_signin_btn_icon_dark_normal_background:-1, drawable:googleg_standard_color_18:-1]
+drawable:common_google_signin_btn_icon_light:-1 => [drawable:common_google_signin_btn_icon_disabled:-1, drawable:common_google_signin_btn_icon_light_focused:-1, drawable:common_google_signin_btn_icon_light_normal:-1]
+drawable:common_google_signin_btn_icon_light_focused:-1 => [drawable:common_google_signin_btn_icon_light_normal:-1]
+drawable:common_google_signin_btn_icon_light_normal:-1 => [drawable:common_google_signin_btn_icon_light_normal_background:-1, drawable:googleg_standard_color_18:-1]
+drawable:common_google_signin_btn_text_dark:-1 => [drawable:common_google_signin_btn_text_disabled:-1, drawable:common_google_signin_btn_text_dark_focused:-1, drawable:common_google_signin_btn_text_dark_normal:-1]
+drawable:common_google_signin_btn_text_disabled:-1 => [drawable:googleg_disabled_color_18:-1]
+drawable:common_google_signin_btn_text_dark_focused:-1 => [drawable:common_google_signin_btn_text_dark_normal:-1]
+drawable:common_google_signin_btn_text_dark_normal:-1 => [drawable:common_google_signin_btn_text_dark_normal_background:-1, drawable:googleg_standard_color_18:-1]
+drawable:common_google_signin_btn_text_light:-1 => [drawable:common_google_signin_btn_text_disabled:-1, drawable:common_google_signin_btn_text_light_focused:-1, drawable:common_google_signin_btn_text_light_normal:-1]
+drawable:common_google_signin_btn_text_light_focused:-1 => [drawable:common_google_signin_btn_text_light_normal:-1]
+drawable:common_google_signin_btn_text_light_normal:-1 => [drawable:common_google_signin_btn_text_light_normal_background:-1, drawable:googleg_standard_color_18:-1]
 
 The root reachable resources are:
-attr:imageAspectRatio:2130771982,
-   attr:imageAspectRatioAdjust:2130771983,
-   color:notification_action_color_filter:2130837515,
-   color:notification_icon_bg_color:2130837516,
-   dimen:notification_action_icon_size:2130903047,
-   dimen:notification_action_text_size:2130903048,
-   dimen:notification_big_circle_margin:2130903049,
-   dimen:notification_content_margin_start:2130903050,
-   dimen:notification_large_icon_height:2130903051,
-   dimen:notification_large_icon_width:2130903052,
-   dimen:notification_main_column_padding_top:2130903053,
-   dimen:notification_media_narrow_margin:2130903054,
-   dimen:notification_right_icon_size:2130903055,
-   dimen:notification_right_side_padding_top:2130903056,
-   dimen:notification_small_icon_background_padding:2130903057,
-   dimen:notification_small_icon_size_as_large:2130903058,
-   dimen:notification_subtext_size:2130903059,
-   dimen:notification_top_pad:2130903060,
-   dimen:notification_top_pad_large_text:2130903061,
-   drawable:common_full_open_on_phone:2130968576,
-   drawable:launch_background:2130968597,
-   drawable:notification_action_background:2130968598,
-   drawable:notification_bg:2130968599,
-   drawable:notification_bg_low:2130968600,
-   drawable:notification_bg_low_normal:2130968601,
-   drawable:notification_bg_low_pressed:2130968602,
-   drawable:notification_bg_normal:2130968603,
-   drawable:notification_bg_normal_pressed:2130968604,
-   drawable:notification_icon_background:2130968605,
-   drawable:notification_template_icon_bg:2130968606,
-   drawable:notification_template_icon_low_bg:2130968607,
-   drawable:notification_tile_bg:2130968608,
+drawable:launch_background:2130968576,
    id:accessibility_action_clickable_span:2131034112,
    id:accessibility_custom_action_0:2131034113,
    id:accessibility_custom_action_1:2131034114,
@@ -2764,51 +693,11 @@ attr:imageAspectRatio:2130771982,
    id:action_image:2131034147,
    id:action_text:2131034148,
    id:actions:2131034149,
-   id:auto:2131034153,
-   id:dark:2131034156,
-   id:icon:2131034159,
-   id:icon_group:2131034160,
-   id:icon_only:2131034161,
-   id:light:2131034164,
-   id:none:2131034167,
-   id:notification_background:2131034169,
-   id:notification_main_column:2131034170,
-   id:notification_main_column_container:2131034171,
-   id:tag_accessibility_pane_title:2131034178,
-   id:tag_transition_group:2131034180,
-   id:tag_unhandled_key_event_manager:2131034181,
-   id:tag_unhandled_key_listeners:2131034182,
-   id:text:2131034183,
-   id:text2:2131034184,
-   id:time:2131034185,
-   id:title:2131034186,
+   id:text:2131034175,
+   id:text2:2131034176,
    integer:google_play_services_version:2131099648,
-   integer:status_bar_notification_info_maxnum:2131099649,
-   layout:custom_dialog:2131165184,
-   layout:notification_action:2131165185,
-   layout:notification_action_tombstone:2131165186,
-   layout:notification_template_custom_big:2131165187,
-   layout:notification_template_icon_group:2131165188,
-   layout:notification_template_part_chronometer:2131165189,
-   layout:notification_template_part_time:2131165190,
    mipmap:ic_launcher:2131230720,
-   string:common_google_play_services_enable_button:2131296256,
-   string:common_google_play_services_enable_text:2131296257,
-   string:common_google_play_services_enable_title:2131296258,
-   string:common_google_play_services_install_button:2131296259,
-   string:common_google_play_services_install_text:2131296260,
-   string:common_google_play_services_install_title:2131296261,
-   string:common_google_play_services_notification_channel_name:2131296262,
-   string:common_google_play_services_notification_ticker:2131296263,
-   string:common_google_play_services_unknown_issue:2131296264,
-   string:common_google_play_services_unsupported_text:2131296265,
-   string:common_google_play_services_update_button:2131296266,
-   string:common_google_play_services_update_text:2131296267,
-   string:common_google_play_services_update_title:2131296268,
-   string:common_google_play_services_updating_text:2131296269,
-   string:common_google_play_services_wear_update_text:2131296270,
-   string:common_open_on_phone:2131296271,
-   string:status_bar_notification_info_overflow:2131296274,
+   string:common_google_play_services_unknown_issue:2131296256,
    style:LaunchTheme:2131361792,
    style:NormalTheme:2131361793,
    attr:android_color:-1,
@@ -2831,44 +720,37 @@ attr:imageAspectRatio:2130771982,
    attr:android_endY:-1,
    attr:android_tileMode:-1,
    attr:android_offset:-1
-Skipped unused resource res/color/common_google_signin_btn_text_dark.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/color/common_google_signin_btn_text_light.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/color/common_google_signin_btn_tint.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_icon_dark.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_icon_dark_focused.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_icon_dark_normal.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_icon_disabled.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_icon_light.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_icon_light_focused.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_icon_light_normal.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_text_dark.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_text_dark_focused.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_text_dark_normal.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_text_disabled.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_text_light.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_text_light_focused.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/common_google_signin_btn_text_light_normal.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png: 610 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png: 500 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png: 615 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png: 465 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-mdpi-v4/googleg_disabled_color_18.png: 281 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/drawable-mdpi-v4/googleg_standard_color_18.png: 562 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png: 897 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png: 683 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png: 960 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png: 694 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-hdpi-v4/googleg_disabled_color_18.png: 410 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/drawable-hdpi-v4/googleg_standard_color_18.png: 808 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png: 1032 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png: 776 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png: 1086 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png: 808 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-xhdpi-v4/googleg_disabled_color_18.png: 516 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/drawable-xhdpi-v4/googleg_standard_color_18.png: 982 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png: 1510 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png: 1138 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png: 1638 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png: 1255 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-xxhdpi-v4/googleg_disabled_color_18.png: 727 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/drawable-xxhdpi-v4/googleg_standard_color_18.png: 1615 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable/notification_bg.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/notification_bg_low.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/notification_icon_background.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/notification_tile_bg.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable-v21/notification_action_background.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notification_bg_low_normal.9.png: 215 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notification_bg_low_pressed.9.png: 223 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notification_bg_normal.9.png: 215 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png: 223 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png: 98 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_bg_low_normal.9.png: 212 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_bg_low_pressed.9.png: 225 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_bg_normal.9.png: 212 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png: 225 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png: 107 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notification_bg_low_normal.9.png: 221 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png: 252 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notification_bg_normal.9.png: 221 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png: 247 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png: 138 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/layout/custom_dialog.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout/notification_action.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout-v17/notification_action.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout/notification_action_tombstone.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout-v17/notification_action_tombstone.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout-v16/notification_template_custom_big.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout-v17/notification_template_custom_big.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout/notification_template_icon_group.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout/notification_template_part_chronometer.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout/notification_template_part_time.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout-v21/notification_action.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout-v21/notification_action_tombstone.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout-v21/notification_template_custom_big.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/layout-v21/notification_template_icon_group.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
