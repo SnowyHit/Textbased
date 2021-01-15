@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'dart:async';
+import 'package:textbased/Clicker.dart';
 
 class QuestionWidget extends StatefulWidget {
   const QuestionWidget({Key key}) : super(key: key) ;
@@ -43,53 +43,61 @@ class _QuestionWidgetState extends State<QuestionWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return  !isLoaded ? Container() :  Padding(
+    if (_counter == 4) {
+      return !isLoaded ? Container() : ClickerSection();
+    }
+    else {
+      return !isLoaded ? Container() : Padding(
         padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
         child: ListView(
-            scrollDirection: Axis.vertical,
-            children: [
-              Container(
-                  padding: EdgeInsets.all(20),
-                  color : Colors.black12,
-                  child: Text(
-                    "${qTree.Nodes[_counter].value.line}" ,
-                    textAlign: TextAlign.center,
-                  )
-              ) ,
-              Container(
-                  child : Column(
-                    children: qTree.Nodes[_counter].value.answers.asMap().entries.map<Widget>((answer) {
-                      return Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: SizedBox(
-                          width: double.infinity,
-                          child: OutlinedButton(
-                            onPressed: ((){}),
-                            onLongPress: (){
-                              setState(() {
-                                if(qTree.Nodes[_counter].haschildren)
-                                  {
-                                    point = point ;
-                                    _incrementCounter(qTree.Nodes[_counter].children[answer.key].index , point) ;
-                                  }
-                              });
-
-                            },
-                            child : Padding(
-                              padding: const EdgeInsets.all(20.0),
-                              child: Text(
-                                "${answer.value}" ,
-                              ),
-                            ) ,
+          scrollDirection: Axis.vertical,
+          children: [
+            Container(
+                padding: EdgeInsets.all(20),
+                color: Colors.black12,
+                child: Text(
+                  "${qTree.Nodes[_counter].value.line}",
+                  textAlign: TextAlign.center,
+                )
+            ),
+            Container(
+              child: Column(
+                children: qTree.Nodes[_counter].value.answers
+                    .asMap()
+                    .entries
+                    .map<Widget>((answer) {
+                  return Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton(
+                        onPressed: (() {}),
+                        onLongPress: () {
+                          setState(() {
+                            if (qTree.Nodes[_counter].haschildren) {
+                              point = point;
+                              _incrementCounter(
+                                  qTree.Nodes[_counter].children[answer.key]
+                                      .index, point);
+                            }
+                          });
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Text(
+                            "${answer.value}",
                           ),
                         ),
-                      );
-                    }).toList(),
-                  ),
-              )
-            ],
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ),
+            )
+          ],
         ),
       );
+    }
   }
 }
 

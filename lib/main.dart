@@ -24,7 +24,7 @@ void main()  {
           ),
         ),
       ),
-      home: Home(),
+      home : Home(),
 
     ));
   }
