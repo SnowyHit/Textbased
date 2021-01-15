@@ -19,6 +19,7 @@ void main()  {
             fontSize: 20,
           ),
           bodyText2: TextStyle(
+            color : Colors.white ,
             fontSize: 20 ,
           ),
         ),

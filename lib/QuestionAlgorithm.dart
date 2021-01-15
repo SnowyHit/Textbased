@@ -43,8 +43,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return  !isLoaded ? Container() : Scaffold(
-      body: Padding(
+    return  !isLoaded ? Container() :  Padding(
         padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
         child: ListView(
             scrollDirection: Axis.vertical,
@@ -90,8 +89,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
               )
             ],
         ),
-      ),
-    );
+      );
   }
 }
 
