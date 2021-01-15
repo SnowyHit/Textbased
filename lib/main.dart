@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'QuestionAlgorithm.dart';
-import 'dart:async';
 import 'package:toast/toast.dart';
 
 
@@ -37,21 +36,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    startTime();
-  }
-
-
-
-  startTime() async {
-    var duration = new Duration(seconds: 6);
-    return new Timer(duration, route);
-  }
-  route() {
-
-  }
 
   int _selectedIndex = 0;
 
@@ -160,7 +144,6 @@ class Homescreen extends StatelessWidget {
               scrollDirection: Axis.vertical,//.horizontal
               child: new Text(
                 " Double moon drive'a hoşgeldiniz. Burası Anasayfada yazılan yazıları içerir.",
-
               ),
             ),
       ),
