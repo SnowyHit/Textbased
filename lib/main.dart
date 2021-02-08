@@ -133,26 +133,89 @@ class _SettingsState extends State<Settings> {
     );
   }
 }
-
-class Homescreen extends StatelessWidget {
+class Homescreen extends StatefulWidget {
   const Homescreen({Key key}) : super(key: key) ;
   @override
+  _HomescreenState createState() => _HomescreenState();
+}
+
+class _HomescreenState extends State<Homescreen> {
+  int promote ;
+  bool isLoaded = false ;
+  int _clicks ;
+  List<String> promotions = [
+    "Uyuyor",
+    "İşçi" ,
+    "Bölüm sorumlusu" ,
+    "Patron" ,
+    "Bölge patronu" ,
+    "Uluslararası sorumlu" ,
+    "Hissedar" ,
+    "Şirket sahibi" ,
+  ] ;
+
+  void initState() {
+
+    super.initState();
+    _loadCounter();
+  }
+
+  _loadCounter() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    isLoaded = true;
+    setState(() {
+      _clicks = (prefs.getInt('clicks') ?? 0);
+      promote = (prefs.getInt('promote') ?? 0);
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: SingleChildScrollView(
+    return !isLoaded? Container() : Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: SingleChildScrollView(
               scrollDirection: Axis.vertical,//.horizontal
               child: new Text(
                 " Double moon drive'a hoşgeldiniz. Burası Anasayfada yazılan yazıları içerir.",
               ),
             ),
-      ),
+          ),
 
+        ),
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,//.horizontal
+              child: new Text(
+                "Paran :  ${_clicks}",
+              ),
+            ),
+          ),
+
+        ),
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,//.horizontal
+              child: new Text(
+                "Ünvanın :  ${promotions[promote]}",
+              ),
+            ),
+          ),
+
+        ),
+      ],
     );
-
   }
 }
+
 
 
 

@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:textbased/QuestionAlgorithm.dart';
 
-class ClickerSection extends StatefulWidget {
+class snake extends StatefulWidget {
   @override
-  _ClickerSectionState createState() => _ClickerSectionState();
+  _snakeState createState() => _snakeState();
 }
 
-class _ClickerSectionState extends State<ClickerSection> {
+class _snakeState extends State<snake> {
   bool isLoaded = false ;
   int promote= 1 ;
   int _clicks = 0;
@@ -105,7 +105,7 @@ class _ClickerSectionState extends State<ClickerSection> {
               ),
             ),
             TextButton.icon(onPressed: () {
-                _Leave();
+              _Leave();
             }, icon: Icon(Icons.airport_shuttle), label: Text("Yeterli"),)
           ],
         ),

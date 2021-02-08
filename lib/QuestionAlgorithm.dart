@@ -76,9 +76,8 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                           setState(() {
                             if (qTree.Nodes[_counter].haschildren) {
                               point = point;
-                              _incrementCounter(
-                                  qTree.Nodes[_counter].children[answer.key]
-                                      .index, point);
+                              _incrementCounter(qTree.Nodes[_counter].children[answer.key].index, point);
+                              print(_counter);
                             }
                           });
                         },
@@ -105,7 +104,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
 
 class Tree{
   List<Question> Questions = [
-    Question("Macerana Başlıyorsun. Sıkıcı bir ofis hayatında çalışan boş beleş bir insan ..", [".."], [0]),
+    Question(" Macerana Başlıyorsun. Sıkıcı bir ofis hayatında çalışan boş beleş bir insan ..", [".."], [0] ),
     Question(" ZZZZZZZt! Alarmın çalıyor. " , [" Alarmı sustur ve işe git. " , " Alarmı sustur v... "] , [0 , 0 ] ) ,
     Question(" Telefonun Çalıyor, \"İş Ali\". İçinden \"hasiktir...\" diyorsun. " , ["Aceleyle hazırlanıp işe git!  " , " Siktir et. "] , [0 , 0 ] ) ,
     Question(" Müdürün günlük fırçasını kayarken her zamanki gibi hayatın anlamını düşünüyorsun. " , [" İşe başla... "] , [0 ] ) ,
@@ -128,13 +127,13 @@ class Tree{
     Question(" Kahvaltığını getiren kuryeye para çıkartırken cebinde bir not olduğunu fark ediyorsun \"319/Çifte Ay Yolu...\". Dün geceden kalan hafızan biraz bulanık ", [" \"Allah allah yav... Bi bakalım şuraya ne varmış?\" ", " \"Beni ucuz hikaye yönlendirmeleriyle kandıramazsınız!!!\" "], []),
     Question(" Taksiyle kağıtta yazan adrese gidiyorsun. Biraz Tenha bir yerde büyük bir malikhane. Kapıdan birisi sana doğru yaklaşıp seni selamlıyor. \"Sebebi ziyaretinizi öğrenebilir miyim efendim?\" ", [" Kağıtı uzat " , " \"Sadece geçiyordum\" ", " Beni Haramidere'den Çatapat Ahmet gönderdi! "], []),
     Question(" Adam arkasını dönüp bir uzaklaşıp şaşırmış bir ses tonunda kulaklığına basarak bir şeyler konuşuyor. Şöyle geçin diyerek seni içeri davet ediyor ve kapıdan girdikten sonra önünde iki kişi belirmesiyle paketlenmen bir oluyor. Birkaç yardım çığlığı atmana fırsat vermeden kafana çuvalı geçiriyorlar. " , [" ... "], []),
-    Question("GİRİŞİN SONU", ["BÖLÜM 1"], []),
-  ];
-  List<Question> endings = [
+    Question(" GİRİŞİN SONU ", ["BÖLÜM 1"], []),
     Question("-SON-", ["..."], []),
-  ] ;
+
+  ];
+
   List<Node> Nodes= [] ;
-  List<Node> Endings = [] ;
+
    Tree(){
      int x = 0 ;
      for (var Q in Questions)
@@ -142,16 +141,9 @@ class Tree{
        Nodes.add(Node(Q , x));
        x = x+1 ;
      }
-     x = 0 ;
-     for (var Q in endings)
-     {
-       Endings.add(Node(Q , x));
-       x = x+1 ;
-     }
-
      Nodes[0].Addchild([Nodes[1]]) ;
      Nodes[1].Addchild([Nodes[3] , Nodes[2]]);
-     Nodes[2].Addchild([Nodes[3] , Endings[0]]);
+     Nodes[2].Addchild([Nodes[3] , Nodes[24]]);
      Nodes[3].Addchild( [Nodes[4]]);
      Nodes[4].Addchild([Nodes[5] ]);
      Nodes[5].Addchild([Nodes[6]  , Nodes[18]]);
@@ -169,9 +161,9 @@ class Tree{
      Nodes[17].Addchild([Nodes[23]]);
      Nodes[18].Addchild([Nodes[13]]);
      Nodes[19].Addchild([Nodes[20]]);
-     Nodes[20].Addchild( [Nodes[21] , Endings[0]] );
+     Nodes[20].Addchild( [Nodes[21] , Nodes[24]] );
      Nodes[21].Addchild( [Nodes[22],Nodes[22],Nodes[22]]);
-     Nodes[22].Addchild([Nodes[22]]);
+     Nodes[22].Addchild([Nodes[23]]);
    }
 
 
