@@ -188,7 +188,12 @@ class _HomescreenState extends State<Homescreen> {
             padding: const EdgeInsets.all(20.0),
             child: OutlinedButton(
               onPressed: (() {
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return Scaffold(body : Achievements()) ;
+                  }),
+                );
 
               }),
               child: Padding(
@@ -274,6 +279,60 @@ class _GamesState extends State<Games> {
     );
   }
 }
+class Achievements extends StatefulWidget {
+  @override
+  _AchievementsState createState() => _AchievementsState();
+}
+
+class _AchievementsState extends State<Achievements> {
+  bool isLoaded = false ;
+  bool ach ;
+  void initState() {
+
+    super.initState();
+    _loadCounter();
+  }
+
+  _loadCounter() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    isLoaded = true;
+    setState(() {
+      ach = (prefs.getBool('ach') ?? false);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return !isLoaded? Container() : Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,//.horizontal
+              child: new Text(
+                "Başarımlarınız",
+              ),
+            ),
+          ),
+
+        ),
+        if(!ach) Center(
+          child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text(
+                    "Played the game",
+                  ),
+                ),
+              )
+
+      ],
+    );
+  }
+}
+
 
 
 
