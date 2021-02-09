@@ -13,8 +13,9 @@ class _ClickerSectionState extends State<ClickerSection> {
   int promote= 1 ;
   int _clicks = 0;
   int _counter = 5 ;
+  bool clickerflag ;
   List<String> promotions = [
-    "",
+    "Uyuyor",
     "İşçi" ,
     "Bölüm sorumlusu" ,
     "Patron" ,
@@ -47,6 +48,7 @@ class _ClickerSectionState extends State<ClickerSection> {
     setState(() {
       _clicks = (prefs.getInt('clicks') ?? 0);
       promote = (prefs.getInt('promote') ?? 0);
+      clickerflag = (prefs.getBool('clickerflag') ?? false);
     });
   }
 
@@ -55,6 +57,7 @@ class _ClickerSectionState extends State<ClickerSection> {
     setState(() {
       prefs.setInt('counter', _counter);
       prefs.setInt('promote', promote);
+      prefs.setBool('clickerflag', true);
       flag = true ;
     });
   }
@@ -104,7 +107,7 @@ class _ClickerSectionState extends State<ClickerSection> {
                 ), label: Text("Kazan"),),
               ),
             ),
-            TextButton.icon(onPressed: () {
+            if(!clickerflag) TextButton.icon(onPressed: () {
                 _Leave();
             }, icon: Icon(Icons.airport_shuttle), label: Text("Yeterli"),)
           ],

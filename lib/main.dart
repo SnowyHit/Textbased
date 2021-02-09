@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'QuestionAlgorithm.dart';
+import 'Clicker.dart';
 import 'package:toast/toast.dart';
 
 
@@ -140,38 +141,10 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
-  int promote ;
-  bool isLoaded = false ;
-  int _clicks ;
-  List<String> promotions = [
-    "Uyuyor",
-    "İşçi" ,
-    "Bölüm sorumlusu" ,
-    "Patron" ,
-    "Bölge patronu" ,
-    "Uluslararası sorumlu" ,
-    "Hissedar" ,
-    "Şirket sahibi" ,
-  ] ;
-
-  void initState() {
-
-    super.initState();
-    _loadCounter();
-  }
-
-  _loadCounter() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    isLoaded = true;
-    setState(() {
-      _clicks = (prefs.getInt('clicks') ?? 0);
-      promote = (prefs.getInt('promote') ?? 0);
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
-    return !isLoaded? Container() : Column(
+    return  Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -190,24 +163,41 @@ class _HomescreenState extends State<Homescreen> {
         Center(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,//.horizontal
-              child: new Text(
-                "Paran :  ${_clicks}",
-              ),
-            ),
+              child: OutlinedButton(
+                onPressed: (() {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return Scaffold(body : Games()) ;
+                    }),
+                  );
+
+                }),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Text(
+                    "Oyunlar",
+                  ),
+                ),
+              )
           ),
 
         ),
         Center(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,//.horizontal
-              child: new Text(
-                "Ünvanın :  ${promotions[promote]}",
+            child: OutlinedButton(
+              onPressed: (() {
+
+
+              }),
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text(
+                  "Başarımlar",
+                ),
               ),
-            ),
+            )
           ),
 
         ),
@@ -215,6 +205,76 @@ class _HomescreenState extends State<Homescreen> {
     );
   }
 }
+
+class Games extends StatefulWidget {
+  @override
+  _GamesState createState() => _GamesState();
+}
+
+class _GamesState extends State<Games> {
+  bool isLoaded = false ;
+  bool clickerflag ;
+  void initState() {
+
+    super.initState();
+    _loadCounter();
+  }
+
+  _loadCounter() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    isLoaded = true;
+    setState(() {
+      clickerflag = (prefs.getBool('clickerflag') ?? false);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return !isLoaded? Container() : Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,//.horizontal
+              child: new Text(
+                "Şuana kadar oynadığınız oyunlar. tekrar oynamak için tıklayın.",
+              ),
+            ),
+          ),
+
+        ),
+        if(clickerflag) Center(
+          child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: OutlinedButton(
+                onPressed: (() {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return Scaffold(body : ClickerSection()) ;
+                    }),
+                  );
+
+                }),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Text(
+                    "Clicker",
+                  ),
+                ),
+              )
+          ),
+
+        ),
+       
+      ],
+    );
+  }
+}
+
 
 
 
