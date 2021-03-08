@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'QuestionAlgorithm.dart';
 import 'Clicker.dart';
+import 'snake.dart';
 import 'package:toast/toast.dart';
 
 
@@ -219,6 +220,7 @@ class Games extends StatefulWidget {
 class _GamesState extends State<Games> {
   bool isLoaded = false ;
   bool clickerflag ;
+  bool snakeflag ;
   void initState() {
 
     super.initState();
@@ -230,6 +232,7 @@ class _GamesState extends State<Games> {
     isLoaded = true;
     setState(() {
       clickerflag = (prefs.getBool('clickerflag') ?? false);
+      snakeflag = (prefs.getBool('clickerflag') ?? false);
     });
   }
 
@@ -268,6 +271,29 @@ class _GamesState extends State<Games> {
                   padding: const EdgeInsets.all(20.0),
                   child: Text(
                     "Clicker",
+                  ),
+                ),
+              )
+          ),
+
+        ),
+        if(clickerflag) Center(
+          child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: OutlinedButton(
+                onPressed: (() {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return Scaffold(body : snake()) ;
+                    }),
+                  );
+
+                }),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Text(
+                    "Snake",
                   ),
                 ),
               )
