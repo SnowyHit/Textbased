@@ -14,6 +14,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   int point = 0 ;
   bool isLoaded = false ;
   Tree qTree = new Tree();
+  bool isclicker = false ;
   @override
   void initState() {
     _loadCounter();
@@ -26,6 +27,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     setState(() {
       _counter = (prefs.getInt('counter') ?? 0);
       point = (prefs.getInt('point') ?? 0);
+      isclicker = (prefs.getBool('clickerflag') ?? false);
     });
   }
 
@@ -43,7 +45,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (_counter == 4) {
+    if ((_counter == 4 || _counter == 5 || _counter == 7) && !isclicker) {
       return !isLoaded ? Container() : ClickerSection();
     }
     else {
@@ -104,31 +106,16 @@ class _QuestionWidgetState extends State<QuestionWidget> {
 
 class Tree{
   List<Question> Questions = [
-    Question(" Macerana Başlıyorsun. Sıkıcı bir ofis hayatında çalışan boş beleş bir insan ..", [".."], [0] ),
-    Question(" ZZZZZZZt! Alarmın çalıyor. " , [" Alarmı sustur ve işe git. " , " Alarmı sustur v... "] , [0 , 0 ] ) ,
-    Question(" Telefonun Çalıyor, \"İş Ali\". İçinden \"hasiktir...\" diyorsun. " , ["Aceleyle hazırlanıp işe git!  " , " Siktir et. "] , [0 , 0 ] ) ,
-    Question(" Müdürün günlük fırçasını kayarken her zamanki gibi hayatın anlamını düşünüyorsun. " , [" İşe başla... "] , [0 ] ) ,
-    Question(" Belin ağrıyor... Beyaz yakalı olmanın dünyadaki en iyi iş olmadığını tekrar fark ediyorsun. Neyse ki yarım saat sonra paydos ve yarın tatil diyorsun ama iş arkadaşın mesai olduğunu hatırlatıyor... " , [ "Hayatı sikim..."] , [0 ] ),
-    Question(" İş çıkışı arkadaşlarını bara giderken görüyorsun. " , [" \"Bir kaç biradan bir şey olmaz.\" ", " \"Zaten yorgunum bi' de milletle mi uğraşıcam?\" "], []),
-    Question(" Arkadaşlarınla bar yolunu tutuyorsun. Barını neon ışıkları gözünü alıyor \"Vlad\'ın Yeri AmBar\". Saat Kavramı senin için anlamını yitiriyor. Koluna bakıyorsun saat gece yarısını geçmiş hatta iki olmuş. " , [" Dibini görmeyen ana... ", " Laura\'yı ara ve onu çok sevdiğini, seni neden böyle terkedip gittiğini sor... çocuklarına selam söyle. :( ", " \"Siz de mi hep bu bara gelirsiniz?\" ", " \"Galiba eve gitmem gerekiyor\" "], []),
-    Question(" Telefonunu arıyorsun, arıyorsun ama yok. Lan telefon zaten elindeymiş, \"Son tekilayı vurmasamıydım?\" diyorsun ama iş işten çoktan geçmiş. Telefonda Numarayı bulm... ", [" ... "], []),
-    Question(" Kadın ufak bir gülücük atıyor ve birasını yudumlamaya devam ediyor. Sen de gülücükten aldığın gazla devam ediyorsun. sırtından birisi seni dürtüyor. ", [" \"Şu an işim var görmüyor musun!?\" "], []),
-    Question(" Bir daha dürtüyor ve ne var diye arkanı dödüğünde bir ışık hüzmesi görüyorsun. ", [" ... "], []),
-    Question(" Tuvaletin geliyor ve tuvalete gidiyorsun. Bir bar tuvaleti gece 2 de nasıl olması gerekiyorsa öyle, temiz ve mis kokulu. İşini görüp yüzünü yıkıyorsun ve kendine bir daha içmemek için tekrar söz veriyorsun. Geri döndüğünde bir şeyler eksik diyorsun. Arkadaşların yok! Puştlar seni ekmiş gibi. ", [" Aramaya çalış. ", " Siktir et. Eve git. "], []),
-    Question(" İlk önce telefonuna davanıyorsun ama telefonunun şarjının bittiğini fark ediyorsun. Sonra Bir iki kere Alp! Mert! Nerdesiniz amk! diye bağırıyorsun. Koluna bir adam girip \"Birisi fazla kaçırmış galiba\" diyip seni kapına önüne atıyor. ", [" ... "], []),
-    Question(" \"Hava soğukmuş.\" diyorsun kafandan, iyi tarafından bakarsan alkolün etkisini azaltıp seni bir nebze canlandırıyor. Eve gitmen gerek ama yakında taksi göremiyorsun. Uzun bir yürüyüş olacak. ", [" Yola koyul. "], []),
-    Question(" Eve doğru giderken ara sokaktan bir takım sesler duyuyorsun ve ilgini çekiyor. Can çekişircesini köşeye oturmuş bir adam görmektesin ve adam sana bakarak elini açıyor. ", [" Adama yaklaş. ", " \"Başıma bela almasam iyi olur.\" "], []),
-    Question(" Yakınlaştıkça adamın yüzünün yarısının sanki yanmışcasına bozulmuş olduğunu ve ağızından kan geldiğini görüyorsun. Adamın bir şeyler söylemeye takati yok. Ceketinin iç cebinden bir adres çıkartıp sana veriyor. Sen kağıtı anlamaya çalışırken bir parıltı çakıyor ve adam ortadan kayboluyor. ", [" \"Hasiktir lan...\" ", " \"Lan hasiktir...\" "], []),
-    Question(" Ne olduğundan bihaber eve gidiyorsun ve gördüğünün sadece bir ilizyon olduğunu varsayarak direkt uyuyorsun.", [" ... "], []),
-    Question(" \"Bu saate hırlısı var hırsızı var... e hırlısı var.\" diyip yürürken arkandan bir panelvanın yaklaştığını görüyorsun. \"Bakar mısınız?... Faruk sokağı nerde biliyor musunuz?\" ", [" \"Uhh... Faruk caddesi olabilir mi?\" "], []),
-    Question(" Arka kapının açılmasıyla paketlenmen bir oluyor. Birkaç yardım çığlığı atmana fırsat vermeden kafana çuvalı geçiriyorlar." , [" ... "], []),
-    Question(" Eve yürürken iş arkadaşlarının arabaya bindiğini görüyorsun. \"Ulan ne vardı da arabayı boşanma sözleşmesine dahil ettin?\" ", [" \"Yapıcak birşey yok tabana kuvvet\" "], []),
-    Question(" Bağırış sesiyle uyanıyorsun, kafan leş gibi ağrıyor. Bağırış çağırış yine yan komşudan geliyor, \" 7/24 de kavga etmezsin be!\" diyorsun aklından. ", [" Önünde koca bi hafta sonu var, aslında 17 saat... eksi uyku. >:/ "], []),
-    Question(" Kahvaltığını getiren kuryeye para çıkartırken cebinde bir not olduğunu fark ediyorsun \"319/Çifte Ay Yolu...\". Dün geceden kalan hafızan biraz bulanık ", [" \"Allah allah yav... Bi bakalım şuraya ne varmış?\" ", " \"Beni ucuz hikaye yönlendirmeleriyle kandıramazsınız!!!\" "], []),
-    Question(" Taksiyle kağıtta yazan adrese gidiyorsun. Biraz Tenha bir yerde büyük bir malikhane. Kapıdan birisi sana doğru yaklaşıp seni selamlıyor. \"Sebebi ziyaretinizi öğrenebilir miyim efendim?\" ", [" Kağıtı uzat " , " \"Sadece geçiyordum\" ", " Beni Haramidere'den Çatapat Ahmet gönderdi! "], []),
-    Question(" Adam arkasını dönüp bir uzaklaşıp şaşırmış bir ses tonunda kulaklığına basarak bir şeyler konuşuyor. Şöyle geçin diyerek seni içeri davet ediyor ve kapıdan girdikten sonra önünde iki kişi belirmesiyle paketlenmen bir oluyor. Birkaç yardım çığlığı atmana fırsat vermeden kafana çuvalı geçiriyorlar. " , [" ... "], []),
-    Question(" GİRİŞİN SONU ", ["BÖLÜM 1"], []),
-    Question("-SON-", ["..."], []),
+    Question(" 0 Karanlık bir kütüphanede yalnız başına oturuyorsun , önündeki kitabın sayfalarını geçerken çıkan ses kulaklarına doluyor. Yorgunluktan gözlerin kapanmak üzere ' biraz daha araştırma yaparsam iyi olabilir. Aynı şekilde , biraz uyusam ve yarın devam etsemde iyi olabilir' diye düşünüyorsun. ", [" Araştırmaya devam et" , " Evine git ve uyu"], [0 , 0] ),
+    Question(" 1 Yorgun gözlerle göz gezdirdiğin kitapta yaşamla ölüm arasındaki çizgiden ve ruhlardan bahsediyor aynı konudan bahseden yüzlerce kitaptan sonra ilgini çeken bir konu gözüne çarptı , Ölüm meleği olarak resmedilen bir geyik.Mavi parlamaları olan ulu bir geyik resmedilmiş ve bunu haftalardır yaptığın araştırmada ilk defa görüyorsunBunun verdiği anlık heyecanla kitabın sayfalarını hızla çeviriyor , ve zamanın nasıl geçtiğini anlayamıyorsun.Kitapta eski bir efsaneden , hayvanların üstün güçlere sahip olduğu bir dünyadan bahsediliyor. Ancak enerjin oldukça düşüyor.Bu hikaye ilgini çektiği için devam etmek istiyorsun . Kütüphane sabahları burda çalışan tarafından düzenleniyor .eğer eve gidersen sabah bu kitabı bulamayabilirsin diye düşünüyorsun bir an. Ancak bu uykunun verdiği paranoyamı yoksa mantıklı bir düşüncemi emin olamıyorsun.Uzun süredir uyuyamadın. Kütüphane başı boş bırakılmış biryer sadece günde bir kez ona bakan birigeliyor ve hiçbir güvenlik önlemi yok." , [" Kitabı al ve eve git. " , " Kitabı bildiğin biryere bırak ve eve git " , " Araştırmaya devam et"] , [0 , 0 , 1 ] ) ,
+    Question(" 2 Yorgun gözlerle karanlık ormanın içinden yavaş yavaş yürüyorsun , bunudaha önce defalarca yaptın ancak her seferinde karanlığın getirdiği hafif gerginlikile yüzleşiyorsun. Kendine 'burda sadece ufak hayvanlar olur' diye tekrara ederek rahatlıyorsun.Bu tanrı'nın unuttuğu yerde kütüphanenin ne işi var diyorsun . Ölüm ve yaşamın mitolojisihakkındaki araştırman için her kütüphanenin önemi var biliyorsun , ama konsept olarak en uygun kütüphane bu oldu diye düşünüyorsun.Aklından bunlar geçerken evine vardın , anahtarını yavaşça taktıktan sonra eski püskü kapıyı gıcırdatmamak için yavaşça açıyorsun.Onu uyandırmak istemiyorsun. Artık uykuya olan özlemin iyice arttı ver yatağına kavuştuğunda derin bir iç çekip uykuya dalıyorsun.Bu araştırman elbet bir gün onu kurtarmana yardım edecek. ", ["..." ], [0] ),
+    Question(" 3 İlgini çeken birşeyin verdiği heyecan senin enerjin oluyor ve devam ediyorsun.Kitapta bahsedilen olay , yüzyıllar önce yaşadığın yerde geçmiş efsanevi bir olayEskiden büyük hayvanların büyü gücüyle hükmettiği bir dünyada yaşayan normalinsanların hikayesini anlatıyor. Buradan bazı olaylar sonucunda kurtulduklarını söylüyorlar ancakkitapta bu hikayeyi ancak bu kadar anlatmış olduklarını görüyorsun.Bu kitapta bahsedilen asıl kısım buolayların hepsinde ortak görülen geyik ve insanların savaşlarda bunu gördükleri. Geyiğin onlarınruhlarına rehberlik etmek için parladığını , ruhların son anlarının sessiz ve huzurlu olması için duyma duyusunu yok ettiğinden ,bazı geyiklerin buna benzer özelliklerde olduğundan ve bu 'ölüm tanrısı' nın yeryüzündeki yansıması olduğundan bahsediyor.Bu geyiklerin hiçbir okçu tarafından vurulamayacağını ve vurulduğunda ona zarar verenlere geçen bir lanetten bahsediliyor. Kitabın sayfalarını çevirirkensayfaların ağırlaşmaya başladığını hissediyorsun. Herşey onun için diyorsun kendi kendine. Onu kurtarmanın bir yolunu bulabilirim . . .Ve kitaba kafanı gömerek vücudunun uzun saatlerdir aradığı uykuya dalıyorsun. ", ["..." ], [0] ),
+    Question(" 4 Burnuna bir yanık kokusu geliyor. Koku seni hızlıca uyandırıyor. Masanın üstünde dün okuduğun kitabın alev almış olduğunu görüyorsun. ", [" Söndürmek için su ara" ," Kütüphaneden kaç !" ], [0, 0 ] ),
+    Question(" 5 Burnuna bir yanık kokusu geliyor. Koku seni hızlıca uyandırıyor. Etrafına bakıyorsun ancak dumanı göremiyorsun", [" Acilen onun odasına koş" , " Yanık kokusunu kontrol et" ], [0, 0 ] ),
+    Question(" 6 Yorgun gözlerle karanlık ormanın içinden yavaş yavaş yürüyorsun , bunudaha önce defalarca yaptın ancak her seferinde karanlığın getirdiği hafif gerginlikile yüzleşiyorsun. Kendine 'burda sadece ufak hayvanlar olur' diye tekrara ederek rahatlıyorsun.Bu tanrı'nın unuttuğu yerde kütüphanenin ne işi var diyorsun . Ölüm ve yaşamın mitolojisihakkındaki araştırman için her kütüphanenin önemi var biliyorsun , ama konsept olarak en uygun kütüphane bu oldu diye düşünüyorsun.Aklından bunlar geçerken evine vardın , anahtarını yavaşça taktıktan sonra eski püskü kapıyı gıcırdatmamak için yavaşça açıyorsun.Onu uyandırmak istemiyorsun. Artık uykuya olan özlemin iyice arttı ver yatağına kavuştuğunda derin bir iç çekip uykuya dalıyorsun.Bu araştırman elbet bir gün onu kurtarmana yardım edecek. ", ["..." ], [0] ),
+    Question(" 7 Dinlenmiş bir vücut ile güneşli bir sabaha , kapındaki tıklama ile uyandın. ", ["..." ], [0] ),
+    Question(" 8 Son", ["..." ], [0] ),
+
 
   ];
 
@@ -141,29 +128,14 @@ class Tree{
        Nodes.add(Node(Q , x));
        x = x+1 ;
      }
-     Nodes[0].Addchild([Nodes[1]]) ;
-     Nodes[1].Addchild([Nodes[3] , Nodes[2]]);
-     Nodes[2].Addchild([Nodes[3] , Nodes[24]]);
-     Nodes[3].Addchild( [Nodes[4]]);
-     Nodes[4].Addchild([Nodes[5] ]);
-     Nodes[5].Addchild([Nodes[6]  , Nodes[18]]);
-     Nodes[6].Addchild([Nodes[19] , Nodes[7] , Nodes[8] , Nodes[10]] );
-     Nodes[7].Addchild([Nodes[19]]);
-     Nodes[8].Addchild( [Nodes[9]]);
-     Nodes[9].Addchild([Nodes[9]] );
-     Nodes[10].Addchild( [Nodes[11] , Nodes[11]]);
-     Nodes[11].Addchild( [Nodes[12]] );
-     Nodes[12].Addchild([Nodes[13]]);
-     Nodes[13].Addchild([Nodes[14],Nodes[16]]);
-     Nodes[14].Addchild([Nodes[15] , Nodes[15]]);
-     Nodes[15].Addchild([Nodes[19]]);
-     Nodes[16].Addchild( [Nodes[17]] );
-     Nodes[17].Addchild([Nodes[23]]);
-     Nodes[18].Addchild([Nodes[13]]);
-     Nodes[19].Addchild([Nodes[20]]);
-     Nodes[20].Addchild( [Nodes[21] , Nodes[24]] );
-     Nodes[21].Addchild( [Nodes[22],Nodes[22],Nodes[22]]);
-     Nodes[22].Addchild([Nodes[23]]);
+     Nodes[0].Addchild([Nodes[1] , Nodes[2]]) ;
+     Nodes[1].Addchild([Nodes[6] , Nodes[2] , Nodes[3]]) ;
+     Nodes[2].Addchild([Nodes[7]]) ;
+     Nodes[3].Addchild([Nodes[4]]) ;
+     Nodes[4].Addchild([Nodes[8]]) ;
+     Nodes[5].Addchild([Nodes[8]]) ;
+     Nodes[6].Addchild([Nodes[5]]) ;
+     Nodes[7].Addchild([Nodes[8]]) ;
    }
 
 

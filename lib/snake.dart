@@ -20,10 +20,13 @@ class _snakeState extends State<snake> {
   }
   void startGame(){
     snakepos = [10,20];
-    const duration = const Duration(milliseconds: 100) ;
+    const duration = const Duration(milliseconds: 150) ;
     Timer.periodic(duration, (Timer timer) {
       updateSnake();
-
+      if(gameOver())
+        {
+          timer.cancel() ;
+        }
     }) ;
   }
   var direction = "D" ;
@@ -82,6 +85,26 @@ class _snakeState extends State<snake> {
         }
 
     });
+  }
+  bool gameOver()
+  {
+    for (int i = 0 ;  i<snakepos.length ; i++)
+      {
+        int count = 0 ;
+        for (int j = 0 ; j < snakepos.length ; j++)
+          {
+            if (snakepos[i] == snakepos[j])
+              {
+                count += 1 ;
+              }
+            if (count == 2 )
+            {
+              return true;
+            }
+          }
+
+      }
+    return false ;
   }
   bool isLoaded = false ;
   bool Leaveflag = false ;
@@ -175,7 +198,7 @@ class _snakeState extends State<snake> {
                             padding: EdgeInsets.all(2),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(5),
-                              child : Container(color: Colors.grey[900],),
+                              child : Container(),
                             )
                         ) ;
                       }
@@ -190,7 +213,8 @@ class _snakeState extends State<snake> {
                     GestureDetector(
                       onTap :  startGame,
                       child:  Text("Başla"),
-                    )
+                    ), 
+                     Text("Skor : " + snakepos.length.toString())
                   ],
                 ) ,
 
