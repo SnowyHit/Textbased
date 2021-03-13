@@ -232,7 +232,7 @@ class _GamesState extends State<Games> {
     isLoaded = true;
     setState(() {
       clickerflag = (prefs.getBool('clickerflag') ?? false);
-      snakeflag = (prefs.getBool('clickerflag') ?? false);
+      snakeflag = (prefs.getBool('snakeflag') ?? false);
     });
   }
 
@@ -277,7 +277,7 @@ class _GamesState extends State<Games> {
           ),
 
         ),
-        if(clickerflag) Center(
+        if(snakeflag) Center(
           child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: OutlinedButton(
