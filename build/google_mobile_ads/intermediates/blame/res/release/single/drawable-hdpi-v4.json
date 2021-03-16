@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\D\\Flutter_projects\\textbased\\build\\google_mobile_ads\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notification_bg_normal.9.png",
+        "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\de77e1e9fa8694fe2078119a1bd351b7\\core-1.2.0\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\D\\Flutter_projects\\textbased\\build\\google_mobile_ads\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\de77e1e9fa8694fe2078119a1bd351b7\\core-1.2.0\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "C:\\D\\Flutter_projects\\textbased\\build\\google_mobile_ads\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\de77e1e9fa8694fe2078119a1bd351b7\\core-1.2.0\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\D\\Flutter_projects\\textbased\\build\\google_mobile_ads\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\de77e1e9fa8694fe2078119a1bd351b7\\core-1.2.0\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "C:\\D\\Flutter_projects\\textbased\\build\\google_mobile_ads\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\de77e1e9fa8694fe2078119a1bd351b7\\core-1.2.0\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+    }
+]

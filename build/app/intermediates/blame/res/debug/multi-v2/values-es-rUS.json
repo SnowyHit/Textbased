@@ -4,7 +4,7 @@
             "outputFile": "C:\\D\\Flutter_projects\\textbased\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rUS\\values-es-rUS.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\bf06bf8e9202a371e5478e396c01b970\\jetified-play-services-basement-17.0.0\\res\\values-es-rUS\\values.xml",
+                    "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\be1841f9d18bfb8bf82d389a0f1c7c31\\jetified-play-services-basement-17.3.0\\res\\values-es-rUS\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\values-es-rUS\\values-es-rUS.xml",
+                    "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\dafa1b04b02051df178062ceb393a408\\jetified-play-services-ads-19.7.0\\res\\values-es-rUS\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "203,314,451,536,699,788,936,1066,1137,1271,1336,1402,1489,1609",
+                        "endColumns": "110,136,84,162,88,147,129,70,133,64,65,86,119,74",
+                        "endOffsets": "313,450,535,698,787,935,1065,1136,1270,1335,1401,1488,1608,1683"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "310,425,566,655,822,915,1067,1201,1276,1414,1483,1553,1644,1768",
+                        "endColumns": "114,140,88,166,92,151,133,74,137,68,69,90,123,78",
+                        "endOffsets": "420,561,650,817,910,1062,1196,1271,1409,1478,1548,1639,1763,1842"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\de77e1e9fa8694fe2078119a1bd351b7\\core-1.2.0\\res\\values-es-rUS\\values-es-rUS.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,11 +47,11 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "3",
+                        "startLines": "17",
                         "startColumns": "4",
-                        "startOffsets": "310",
+                        "startOffsets": "1847",
                         "endColumns": "100",
-                        "endOffsets": "406"
+                        "endOffsets": "1943"
                     }
                 }
             ]

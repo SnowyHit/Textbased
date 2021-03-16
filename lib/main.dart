@@ -1,35 +1,55 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'QuestionAlgorithm.dart';
 import 'Clicker.dart';
 import 'snake.dart';
 import 'package:toast/toast.dart';
-
+import 'package:provider/provider.dart';
+import 'ad_unit.dart';
 
 
 void main()  {
-    runApp(MaterialApp(
-      theme : ThemeData.dark().copyWith(
-        outlinedButtonTheme: OutlinedButtonThemeData(
-          style: OutlinedButton.styleFrom(
-            primary: Colors.white,
-          ),
-        ),
-        textTheme: TextTheme(
-          button: TextStyle(
-            fontSize: 20,
-          ),
-          bodyText2: TextStyle(
-            color : Colors.white ,
-            fontSize: 20 ,
-          ),
-        ),
-      ),
-      home : Home(),
-
-    ));
+    WidgetsFlutterBinding.ensureInitialized();
+    final initFuture = MobileAds.instance.initialize();
+    final adState = AdState(initFuture);
+    runApp(
+        Provider.value(
+          value: adState,
+          builder: (context , child) => Matapp(),
+        )
+    );
   }
+
+class Matapp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return
+      MaterialApp(
+        theme : ThemeData.dark().copyWith(
+          outlinedButtonTheme: OutlinedButtonThemeData(
+            style: OutlinedButton.styleFrom(
+              primary: Colors.white,
+            ),
+          ),
+          textTheme: TextTheme(
+            button: TextStyle(
+              fontSize: 20,
+            ),
+            bodyText2: TextStyle(
+              color : Colors.white ,
+              fontSize: 20 ,
+            ),
+          ),
+        ),
+        home : Home(),
+
+      ) ;
+
+  }
+}
+
 
 class Home extends StatefulWidget {
 
@@ -142,7 +162,22 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
-
+  BannerAd banner;
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final adState = Provider.of<AdState>(context) ;
+    adState.initialization.then((status){
+      setState(() {
+        banner = BannerAd(
+          adUnitId: adState.bannerAdUnitId ,
+          size: AdSize.banner ,
+          request: AdRequest(),
+          listener: adState.adListener,
+        )..load();
+      });
+    });
+}
   @override
   Widget build(BuildContext context) {
     return  Column(
@@ -207,6 +242,15 @@ class _HomescreenState extends State<Homescreen> {
           ),
 
         ),
+        if(banner == null)
+          SizedBox(
+            height: 100,
+        )
+        else
+          Container(
+            height: 50,
+            child: AdWidget(ad:banner),
+          ) ,
       ],
     );
   }

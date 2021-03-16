@@ -4,7 +4,24 @@
             "outputFile": "C:\\D\\Flutter_projects\\textbased\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-sl\\values-sl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\bf06bf8e9202a371e5478e396c01b970\\jetified-play-services-basement-17.0.0\\res\\values-sl\\values.xml",
+                    "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\dafa1b04b02051df178062ceb393a408\\jetified-play-services-ads-19.7.0\\res\\values-sl\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "199,317,459,543,696,783,928,1054,1129,1239,1304,1368,1458,1566",
+                        "endColumns": "117,141,83,152,86,144,125,74,109,64,63,89,107,73",
+                        "endOffsets": "316,458,542,695,782,927,1053,1128,1238,1303,1367,1457,1565,1639"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "304,426,572,660,817,908,1057,1187,1266,1380,1449,1517,1611,1723",
+                        "endColumns": "121,145,87,156,90,148,129,78,113,68,67,93,111,77",
+                        "endOffsets": "421,567,655,812,903,1052,1182,1261,1375,1444,1512,1606,1718,1796"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\be1841f9d18bfb8bf82d389a0f1c7c31\\jetified-play-services-basement-17.3.0\\res\\values-sl\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\values-sl\\values-sl.xml",
+                    "source": "C:\\Users\\merto\\.gradle\\caches\\transforms-2\\files-2.1\\de77e1e9fa8694fe2078119a1bd351b7\\core-1.2.0\\res\\values-sl\\values-sl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,11 +47,11 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "3",
+                        "startLines": "17",
                         "startColumns": "4",
-                        "startOffsets": "304",
+                        "startOffsets": "1801",
                         "endColumns": "100",
-                        "endOffsets": "400"
+                        "endOffsets": "1897"
                     }
                 }
             ]
