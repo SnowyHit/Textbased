@@ -96,12 +96,7 @@ class _HomeState extends State<Home> {
             // Important: Remove any padding from the ListView.
             padding: EdgeInsets.zero,
             children: <Widget>[
-              DrawerHeader(
-                child: Text('Drawer Header'),
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                ),
-              ),
+
               ListTile(
                 title: Text('Anasayfa'),
                 onTap: () {
