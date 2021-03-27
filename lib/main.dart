@@ -119,6 +119,7 @@ class _HomeState extends State<Home> {
       appBar : AppBar(title: Text("A R A Ş T I R M A"), centerTitle: true,),
       body: PageStorage(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             _widgetOptions[_selectedIndex],
@@ -279,33 +280,34 @@ class _HomescreenState extends State<Homescreen> {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
+    return  Center(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
 
-        Image(
-            image : AssetImage('Assets/gifs/book.gif'),
-            width: 200.0,
-            height: 200.0
-        ),
-        if(newPlayerFlag)
-          Card(
-            child:Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Text("Araştırma oyununa hoşgeldiniz. Verdiğiniz her karak ajbnqwjodnmqpölfqğwfğ qkqmw fklqnkjn qkje nqwk nqken qwkjne jkqnwjnkqne kqwne kjqw"),
-              ) ,
-          )
-        else
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Card(child:Padding(
+          Image(
+              image : AssetImage('Assets/gifs/book.gif'),
+              width: 200.0,
+              height: 200.0
+          ),
+          if(newPlayerFlag)
+            Card(
+              child:Padding(
             padding: const EdgeInsets.all(20.0),
-            child: Text("Hikayeye devam edin , istatistik falan filan Hikayeye devam edin , istatistik falan filan Hikayeye devam edin , istatistik falan filan Hikayeye devam edin , istatistik falan filan Hikayeye devam edin , istatistik falan filan Hikayeye devam edin , istatistik falan filan "),
-            ) , ),
-          ) ,
-
-      ],
+            child: Text("Araştırma oyununa hoşgeldiniz.Bu seçim üzerine kurulu hikaye oyununda , yaptığınız seçimler hikayenin gidişatını belirleyecek. Aynı seçimlere göre karşınıza çıkan zorlukları'da yenmek zorunda kalacaksınız. Eğer hazırsan .."),
+                ) ,
+            )
+          else
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Card(child:Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text("Şuana kadar yaptığın şeyler ; \n - Hikayeye başladın."),
+              ) , ),
+            ) ,
+        ],
+      ),
     );
   }
 }

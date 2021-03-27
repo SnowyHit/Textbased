@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'file:///C:/D/Flutter_projects/textbased/lib/Games/QuestionAlgorithm.dart';
+import 'QuestionAlgorithm.dart';
 
 class ClickerSection extends StatefulWidget {
   @override
