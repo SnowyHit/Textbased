@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../Games/QuestionAlgorithm.dart';
-import '../Games/Clicker.dart';
-import '../Games/snake.dart';
 import 'package:provider/provider.dart';
 import 'ad_unit.dart';
 import 'settings.dart' ;
+import 'Games.dart' ;
 
 
 void main()  {
@@ -58,17 +57,52 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  BannerAd banner;
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final adState = Provider.of<AdState>(context) ;
+    adState.initialization.then((status){
+      setState(() {
+        banner = BannerAd(
+          adUnitId: adState.bannerAdUnitId ,
+          size: AdSize.banner ,
+          request: AdRequest(),
+          listener: adState.adListener,
+        )..load();
+      });
+    });
+  }
   @override
 
   int _selectedIndex = 0;
+  String fabtext = "" ;
+  bool newPlayerFlag = true ;
+  void initState() {
+
+    super.initState();
+    _load();
+  }
+
+  _load() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      newPlayerFlag = (prefs.getBool('clickerflag') ?? true);
+      if(newPlayerFlag){
+        fabtext = "Hikayeye Başla !" ;
+      }
+      else{
+        fabtext = "Devam et .." ;
+      }
+    });
+  }
 
   static List<Widget> _widgetOptions = <Widget>[
     Homescreen(),
     Settings(),
-    QuestionWidget(),
     Help() ,
-    SPrefs() ,
     Games(),
+    SPrefs() ,
   ];
 
   final PageStorageBucket bucket = PageStorageBucket();
@@ -84,7 +118,28 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar : AppBar(title: Text("A R A Ş T I R M A"), centerTitle: true,),
       body: PageStorage(
-        child: _widgetOptions[_selectedIndex] ,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            _widgetOptions[_selectedIndex],
+            if(banner == null)
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+                child: SizedBox(
+                  height: 100,
+                ),
+              )
+            else
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+                child: Container(
+                  height: 50,
+                  child: AdWidget(ad:banner),
+                ),
+              ) ,
+
+          ],
+        ) ,
         bucket: bucket ,
       ) ,
       drawer: SafeArea(
@@ -96,57 +151,66 @@ class _HomeState extends State<Home> {
             // Important: Remove any padding from the ListView.
             padding: EdgeInsets.zero,
             children: <Widget>[
+              Container(height: 200,) ,
+              Card(
+                child: ListTile(
+                  leading: Icon(Icons.home),
+                  title: Text('Anasayfa'),
+                  trailing: Icon(Icons.keyboard_arrow_right),
+                  onTap: () {
+                    // Update the state of the app
+                    _onItemTapped(0);
+                    // Then close the drawer
+                    Navigator.pop(context);
+                  },
+                ),
+              ),
 
-              ListTile(
-                title: Text('Anasayfa'),
-                onTap: () {
-                  // Update the state of the app
-                  _onItemTapped(0);
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                title: Text('Ayarlar'),
-                onTap: () {
-                  // Update the state of the app
-                  _onItemTapped(1);
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
+              Card(
+                child: ListTile(
+                  leading: Icon(Icons.settings),
+                  title: Text('Ayarlar'),
+                  trailing: Icon(Icons.keyboard_arrow_right),
+                  onTap: () {
+                    // Update the state of the app
+                    _onItemTapped(1);
+                    // Then close the drawer
+                    Navigator.pop(context);
+                  },
+                ),
               ) ,
-              ListTile(
-                title: Text('Hikaye'),
-                onTap: () {
-                  // Update the state of the app
-                  _onItemTapped(2);
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
+
+              Card(
+                child: ListTile(
+                  leading: Icon(Icons.help),
+                  title: Text('Yardım'),
+                  trailing: Icon(Icons.keyboard_arrow_right),
+                  onTap: () {
+                    // Update the state of the app
+                    _onItemTapped(2);
+                    // Then close the drawer
+                    Navigator.pop(context);
+                  },
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  leading: Icon(Icons.all_inclusive),
+                  title: Text('Oyunlar'),
+                  trailing: Icon(Icons.keyboard_arrow_right),
+                  onTap: () {
+                    // Update the state of the app
+                    _onItemTapped(3);
+                    // Then close the drawer
+                    Navigator.pop(context);
+                  },
+                ),
               ),
               ListTile(
-                title: Text('Yardım'),
-                onTap: () {
-                  // Update the state of the app
-                  _onItemTapped(3);
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                title: Text('SPREFS'),
+                title: Text('Sprefs'),
                 onTap: () {
                   // Update the state of the app
                   _onItemTapped(4);
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                title: Text('Oyunlar'),
-                onTap: () {
-                  // Update the state of the app
-                  _onItemTapped(5);
                   // Then close the drawer
                   Navigator.pop(context);
                 },
@@ -155,8 +219,16 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-      ),
 
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        label: Text(fabtext),
+        icon: Icon(Icons.arrow_forward_ios_outlined),
+        backgroundColor: Colors.lightGreen,
+      ),
     );
   }
 }
@@ -182,22 +254,7 @@ class _HomescreenState extends State<Homescreen> {
     });
   }
 
-  BannerAd banner;
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    final adState = Provider.of<AdState>(context) ;
-    adState.initialization.then((status){
-      setState(() {
-        banner = BannerAd(
-          adUnitId: adState.bannerAdUnitId ,
-          size: AdSize.banner ,
-          request: AdRequest(),
-          listener: adState.adListener,
-        )..load();
-      });
-    });
-}
+
   @override
   Widget build(BuildContext context) {
     return  Column(
@@ -225,120 +282,13 @@ class _HomescreenState extends State<Homescreen> {
             child: Text("Hikayeye devam edin , istatistik falan filan Hikayeye devam edin , istatistik falan filan Hikayeye devam edin , istatistik falan filan Hikayeye devam edin , istatistik falan filan Hikayeye devam edin , istatistik falan filan Hikayeye devam edin , istatistik falan filan "),
             ) , ),
           ) ,
-        if(banner == null)
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
-            child: SizedBox(
-              height: 100,
-            ),
-          )
-        else
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
-            child: Container(
-              height: 50,
-              child: AdWidget(ad:banner),
-            ),
-          ) ,
 
       ],
     );
   }
 }
 
-class Games extends StatefulWidget {
-  @override
-  _GamesState createState() => _GamesState();
-}
 
-class _GamesState extends State<Games> {
-  bool isLoaded = false ;
-  bool clickerflag ;
-  bool snakeflag ;
-  void initState() {
-
-    super.initState();
-    _loadCounter();
-  }
-
-  _loadCounter() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    isLoaded = true;
-    setState(() {
-      clickerflag = (prefs.getBool('clickerflag') ?? false);
-      snakeflag = (prefs.getBool('snakeflag') ?? false);
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return !isLoaded? Container() : Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Center(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,//.horizontal
-              child: new Text(
-                "Şuana kadar oynadığınız oyunlar. tekrar oynamak için tıklayın.",
-              ),
-            ),
-          ),
-
-        ),
-        if(clickerflag) Center(
-          child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: OutlinedButton(
-                onPressed: (() {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return Scaffold(body : ClickerSection()) ;
-                    }),
-                  );
-
-                }),
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Text(
-                    "Clicker",
-                  ),
-                ),
-              )
-          ),
-
-        ),
-        if(snakeflag) Center(
-          child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: OutlinedButton(
-                onPressed: (() {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return Scaffold(body : snake()) ;
-                    }),
-                  );
-
-                }),
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Text(
-                    "Snake",
-                  ),
-                ),
-              )
-          ),
-
-        ),
-
-      ],
-    );
-  }
-}
 class Help extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
