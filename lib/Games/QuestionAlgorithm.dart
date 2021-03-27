@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'file:///C:/D/Flutter_projects/textbased/lib/Games/Clicker.dart';
-import 'file:///C:/D/Flutter_projects/textbased/lib/Games/snake.dart';
 
 class QuestionWidget extends StatefulWidget {
   const QuestionWidget({Key key}) : super(key: key) ;
@@ -15,8 +13,6 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   int point = 0 ;
   bool isLoaded = false ;
   Tree qTree = new Tree();
-  bool isclicker = false ;
-  bool issnake = false ;
   @override
   void initState() {
     _loadCounter();
@@ -29,8 +25,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     setState(() {
       _counter = (prefs.getInt('counter') ?? 0);
       point = (prefs.getInt('point') ?? 0);
-      isclicker = (prefs.getBool('clickerflag') ?? false);
-      issnake = (prefs.getBool('snakeflag') ?? false);
+
     });
   }
 
@@ -48,13 +43,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if ((_counter == 4 || _counter == 5 || _counter == 7) && !isclicker) {
-      return !isLoaded ? Container() : ClickerSection();
-    }
-    else if((_counter == 14 || _counter == 15 || _counter == 16|| _counter == 17) && !issnake) {
-      return !isLoaded ? Container() : snake();
-    }
-    else {
+
       return !isLoaded ? Container() : Padding(
         padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
         child: ListView(
@@ -100,13 +89,14 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                   );
                 }).toList(),
               ),
-            )
+            ),
+            Container(height: 80 ,) ,  //This is for FAB to get out of the way
           ],
         ),
       );
     }
   }
-}
+
 
 
 
