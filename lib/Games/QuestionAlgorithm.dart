@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:textbased/Clicker.dart';
-import 'package:textbased/snake.dart';
+import 'file:///C:/D/Flutter_projects/textbased/lib/Games/Clicker.dart';
+import 'file:///C:/D/Flutter_projects/textbased/lib/Games/snake.dart';
 
 class QuestionWidget extends StatefulWidget {
   const QuestionWidget({Key key}) : super(key: key) ;

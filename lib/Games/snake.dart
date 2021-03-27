@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:textbased/QuestionAlgorithm.dart';
+import 'file:///C:/D/Flutter_projects/textbased/lib/Games/QuestionAlgorithm.dart';
 import 'dart:math';
 import 'dart:async';
 
@@ -13,7 +13,56 @@ class snake extends StatefulWidget {
 class _snakeState extends State<snake> {
   bool gameflag = false ;
   bool earlyend = false ;
-  bool endflag = false ;
+
+  bool isLoaded = false ;
+  bool Leaveflag = false ;
+  int snakepoint = 0 ;
+  bool snakeflag = false ;
+  int snakehiscore = 0 ;
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  _load() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    isLoaded = true;
+    setState(() {
+      snakeflag = (prefs.getBool('snakeflag') ?? false);
+      snakepoint = (prefs.getInt('snakepoint') ?? 0);
+      direction = (prefs.getString('direction') ?? "D");
+      snakehiscore = (prefs.getInt('snakehiscore') ?? 0);
+    });
+  }
+
+  _Leave() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      prefs.setBool('snakeflag', true);
+      prefs.setInt('snakepoint', (snakepos.length));
+
+      Leaveflag = true ;
+    });
+  }
+  setdirect() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      prefs.setString('direction', direction);
+      sethiscore();
+    });
+  }
+  sethiscore() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      if(snakehiscore< (snakepos.length))
+      {
+        snakehiscore = snakepos.length ;
+        prefs.setInt('snakehiscore', snakehiscore);
+      }
+    });
+  }
+
   static List<int> snakepos = [10 , 20 ] ;
   int numberofsquares = 160 ;
   static var randomnum = Random() ;
@@ -22,7 +71,6 @@ class _snakeState extends State<snake> {
     food = randomnum.nextInt(160) ;
   }
   void startGame(){
-    endflag = false ;
     earlyend = false ;
     gameflag = true ;
     const duration = const Duration(milliseconds: 150) ;
@@ -111,6 +159,7 @@ class _snakeState extends State<snake> {
               }
             if (count == 2 )
             {
+
               return true;
             }
           }
@@ -120,7 +169,6 @@ class _snakeState extends State<snake> {
   }
 
   void showGameOverScreen(){
-    endflag = true ;
     String txt ;
     if(snakepoint > 20)
       {
@@ -142,7 +190,6 @@ class _snakeState extends State<snake> {
           }, icon: Icon(Icons.arrow_right_sharp), label: Text("Tekrar Oyna"),),
           if(!snakeflag) TextButton.icon(onPressed: () {
             _Leave();
-            endflag=false  ;
             Navigator.of(context).pop();
           }, icon: Icon(Icons.arrow_right_sharp), label: Text("Arkana yaslan"),)
         ],
@@ -150,41 +197,7 @@ class _snakeState extends State<snake> {
     }
     ) ;
   }
-  bool isLoaded = false ;
-  bool Leaveflag = false ;
-  int snakepoint = 0 ;
-  bool snakeflag = false ;
-  @override
-  void initState() {
 
-    super.initState();
-    _load();
-  }
-
-  _load() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    isLoaded = true;
-    setState(() {
-      snakeflag = (prefs.getBool('snakeflag') ?? false);
-      snakepoint = (prefs.getInt('snakepoint') ?? 0);
-      direction = (prefs.getString('direction') ?? "D");
-    });
-  }
-
-  _Leave() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      prefs.setBool('snakeflag', true);
-      prefs.setInt('snakepoint', (snakepos.length));
-      Leaveflag = true ;
-    });
-  }
-  setdirect() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      prefs.setString('direction', direction);
-    });
-  }
   void onBackPressed(){
     earlyend = true ;
     if(snakeflag){Navigator.pop(context);}
@@ -192,7 +205,6 @@ class _snakeState extends State<snake> {
 
   @override
   Widget build(BuildContext context) {
-    if(!endflag){
       if (Leaveflag) {
       return WillPopScope(
         onWillPop: () async {
@@ -201,8 +213,8 @@ class _snakeState extends State<snake> {
         },
         child: QuestionWidget(),
       );
-    }
-    else {
+      }
+      else {
       return WillPopScope(
         onWillPop: () async {
           onBackPressed(); // Action to perform on back pressed
@@ -278,9 +290,10 @@ class _snakeState extends State<snake> {
                       startGame();
                     }, icon: Icon(Icons.arrow_drop_down_sharp), label: Text("Yemeye başla"),) ,
                     if(gameflag)Text("Yemek: " + snakepos.length.toString()) ,
-                    if(!snakeflag) TextButton.icon(onLongPress: () {
+                    if(!snakeflag) TextButton.icon(
+                      onPressed: null ,
+                      onLongPress: () {
                       earlyend = true ;
-                      endflag=false;
                        _Leave();
 
                     }, icon: Icon(Icons.arrow_forward_outlined), label: Text("Devam et ..."),)
@@ -293,10 +306,6 @@ class _snakeState extends State<snake> {
       );
 
     }
-    }
-    else
-      {
-        return Container();
-      }
+
   }
 }
