@@ -1,4 +1,3 @@
-
 import 'package:shared_preferences/shared_preferences.dart';
 import '../Games/Clicker.dart';
 import '../Games/snake.dart';
@@ -47,7 +46,7 @@ class _GamesState extends State<Games> {
           ),
 
         ),
-        if(clickerflag) Center(
+        if(true) Center(
           child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: OutlinedButton(
@@ -91,7 +90,28 @@ class _GamesState extends State<Games> {
                 ),
               )
           ),
+        ),
+        Center(
+          child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: OutlinedButton(
+                onPressed: (() {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return Scaffold(body : clickerGame()) ;
+                    }),
+                  );
 
+                }),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Text(
+                    "New clicker",
+                  ),
+                ),
+              )
+          ),
         ),
 
       ],

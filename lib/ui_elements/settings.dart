@@ -1,5 +1,3 @@
-
-import 'package:toast/toast.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -18,14 +16,30 @@ class _SettingsState extends State<Settings> {
       prefs.remove('counter');
       prefs.remove('point');
     });
-    Toast.show("Silindi.", context, duration: Toast.LENGTH_LONG, gravity:  Toast.TOP  , backgroundColor : Colors.white10);
+
+    final snackBar = SnackBar(
+        duration: const Duration(milliseconds: 50),
+        content: Padding(
+          padding: const EdgeInsets.all(13.0),
+          child: Text('Başarılı'),
+        ));
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
   }
   _Delete() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       prefs.clear();
     });
-    Toast.show("Silindi.", context, duration: Toast.LENGTH_LONG, gravity:  Toast.TOP  , backgroundColor : Colors.white10);
+
+    final snackBar = SnackBar(
+        duration: const Duration(milliseconds: 50),
+        content: Padding(
+      padding: const EdgeInsets.all(13.0),
+      child: Text('Başarılı'),
+    ));
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
   }
 
 

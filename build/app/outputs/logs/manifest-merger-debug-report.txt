@@ -22,11 +22,11 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\merto\.gradl
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\6c8d19400b7f90767a40bf848d545c16\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\6a9ba58fa3bc7f62d1378a3eb93d4017\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\8dbb9132b1fb53fd4fbb93eaf077875c\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.work:work-runtime:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\8a3fdf374efa24d07d9bfd29accde47f\work-runtime-2.1.0\AndroidManifest.xml:17:1-125:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\3b340202e6e96084fa364bee26a8acfe\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\1d758cb9ab12ad6092399d559f7f5aba\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\12ff3bf4931c6ee0e182bbcefc5a1cfe\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\e43a985b08a652886ef802cf14a111c7\customview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.work:work-runtime:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\8a3fdf374efa24d07d9bfd29accde47f\work-runtime-2.1.0\AndroidManifest.xml:17:1-125:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\8092df27876235e212dfd26626ab1ebc\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\754722de293e99795dfef034937daf8d\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.room:room-runtime:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\70ed026ab4d758de6a35fac6563627e3\room-runtime-2.1.0\AndroidManifest.xml:17:1-30:12
@@ -38,8 +38,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\merto\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\fdf32433e1a6a6a1a59c5f19e6604e1d\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.1] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\666c8ed344b10ec64170c463acbc5b2c\core-runtime-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\bc4f4858855e039c57c15500877bf525\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\5c0c439dd771074d966cf4cb84a1b1ef\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\1b095822d1b8a91797ad223c378ae9e6\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\5c0c439dd771074d966cf4cb84a1b1ef\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\63375a8602e663a8c50b61d57bebad9d\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\d3a0c526675defaec83a58f88616d673\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\83186ecf5c8ddeae84db330840a1a96d\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -184,6 +184,8 @@ MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\merto\.gr
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\6a9ba58fa3bc7f62d1378a3eb93d4017\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\8dbb9132b1fb53fd4fbb93eaf077875c\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\8dbb9132b1fb53fd4fbb93eaf077875c\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.work:work-runtime:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\8a3fdf374efa24d07d9bfd29accde47f\work-runtime-2.1.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.work:work-runtime:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\8a3fdf374efa24d07d9bfd29accde47f\work-runtime-2.1.0\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\3b340202e6e96084fa364bee26a8acfe\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\3b340202e6e96084fa364bee26a8acfe\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\1d758cb9ab12ad6092399d559f7f5aba\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
@@ -192,8 +194,6 @@ MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\merto\
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\12ff3bf4931c6ee0e182bbcefc5a1cfe\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\e43a985b08a652886ef802cf14a111c7\customview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\e43a985b08a652886ef802cf14a111c7\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.work:work-runtime:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\8a3fdf374efa24d07d9bfd29accde47f\work-runtime-2.1.0\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.work:work-runtime:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\8a3fdf374efa24d07d9bfd29accde47f\work-runtime-2.1.0\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\8092df27876235e212dfd26626ab1ebc\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\8092df27876235e212dfd26626ab1ebc\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\754722de293e99795dfef034937daf8d\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
@@ -216,10 +216,10 @@ MERGED from [androidx.arch.core:core-runtime:2.0.1] C:\Users\merto\.gradle\cache
 MERGED from [androidx.arch.core:core-runtime:2.0.1] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\666c8ed344b10ec64170c463acbc5b2c\core-runtime-2.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\bc4f4858855e039c57c15500877bf525\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\bc4f4858855e039c57c15500877bf525\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\5c0c439dd771074d966cf4cb84a1b1ef\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\5c0c439dd771074d966cf4cb84a1b1ef\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\1b095822d1b8a91797ad223c378ae9e6\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\1b095822d1b8a91797ad223c378ae9e6\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\5c0c439dd771074d966cf4cb84a1b1ef\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\5c0c439dd771074d966cf4cb84a1b1ef\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\63375a8602e663a8c50b61d57bebad9d\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\63375a8602e663a8c50b61d57bebad9d\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\d3a0c526675defaec83a58f88616d673\documentfile-1.0.0\AndroidManifest.xml:20:5-44

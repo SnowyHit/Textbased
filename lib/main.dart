@@ -287,7 +287,7 @@ class _HomescreenState extends State<Homescreen> {
         children: [
 
           Image(
-              image : AssetImage('Assets/gifs/book.gif'),
+              image : AssetImage('assets/gifs/book.gif'),
               width: 200.0,
               height: 200.0
           ),

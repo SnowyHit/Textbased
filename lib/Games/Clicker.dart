@@ -1,7 +1,26 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'QuestionAlgorithm.dart';
+import 'package:flame/game.dart';
+import 'clickerGame.dart';
+
+
+class clickerGame extends StatefulWidget {
+  @override
+  _clickerGameState createState() => _clickerGameState();
+}
+
+class _clickerGameState extends State<clickerGame> {
+  final myGame = BasicAnimations();
+  @override
+  Widget build(BuildContext context) {
+    return GameWidget(game: myGame ,) ;
+  }
+}
+
 
 class ClickerSection extends StatefulWidget {
   @override
