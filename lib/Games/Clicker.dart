@@ -29,12 +29,12 @@ class BasicAnimations extends BaseGame {
 
   @override
   Future<void> onLoad() async {
-    adventurer = await images.load('adventurer/idle.png');
+    adventurer = await images.load('adventurer/run.png');
 
     animation = SpriteAnimation.fromFrameData(
       adventurer,
       SpriteAnimationData.sequenced(
-        amount: 4,
+        amount: 6,
         textureSize: Vector2.all(50),
         stepTime: 0.15,
       ),
@@ -45,8 +45,8 @@ class BasicAnimations extends BaseGame {
       animation: animation,
       size: spriteSize,
     );
-    animationComponent2.x = size.x / 2 - spriteSize.x;
-    animationComponent2.y = spriteSize.y;
+    animationComponent2.x = 100;
+    animationComponent2.y = 200;
 
     final parallax = await loadParallaxComponent(
       _imageNames,

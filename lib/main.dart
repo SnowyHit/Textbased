@@ -43,7 +43,7 @@ class Matapp extends StatelessWidget {
             ),
           ),
         ),
-        home : clickerGame(),
+        home : Home(),
 
       ) ;
 
