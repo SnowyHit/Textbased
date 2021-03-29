@@ -51,6 +51,8 @@ flutter:
   assets:
     - assets/gifs/
     - assets/images/adventurer/
+    - assets/images/parallax/
+    - assets/images/
 
 
 

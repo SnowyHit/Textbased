@@ -1,11 +1,65 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'QuestionAlgorithm.dart';
 import 'package:flame/game.dart';
-import 'clickerGame.dart';
+import 'dart:ui' as ui;
+import 'package:flame/components.dart';
+import 'package:flame/parallax.dart';
+import 'package:flutter/painting.dart';
+import 'package:flame/widgets.dart';
+
+class BasicAnimations extends BaseGame {
+  ui.Image adventurer;
+  SpriteAnimation animation;
+  final _imageNames = [
+    'parallax/Layer_0010_1.png',
+    'parallax/Layer_0009_2.png',
+    'parallax/Layer_0008_3.png',
+    'parallax/Layer_0007_Lights.png',
+    'parallax/Layer_0006_4.png',
+    'parallax/Layer_0005_5.png',
+    'parallax/Layer_0004_Lights.png',
+    'parallax/Layer_0003_6.png',
+    'parallax/Layer_0002_7.png',
+    'parallax/Layer_0001_8.png',
+    'parallax/Layer_0000_9.png',
+
+  ];
+
+  @override
+  Future<void> onLoad() async {
+    adventurer = await images.load('adventurer/idle.png');
+
+    animation = SpriteAnimation.fromFrameData(
+      adventurer,
+      SpriteAnimationData.sequenced(
+        amount: 4,
+        textureSize: Vector2.all(50),
+        stepTime: 0.15,
+      ),
+    );
+
+    final spriteSize = Vector2.all(100.0);
+    final animationComponent2 = SpriteAnimationComponent(
+      animation: animation,
+      size: spriteSize,
+    );
+    animationComponent2.x = size.x / 2 - spriteSize.x;
+    animationComponent2.y = spriteSize.y;
+
+    final parallax = await loadParallaxComponent(
+      _imageNames,
+      fill: LayerFill.height,
+      baseVelocity: Vector2(0.5, 0),
+      velocityMultiplierDelta: Vector2(1.8, 1.0),
+    );
+    add(parallax);
+    add(animationComponent2);
+  }
+
+}
+
 
 
 class clickerGame extends StatefulWidget {
@@ -14,10 +68,21 @@ class clickerGame extends StatefulWidget {
 }
 
 class _clickerGameState extends State<clickerGame> {
-  final myGame = BasicAnimations();
+  BasicAnimations game = BasicAnimations() ;
   @override
   Widget build(BuildContext context) {
-    return GameWidget(game: myGame ,) ;
+    return Scaffold(
+      body: Column(
+        children: [
+          SizedBox(
+              height : 300 ,
+              child: GameWidget(game: game)),
+          TextButton(onPressed: ((){
+             ;
+          }), child: Text("Koşuyorsun .. ")) ,
+        ],
+      ),
+    ) ;
   }
 }
 
