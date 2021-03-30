@@ -91,29 +91,6 @@ class _GamesState extends State<Games> {
               )
           ),
         ),
-        Center(
-          child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: OutlinedButton(
-                onPressed: (() {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return Scaffold(body : clickerGame()) ;
-                    }),
-                  );
-
-                }),
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Text(
-                    "New clicker",
-                  ),
-                ),
-              )
-          ),
-        ),
-
       ],
     );
   }
