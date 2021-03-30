@@ -66,7 +66,7 @@
 46        android:debuggable="true"
 47        android:icon="@mipmap/ic_launcher"
 47-->C:\D\Flutter_projects\textbased\android\app\src\main\AndroidManifest.xml:11:9-43
-48        android:label="textbased" >
+48        android:label="Araştırma" >
 48-->C:\D\Flutter_projects\textbased\android\app\src\main\AndroidManifest.xml:10:9-34
 49        <activity
 49-->C:\D\Flutter_projects\textbased\android\app\src\main\AndroidManifest.xml:12:9-40:20
