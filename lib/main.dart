@@ -346,15 +346,17 @@ class SPrefs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: FutureBuilder<List<Widget>>(
-          future: getAllPrefs(),
-          builder: (context, snapshot) {
-            if (!snapshot.hasData) return Container();
-            return ListView(
-              children: snapshot.data,
-            );
-          }),
+    return Expanded(
+      child: Scaffold(
+        body: FutureBuilder<List<Widget>>(
+            future: getAllPrefs(),
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) return Container();
+              return ListView(
+                children: snapshot.data,
+              );
+            }),
+      ),
     );
   }
 }

@@ -10,6 +10,8 @@ import 'package:flame/components.dart';
 import 'package:flame/parallax.dart';
 import 'package:flame/widgets.dart';
 
+import 'clicker_marketplace.dart';
+
 class ClickerSection extends StatefulWidget {
   @override
   _ClickerSectionState createState() => _ClickerSectionState();
@@ -18,9 +20,11 @@ class ClickerSection extends StatefulWidget {
 class _ClickerSectionState extends State<ClickerSection> {
   BasicAnimations game = BasicAnimations() ;
   bool isLoaded = false ;
-  int promote= 1 ;
   int _metreRun = 0;
   int _metreRunTemp = 0;
+  int luckOfFind = 1 ;
+  int luckOfHunt = 1 ;
+  int speedMod = 1 ;
   int huntPoint = 0 ;
   int meat = 0 ;
   int fur = 0 ;
@@ -31,20 +35,22 @@ class _ClickerSectionState extends State<ClickerSection> {
 
   @override
   void initState() {
-
     super.initState();
     _loadCounter();
   }
-
 
   _loadCounter() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     isLoaded = true;
     setState(() {
+      print("Loading.. ") ;
       _metreRun = (prefs.getInt('clicks') ?? 0);
       game.metre = _metreRun.toString() ;
       clickerflag = (prefs.getBool('clickerflag') ?? false);
       huntPoint = (prefs.getInt('huntPoint') ?? 0);
+      luckOfFind = (prefs.getInt('luckOfFind') ?? 0);
+      luckOfHunt = (prefs.getInt('luckOfHunt') ?? 0);
+      speedMod = (prefs.getInt('speedMod') ?? 0);
       fur = (prefs.getInt('fur') ?? 0);
       meat = (prefs.getInt('meat') ?? 0);
       coin = (prefs.getInt('coin') ?? 0);
@@ -63,9 +69,9 @@ class _ClickerSectionState extends State<ClickerSection> {
   void _incrementClicks(int speed) async{
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      _metreRun += 1 * speed ;
-      _metreRunTemp += 1* speed ;
-      if(_metreRunTemp >= 231 && _rollaDice(90))
+      _metreRun += 1 * speed  * speedMod;
+      _metreRunTemp += 1* speed * speedMod ;
+      if(_metreRunTemp >= 231 && _rollaDice(luckOfFind))
         {
           huntPoint += 1 ;
           _metreRunTemp = 0 ;
@@ -86,7 +92,7 @@ class _ClickerSectionState extends State<ClickerSection> {
       if(huntPoint > 0 )
         {
           huntPoint -= 1 ;
-          if(_rollaDice(60))
+          if(_rollaDice(luckOfHunt))
             {
               String animalName = "" ;
               game.hunt = true ;
@@ -151,7 +157,6 @@ class _ClickerSectionState extends State<ClickerSection> {
 
     });
 
-    //TODO : random chance to get items , fur , meat , get a snackbar with info
   }
   bool _rollaDice(int roll){
     Random dice = Random() ;
@@ -213,10 +218,10 @@ class _ClickerSectionState extends State<ClickerSection> {
                                     setState(() {
                                       Navigator.push(
                                         context,
-                                        MaterialPageRoute(builder: (context) {
-                                          return clickerMarketSection() ;
-                                        }),
-                                      );
+                                        MaterialPageRoute(builder: (context) => clickerMarketSection(),),
+                                      ).then((value) {
+                                        _loadCounter();
+                                      });
                                     });
                                   }), child: Text("Market")),
                                 ),
@@ -271,145 +276,6 @@ class _ClickerSectionState extends State<ClickerSection> {
   }
 }
 
-class clickerMarketSection extends StatefulWidget {
-  @override
-  _clickerMarketSectionState createState() => _clickerMarketSectionState();
-}
-
-class _clickerMarketSectionState extends State<clickerMarketSection> {
-  bool isLoaded =false ;
-  int fur = 0 ;
-  int meat = 0 ;
-  int coin = 0 ;
-  String townName = "Default asd asdsa" ;
-  @override
-  void initState() {
-
-    super.initState();
-    _load();
-  }
-
-
-  _load() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    isLoaded = true;
-    setState(() {
-      fur = (prefs.getInt('fur') ?? 0);
-      meat = (prefs.getInt('meat') ?? 0);
-      coin = (prefs.getInt('coin') ?? 0);
-    });
-  }
-
-  void _save() async{
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      prefs.setInt('fur', fur);
-      prefs.setInt('meat', meat);
-      prefs.setInt('coin', coin);
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return !isLoaded ? Scaffold(body: Container(),) : SafeArea(
-      child: Scaffold(
-        body: CustomScrollView(
-          slivers: <Widget>[
-            SliverAppBar(
-              expandedHeight: 160.0,
-              flexibleSpace: FlexibleSpaceBar(
-                title: Text(townName + " Market'i"),
-                background: Image(image: AssetImage('assets/items/blacksmith.jpg')),
-              ),
-            ),
-
-            SliverGrid(
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 300.0,
-                mainAxisSpacing: 10.0,
-                crossAxisSpacing: 10.0,
-                childAspectRatio: 1.0,
-              ),
-              delegate: SliverChildListDelegate(
-                [
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                  _addCard('Cookie mint', '\$3.99', 'assets/items/Armor 1.png', false, false, context),
-                ]
-              ),
-              // delegate: SliverChildBuilderDelegate(
-              //       (BuildContext context, int index) {
-              //     return Container(
-              //       alignment: Alignment.center,
-              //       color: Colors.teal[100 * (index % 9)],
-              //       child: Text('grid item $index'),
-              //     );
-              //   },
-              //   childCount: 20,
-              // ),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
-Widget _addCard(String name, String price, String imgPath, bool added,
-    bool isFavorite, context) {
-  return Padding(
-      padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
-      child: InkWell(
-          onTap: () {
-          },
-          child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15.0),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 3.0,
-                        blurRadius: 5.0)
-                  ],
-                  color: Colors.white),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                Hero(
-                    tag: imgPath,
-                    child: Container(
-                        height: 50.0,
-                        width: 50.0,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(imgPath),
-                                fit: BoxFit.fill)))),
-                SizedBox(height: 7.0),
-                Text(price,
-                    style: TextStyle(
-                        color: Color(0xFFCC8053),
-                        fontFamily: 'Varela',
-                        fontSize: 14.0)),
-                Text(name,
-                    style: TextStyle(
-                        color: Color(0xFF575E67),
-                        fontFamily: 'Varela',
-                        fontSize: 14.0)),
-                Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Container(color: Color(0xFFEBEBEB), height: 1.0)),
-              ]))));
-}
 
 class BasicAnimations extends BaseGame {
   String metre ;
