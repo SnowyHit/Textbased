@@ -235,19 +235,14 @@ class _HomeState extends State<Home> {
                     body : QuestionWidget() ,
                     floatingActionButton: FloatingActionButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) {
-                            return  Home() ;
-                          }),
-                        );
+                        Navigator.pop(context);
                       },
                       child: const Icon(Icons.home),
                       backgroundColor: Colors.lightGreen,
                     ),
                 ) ;
               }),
-            );
+            ).then((value) =>  _load());
           },
           label: Text(fabtext),
           icon: Icon(Icons.arrow_forward_ios_outlined),

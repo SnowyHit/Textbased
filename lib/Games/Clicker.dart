@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:textbased/Games/clicker_Inventory.dart';
 import 'QuestionAlgorithm.dart';
 import 'package:flame/game.dart';
 import 'dart:ui' as ui;
@@ -22,8 +23,8 @@ class _ClickerSectionState extends State<ClickerSection> {
   bool isLoaded = false ;
   int _metreRun = 0;
   int _metreRunTemp = 0;
-  int luckOfFind = 1 ;
-  int luckOfHunt = 1 ;
+  int luckOfFind  ;
+  int luckOfHunt  ;
   int speedMod = 1 ;
   int huntPoint = 0 ;
   int meat = 0 ;
@@ -31,7 +32,33 @@ class _ClickerSectionState extends State<ClickerSection> {
   int coin = 0 ;
   bool clickerflag ;
   bool flag = false ;
-  int carryCapacityMultiplier = 190;
+  int carryCapacityMultiplier;
+  List<String> townNames = [
+    "Antox" ,
+    "Krasin" ,
+    "Baili" ,
+    "Pyto" ,
+    "Antia" ,
+    "Inia" ,
+    "Oinell" ,
+    "Ukuel" ,
+    "Tyn" ,
+
+
+    "Z'tari" ,
+    "Folnir" ,
+    "Bato" ,
+    "Pxti" ,
+    "Slynn" ,
+    "Dmira" ,
+    "Krisia" ,
+
+
+
+    "Kails" ,
+    "Ryn" ,
+    "Setria" ,
+  ] ;
 
   @override
   void initState() {
@@ -48,9 +75,10 @@ class _ClickerSectionState extends State<ClickerSection> {
       game.metre = _metreRun.toString() ;
       clickerflag = (prefs.getBool('clickerflag') ?? false);
       huntPoint = (prefs.getInt('huntPoint') ?? 0);
-      luckOfFind = (prefs.getInt('luckOfFind') ?? 0);
-      luckOfHunt = (prefs.getInt('luckOfHunt') ?? 0);
-      speedMod = (prefs.getInt('speedMod') ?? 0);
+      luckOfFind = (prefs.getInt('luckOfFind') ?? 1);
+      luckOfHunt = (prefs.getInt('luckOfHunt') ?? 1);
+      carryCapacityMultiplier = (prefs.getInt('carryCapacityMultiplier') ?? 100);
+      speedMod = (prefs.getInt('speedMod') ?? 1);
       fur = (prefs.getInt('fur') ?? 0);
       meat = (prefs.getInt('meat') ?? 0);
       coin = (prefs.getInt('coin') ?? 0);
@@ -105,6 +133,7 @@ class _ClickerSectionState extends State<ClickerSection> {
                   {
                     fur += 20 ;
                     meat += 50 ;
+                    _finditem() ;
                   }
                 }
               else if(animal >= 90)
@@ -114,6 +143,7 @@ class _ClickerSectionState extends State<ClickerSection> {
                   {
                     fur += 10 ;
                     meat += 20 ;
+                    _finditem() ;
                   }
                 }
               else if(animal >= 80)
@@ -123,6 +153,7 @@ class _ClickerSectionState extends State<ClickerSection> {
                   {
                     fur += 5 ;
                     meat += 10 ;
+                    _finditem() ;
                   }
                 }
               else if(animal >= 30)
@@ -132,6 +163,7 @@ class _ClickerSectionState extends State<ClickerSection> {
                   {
                     fur += 1 ;
                     meat += 1 ;
+                    _finditem() ;
                   }
                 }
               else
@@ -141,6 +173,7 @@ class _ClickerSectionState extends State<ClickerSection> {
                   {
                     fur += 1 ;
                     meat += 1 ;
+                    _finditem() ;
                   }
                 }
 
@@ -158,6 +191,17 @@ class _ClickerSectionState extends State<ClickerSection> {
     });
 
   }
+  void _finditem() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String> items = (prefs.getStringList("items") ?? []) ;
+    int founditem = _random() ;
+    print("Found item $founditem") ;
+    setState(() {
+      items.add(founditem.toString());
+      prefs.setStringList("items", items) ;
+    });
+  }
+
   bool _rollaDice(int roll){
     Random dice = Random() ;
     if(dice.nextInt(100) > roll)
@@ -200,6 +244,21 @@ class _ClickerSectionState extends State<ClickerSection> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                               Text('${townNames[(_metreRun ~/10000) % townNames.length]} '),
+                               Expanded(child: LinearProgressIndicator(
+                                 value: 1- ((10000 - (_metreRun % 10000 ))/10000),
+                                 minHeight: 20,
+                               ),
+                               ),
+                               Text(' ${townNames[((_metreRun ~/10000) + 1) % townNames.length]}(${10000 - (_metreRun % 10000 )})'),
+                              ],
+                            ),
+                          ),
                           Text('$huntPoint Avlanılabilecek alan bulundu'),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -224,6 +283,21 @@ class _ClickerSectionState extends State<ClickerSection> {
                                       });
                                     });
                                   }), child: Text("Market")),
+                                ),
+                              ),
+                              Expanded(
+                                child: Card(
+                                  color : Colors.white10,
+                                  child: TextButton(onPressed: ((){
+                                    setState(() {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => clickerInventory(),),
+                                      ).then((value) {
+                                        _loadCounter();
+                                      });
+                                    });
+                                  }), child: Text("Çanta")),
                                 ),
                               ),
                             ],

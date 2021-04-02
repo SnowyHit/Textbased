@@ -1,7 +1,9 @@
 
-
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'clicker_Inventory.dart';
 
 class clickerMarketSection extends StatefulWidget {
   @override
@@ -13,7 +15,37 @@ class _clickerMarketSectionState extends State<clickerMarketSection> {
   int fur = 0 ;
   int meat = 0 ;
   int coin = 0 ;
+  int _metre = 0 ;
   String townName = "Default asd asdsa" ;
+  int currentTown = 0 ;
+  int townSeed = 145928 ;
+  List<String> items = [] ;
+  List<String> townNames = [
+    "Antox" ,
+    "Krasin" ,
+    "Baili" ,
+    "Pyto" ,
+    "Antia" ,
+    "Inia" ,
+    "Oinell" ,
+    "Ukuel" ,
+    "Tyn" ,
+
+
+    "Z'tari" ,
+    "Folnir" ,
+    "Bato" ,
+    "Pxti" ,
+    "Slynn" ,
+    "Dmira" ,
+    "Krisia" ,
+
+
+
+    "Kails" ,
+    "Ryn" ,
+    "Setria" ,
+  ] ;
   @override
   void initState() {
 
@@ -29,6 +61,9 @@ class _clickerMarketSectionState extends State<clickerMarketSection> {
       fur = (prefs.getInt('fur') ?? 0);
       meat = (prefs.getInt('meat') ?? 0);
       coin = (prefs.getInt('coin') ?? 0);
+      _metre = (prefs.getInt('clicks') ?? 0);
+      items = (prefs.getStringList('items') ?? [] );
+      currentTown = (_metre ~/ 10000) % townNames.length ;
     });
   }
 
@@ -76,7 +111,6 @@ class _clickerMarketSectionState extends State<clickerMarketSection> {
       _selectedIndex = index;
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return !isLoaded ? Scaffold(body: Container(),) : SafeArea(
@@ -92,7 +126,7 @@ class _clickerMarketSectionState extends State<clickerMarketSection> {
                 },
               ),
               flexibleSpace: FlexibleSpaceBar(
-                title: Text(townName),
+                title: Text(townNames[currentTown]),
                 background: Image(image: AssetImage('assets/items/blacksmith.jpg')),
               ),
             ),
@@ -103,51 +137,30 @@ class _clickerMarketSectionState extends State<clickerMarketSection> {
                 crossAxisSpacing: 10.0,
                 childAspectRatio: 1.0,
               ),
-              delegate: SliverChildListDelegate(
-                  [
-                    _addCard('Cookie mint', 10 , 'assets/items/Armor 1.png', 1 , 10 ,  context),
-                  ]
-              ),
-              // delegate: SliverChildBuilderDelegate(
-              //       (BuildContext context, int index) {
-              //     return Container(
-              //       alignment: Alignment.center,
-              //       color: Colors.teal[100 * (index % 9)],
-              //       child: Text('grid item $index'),
-              //     );
-              //   },
-              //   childCount: 20,
-              // ),
+              delegate: SliverChildBuilderDelegate(
+                  (BuildContext context, int index) {
+                return Container(
+                  alignment: Alignment.center,
+                  color: Colors.teal[100 * (index % 9)],
+                  child: Text('grid item $index'),
+                );
+              },
+              childCount: (townSeed * 2 ) ~/ 3 ,
             ),
-            if(_selectedIndex == 1)SliverGrid( //Sell
+            ),
+            if(_selectedIndex == 1)SliverGrid( // Buy
               gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                 maxCrossAxisExtent: 300.0,
                 mainAxisSpacing: 10.0,
                 crossAxisSpacing: 10.0,
                 childAspectRatio: 1.0,
               ),
-              delegate: SliverChildListDelegate(
-                  [
-                   TextButton(onPressed: ((){
-                     _sellFur(1, 1) ;
-                   }), child: Text("Kürk Sat ($fur)")
-                   ),
-                    TextButton(onPressed: ((){
-                      _sellMeat(1, 1) ;
-                    }), child: Text("Et Sat ($meat)")
-                    ),
-                  ]
+              delegate: SliverChildBuilderDelegate(
+                    (BuildContext context, int index) {
+                  return item(items[index]) ;
+                },
+                childCount: items.length ,
               ),
-              // delegate: SliverChildBuilderDelegate(
-              //       (BuildContext context, int index) {
-              //     return Container(
-              //       alignment: Alignment.center,
-              //       color: Colors.teal[100 * (index % 9)],
-              //       child: Text('grid item $index'),
-              //     );
-              //   },
-              //   childCount: 20,
-              // ),
             ),
           ],
         ),
@@ -170,61 +183,6 @@ class _clickerMarketSectionState extends State<clickerMarketSection> {
     );
   }
 }
-Widget _addCard(String name, int price, String imgPath, int itemType , int power ,  context ) {
-  return Padding(
-      padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
-      child: InkWell(
-          onTap: () {
-            //itempage(name, price , imgPath , itemType , power) ;
-          },
-          child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15.0),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 3.0,
-                        blurRadius: 5.0)
-                  ],
-                  color: Colors.white),
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Hero(
-                        tag: imgPath,
-                        child: Container(
-                            height: 50.0,
-                            width: 50.0,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(imgPath),
-                                    fit: BoxFit.fill)))),
-                    SizedBox(height: 7.0),
-                    Text(price.toString() + "Altın",
-                        style: TextStyle(
-                            color: Color(0xFFCC8053),
-                            fontFamily: 'Varela',
-                            fontSize: 14.0)),
-                    Text(name,
-                        style: TextStyle(
-                            color: Color(0xFF575E67),
-                            fontFamily: 'Varela',
-                            fontSize: 14.0)),
-                    Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Container(color: Color(0xFFEBEBEB), height: 1.0)),
-                  ]))));
-}
 
-Widget itempage(String name, int price, String imgPath , int itemtype , int power)
-{
-    return SafeArea(
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text(name),
-            centerTitle: true,
-          ),
-          body: Container(),
-        )
-    ) ;
-}
+
+
