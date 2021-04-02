@@ -136,3 +136,4 @@ Widget item(String ID) {
     child: Text('ID : $ID'),
   );
 }
+//TODO buying items , selling items in your inventory , making inventory uniq(stacking items)
