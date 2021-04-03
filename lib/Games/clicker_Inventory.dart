@@ -17,6 +17,7 @@ class _clickerInventoryState extends State<clickerInventory> {
   int luckOfHunt ;
   int carryCapacityMultiplier ;
   int speedMod ;
+  List<String> equippedItems ;
   Map inventory ;
   List<String> items = [] ;
   @override
@@ -30,27 +31,61 @@ class _clickerInventoryState extends State<clickerInventory> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     isLoaded = true;
     setState(() {
-      fur = (prefs.getInt('fur') ?? 0);
       items = (prefs.getStringList('items') ?? [] );
-      meat = (prefs.getInt('meat') ?? 0);
-      coin = (prefs.getInt('coin') ?? 0);
-      luckOfFind = (prefs.getInt('luckOfFind') ?? 1);
-      luckOfHunt = (prefs.getInt('luckOfHunt') ?? 1);
-      carryCapacityMultiplier = (prefs.getInt('carryCapacityMultiplier') ?? 100);
-      speedMod = (prefs.getInt('speedMod') ?? 1);
-      coin = (prefs.getInt('coin') ?? 0);
-      coin = (prefs.getInt('coin') ?? 0);
-      coin = (prefs.getInt('coin') ?? 0);
+      equippedItems = (prefs.getStringList('equippedItems')  ?? ["0" ,"1","2","3"]) ;
       inventory =  _getInventory(items) ;
+      coin = (prefs.getInt('coin') ?? 0);
+      luckOfFind = _getItem(equippedItems[3]).power;
+      luckOfHunt = _getItem(equippedItems[2]).power;
+      carryCapacityMultiplier = _getItem(equippedItems[1]).power;
+      speedMod = _getItem(equippedItems[0]).power;
     });
   }
 
-  void _save() async{
+  _unequip( int Type ,String ID) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
+    isLoaded = true;
+
+    equippedItems[Type] = "-1" ;
+    items.add(ID) ;
     setState(() {
-      prefs.setInt('fur', fur);
-      prefs.setInt('meat', meat);
-      prefs.setStringList('items', items);
+
+      prefs.setStringList('equippedItems', equippedItems) ;
+      prefs.setStringList('items', items) ;
+      if(inventory.containsKey(ID))
+          {
+            inventory[ID] += 1 ;
+          }
+      else
+         {
+           inventory[ID] = 1 ;
+         }
+
+      luckOfFind = _getItem(equippedItems[3]).power;
+      luckOfHunt = _getItem(equippedItems[2]).power;
+      carryCapacityMultiplier = _getItem(equippedItems[1]).power;
+      speedMod = _getItem(equippedItems[0]).power;
+
+    });
+  }
+  _equipItem(int Type , String ID) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    if(int.parse(equippedItems[Type])>= 0 ) { _unequip(Type , equippedItems[Type]) ; }
+    isLoaded = true;
+    equippedItems[Type] = ID ;
+    setState(() {
+     prefs.setStringList('equippedItems', equippedItems) ;
+     prefs.setStringList('items', items) ;
+     items.remove(ID) ;
+     inventory[ID] -= 1 ;
+     if(inventory[ID] <= 0)
+     {
+       inventory.remove(ID);
+     }
+     luckOfFind = _getItem(equippedItems[3]).power;
+     luckOfHunt = _getItem(equippedItems[2]).power;
+     carryCapacityMultiplier = _getItem(equippedItems[1]).power;
+     speedMod = _getItem(equippedItems[0]).power;
     });
   }
 
@@ -90,7 +125,7 @@ class _clickerInventoryState extends State<clickerInventory> {
               ),
               delegate: SliverChildBuilderDelegate(
                     (BuildContext context, int index) {
-                  return item(inventory.keys.toList()[index].toString() , inventory.values.toList()[index].toString() , false , 0) ;
+                  return item(inventory.keys.toList()[index].toString() , inventory.values.toList()[index].toString() , false , 0 , _equipItem) ;
                 },
                 childCount: inventory.length,
               ),
@@ -104,7 +139,60 @@ class _clickerInventoryState extends State<clickerInventory> {
               ),
               delegate: SliverChildListDelegate(
                   [
-                    Text("Koşu hızın : $speedMod "),
+                    if(int.parse(equippedItems[0]) >= 0)Container(
+                      alignment: Alignment.center,
+                      color: Colors.teal[100],
+                      child: Column(
+                        children: [
+                          Text(_getItem(equippedItems[0]).name),
+                          TextButton(onPressed: ((){
+                              _unequip( _getItem(equippedItems[0]).type , equippedItems[0] ) ;
+                            }
+                          ), child: Text("Çıkar")) ,
+                        ],
+                      ),
+                    ),
+                     if(int.parse(equippedItems[1]) > 0)Container(
+                      alignment: Alignment.center,
+                      color: Colors.teal[100],
+                      child: Column(
+                        children: [
+                          Text(_getItem(equippedItems[1]).name),
+                          TextButton(onPressed: ((){
+                              _unequip( _getItem(equippedItems[1]).type , equippedItems[1] ) ;
+                            }
+                          ), child: Text("Çıkar")) ,
+                        ],
+                      ),
+                    ),
+                     if(int.parse(equippedItems[2]) > 0)Container(
+                      alignment: Alignment.center,
+                      color: Colors.teal[100],
+                      child: Column(
+                        children: [
+                          Text(_getItem(equippedItems[2]).name),
+                          TextButton(onPressed: ((){
+                              _unequip( _getItem(equippedItems[2]).type , equippedItems[2] ) ;
+                            }
+                          ), child: Text("Çıkar")) ,
+                        ],
+                      ),
+                    ),
+                     if(int.parse(equippedItems[3]) > 0)Container(
+                      alignment: Alignment.center,
+                      color: Colors.teal[100],
+                      child: Column(
+                        children: [
+                          Text(_getItem(equippedItems[3]).name),
+                          TextButton(onPressed: ((){
+                              _unequip( _getItem(equippedItems[3]).type , equippedItems[3] ) ;
+                            }
+                          ), child: Text("Çıkar")) ,
+                        ],
+                      ),
+                    ),
+
+                    Text("Koşu hızın : ${speedMod}"),
                     Text("Başarılı Av ihtimali : $luckOfHunt"),
                     Text("Av alanı bulma ihtimali : $luckOfFind"),
                     Text("Taşıma Kapasitesi : $carryCapacityMultiplier"),
@@ -125,7 +213,7 @@ class _clickerInventoryState extends State<clickerInventory> {
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: Colors.amber[800],
+          selectedItemColor: Colors.lightGreen,
           onTap: _onItemTapped,
         ),
       ),
@@ -133,21 +221,38 @@ class _clickerInventoryState extends State<clickerInventory> {
   }
 }
 
-Widget item(String ID , String Amount , bool Sell , int townModifier) {
+Widget item(String ID , String Amount , bool Sell , int townModifier , onTap) {
   Item selectedItem = _getItem(ID) ;
-  print(ID) ;
-  return Sell ?
+  return Sell ? //TODO if selected item type == 1 == 2 == 3 == 0 then its equipable
   Container(
     alignment: Alignment.center,
     color: Colors.teal[100],
-    child: Text(selectedItem.name + " fiyat : " + ((selectedItem.power * (selectedItem.type+1) *( selectedItem.id + 1)* townModifier * 8238149)~/24322342).toString()),
-  )
-      :
+    child: Column(
+      children: [
+        Text(selectedItem.name + "adet : $Amount fiyat : " + ((selectedItem.power * (selectedItem.type+1) *( selectedItem.id + 1)* townModifier * 8238149)~/24322342).toString()),
+        TextButton(onPressed: ((){
+          if(onTap != null){
+            onTap(ID) ;
+          }
+        }), child: Text("Sat")) ,
+      ],
+    ),
+  ) :
   Container(
     alignment: Alignment.center,
     color: Colors.teal[100],
-    child: Text(_getItem(ID).name + " " + Amount),
+    child: Column(
+      children: [
+        Text(selectedItem.name + " adet : $Amount "),
+        if(selectedItem.type < 4)TextButton(onPressed: ((){
+          if(onTap != null){
+          onTap(selectedItem.type , ID ) ;
+          }
+        }), child: Text("Giy")) ,
+      ],
+    ),
   );
+
 }
 
 
@@ -178,17 +283,18 @@ Map _getInventory(List<String> Sitems){
 }
 class Allitems{
   List<Item> AllitemsList =[
-    Item("Kılıç" , 1 , 4 , 0) ,
-    Item("Kılıç 2" , 1 , 34 , 1) ,
-    Item("Kılıç 3" , 1 , 12 , 2) ,
-    Item("Kılıç 4" , 1 , 51 , 3) ,
-    Item("Kılıç 5" , 1 , 2 , 4) ,
-    Item("Kılıç 6" , 1 , 5 , 5) ,
-    Item("Kılıç 7" , 1 , 12 , 6) ,
-    Item("Kılıç 8" , 1 , 5 , 7) ,
-    Item("Kürk" , 1 , 0 , 8) ,
-    Item("Et" , 1 , 0 , 9) ,
-    Item("Kılıç 8" , 1 , 5 , 10) ,
+    Item("Çıplak" , 1 , 0 , -1) ,
+    Item("Çöp ayakkabı" , 2 , 0 , 0) ,
+    Item("Dandik Sihirli Çanta" , 2 , 1 , 1) ,
+    Item("Basit Kılıç" , 10 , 2 , 2) ,
+    Item("Basit Gözlük" , 10 , 3 , 3) ,
+    Item("Basit item 1" , 1 , 5 , 4) ,
+    Item("Basit item 2" , 1 , 5 , 5) ,
+    Item("Basit item 3" , 1 , 5 , 6) ,
+    Item("Basit item 4" , 1 , 5 , 7) ,
+    Item("Kürk" , 1 , 5 , 8) ,
+    Item("Et" , 1 , 5 , 9) ,
+    Item("Basit item 5" , 1 , 5 , 10) ,
   ];
   Item selected = Item("item not found", 0 , 0 , 999);
 

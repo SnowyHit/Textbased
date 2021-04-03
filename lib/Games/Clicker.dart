@@ -19,6 +19,7 @@ class ClickerSection extends StatefulWidget {
 }
 
 class _ClickerSectionState extends State<ClickerSection> {
+  List<String> equippedItems ;
   BasicAnimations game = BasicAnimations() ;
   bool isLoaded = false ;
   int _metreRun = 0;
@@ -72,11 +73,12 @@ class _ClickerSectionState extends State<ClickerSection> {
       _metreRun = (prefs.getInt('clicks') ?? 0);
       game.metre = _metreRun.toString() ;
       clickerflag = (prefs.getBool('clickerflag') ?? false);
+      equippedItems = (prefs.getStringList('equippedItems') ?? ["0" , "1" , "2" , "3"]);
       huntPoint = (prefs.getInt('huntPoint') ?? 0);
-      luckOfFind = (prefs.getInt('luckOfFind') ?? 1);
-      luckOfHunt = (prefs.getInt('luckOfHunt') ?? 1);
-      carryCapacityMultiplier = (prefs.getInt('carryCapacityMultiplier') ?? 100);
-      speedMod = (prefs.getInt('speedMod') ?? 1);
+      luckOfFind = _getItem(equippedItems[3]).power;
+      luckOfHunt = _getItem(equippedItems[2]).power;
+      carryCapacityMultiplier = _getItem(equippedItems[1]).power;
+      speedMod = _getItem(equippedItems[0]).power;
       coin = (prefs.getInt('coin') ?? 0);
 
     });
@@ -94,8 +96,8 @@ class _ClickerSectionState extends State<ClickerSection> {
   void _incrementClicks(int speed) async{
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      _metreRun += 1 * speed  * speedMod;
-      _metreRunTemp += 1* speed * speedMod ;
+      _metreRun += (1 * speed  * speedMod).toInt();
+      _metreRunTemp += (1 * speed  * speedMod).toInt() ;
       if(_metreRunTemp >= 231 && _rollaDice(luckOfFind))
         {
           huntPoint += 1 ;
@@ -115,7 +117,7 @@ class _ClickerSectionState extends State<ClickerSection> {
       if(huntPoint > 0 )
         {
           huntPoint -= 1 ;
-          if(_rollaDice(luckOfHunt))
+          if(_rollaDice(luckOfHunt.toInt()))
             {
               String animalName = "" ;
               game.hunt = true ;
@@ -467,6 +469,20 @@ class BasicAnimations extends BaseGame {
 
 
 
+}
+
+
+
+Item _getItem(String ID){
+  Item selected = itemList.selected ;
+  itemList.AllitemsList.forEach((element) {
+    if(element.id == int.parse(ID))
+    {
+      selected =  element  ;
+    }
+  }
+  ) ;
+  return selected ;
 }
 
 

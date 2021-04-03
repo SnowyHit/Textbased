@@ -81,6 +81,21 @@ class _clickerMarketSectionState extends State<clickerMarketSection> {
 
     });
   }
+  void _sellItem(String ID) async{
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    Item selectedItem = _getItem(ID) ;
+    items.remove(ID) ;
+    coin += ((selectedItem.power * (selectedItem.type+1) *( selectedItem.id + 1)* (townSeed+currentTown) * 8238149)~/24322342) ;
+    setState(() {
+        prefs.setInt('coin', coin);
+        prefs.setStringList('items', items) ;
+        inventory[ID] -= 1 ;
+        if(inventory[ID] <= 0)
+          {
+            inventory.remove(ID);
+          }
+    });
+  }
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
@@ -134,7 +149,7 @@ class _clickerMarketSectionState extends State<clickerMarketSection> {
               ),
               delegate: SliverChildBuilderDelegate(
                     (BuildContext context, int index) {
-                  return item(inventory.keys.toList()[index].toString() , inventory.values.toList()[index].toString() , true , townSeed+currentTown ) ;
+                  return item(inventory.keys.toList()[index].toString() , inventory.values.toList()[index].toString() , true , townSeed+currentTown , _sellItem) ;
                 },
                 childCount: inventory.length ,
               ),
@@ -175,6 +190,19 @@ Map _getInventory(List<String> itemsList){
   });
 
   return map ;
+}
+
+
+Item _getItem(String ID){
+  Item selected = itemList.selected ;
+  itemList.AllitemsList.forEach((element) {
+    if(element.id == int.parse(ID))
+    {
+      selected =  element  ;
+    }
+  }
+  ) ;
+  return selected ;
 }
 
 
