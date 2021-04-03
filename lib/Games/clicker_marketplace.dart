@@ -2,8 +2,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'clicker_Inventory.dart';
+import 'Clicker.dart';
 
 class clickerMarketSection extends StatefulWidget {
   @override
@@ -12,14 +12,13 @@ class clickerMarketSection extends StatefulWidget {
 
 class _clickerMarketSectionState extends State<clickerMarketSection> {
   bool isLoaded =false ;
-  int fur = 0 ;
-  int meat = 0 ;
   int coin = 0 ;
   int _metre = 0 ;
   String townName = "Default asd asdsa" ;
   int currentTown = 0 ;
-  int townSeed = 145928 ;
+  int townSeed = 14 ;
   List<String> items = [] ;
+  Map inventory ;
   List<String> townNames = [
     "Antox" ,
     "Krasin" ,
@@ -58,46 +57,24 @@ class _clickerMarketSectionState extends State<clickerMarketSection> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     isLoaded = true;
     setState(() {
-      fur = (prefs.getInt('fur') ?? 0);
-      meat = (prefs.getInt('meat') ?? 0);
       coin = (prefs.getInt('coin') ?? 0);
       _metre = (prefs.getInt('clicks') ?? 0);
       items = (prefs.getStringList('items') ?? [] );
-      currentTown = (_metre ~/ 10000) % townNames.length ;
+      inventory =  _getInventory(items) ;
+      if(currentTown < (_metre ~/ 10000) % townNames.length)
+      {
+        currentTown = (_metre ~/ 10000) % townNames.length;
+        townSeed = _random(39) ;
+      }
+
+
     });
+  }
+  int _random(int Range){
+    Random dice = Random() ;
+    return dice.nextInt(Range);
   }
 
-  void _save() async{
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      prefs.setInt('fur', fur);
-      prefs.setInt('meat', meat);
-    });
-  }
-  void _sellFur(int Volume , int value) async{
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      if(fur >= Volume)
-        {
-          fur -= Volume ;
-          coin += Volume*value ;
-        }
-      prefs.setInt('fur', fur);
-      prefs.setInt('coin', coin);
-    });
-  }
-  void _sellMeat(int Volume , int value) async{
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      if(meat >= Volume)
-        {
-          meat -= Volume ;
-          coin += Volume*value ;
-        }
-      prefs.setInt('meat', meat);
-      prefs.setInt('coin', coin);
-    });
-  }
   void _buy() async{
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -157,9 +134,9 @@ class _clickerMarketSectionState extends State<clickerMarketSection> {
               ),
               delegate: SliverChildBuilderDelegate(
                     (BuildContext context, int index) {
-                  return item(items[index]) ;
+                  return item(inventory.keys.toList()[index].toString() , inventory.values.toList()[index].toString() , true , townSeed+currentTown ) ;
                 },
-                childCount: items.length ,
+                childCount: inventory.length ,
               ),
             ),
           ],
@@ -182,6 +159,22 @@ class _clickerMarketSectionState extends State<clickerMarketSection> {
       ),
     );
   }
+}
+
+
+Map _getInventory(List<String> itemsList){
+  var elements = itemsList ;
+  var map = Map();
+
+  elements.forEach((element) {
+    if(!map.containsKey(element)) {
+      map[element] = 1;
+    } else {
+      map[element] +=1;
+    }
+  });
+
+  return map ;
 }
 
 

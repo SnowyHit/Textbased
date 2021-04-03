@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -10,8 +9,9 @@ import 'dart:ui' as ui;
 import 'package:flame/components.dart';
 import 'package:flame/parallax.dart';
 import 'package:flame/widgets.dart';
-
 import 'clicker_marketplace.dart';
+
+Allitems itemList = Allitems() ;
 
 class ClickerSection extends StatefulWidget {
   @override
@@ -27,8 +27,6 @@ class _ClickerSectionState extends State<ClickerSection> {
   int luckOfHunt  ;
   int speedMod = 1 ;
   int huntPoint = 0 ;
-  int meat = 0 ;
-  int fur = 0 ;
   int coin = 0 ;
   bool clickerflag ;
   bool flag = false ;
@@ -79,9 +77,8 @@ class _ClickerSectionState extends State<ClickerSection> {
       luckOfHunt = (prefs.getInt('luckOfHunt') ?? 1);
       carryCapacityMultiplier = (prefs.getInt('carryCapacityMultiplier') ?? 100);
       speedMod = (prefs.getInt('speedMod') ?? 1);
-      fur = (prefs.getInt('fur') ?? 0);
-      meat = (prefs.getInt('meat') ?? 0);
       coin = (prefs.getInt('coin') ?? 0);
+
     });
   }
 
@@ -107,8 +104,6 @@ class _ClickerSectionState extends State<ClickerSection> {
       prefs.setInt('clicks', _metreRun);
       game.metre = _metreRun.toString() ;
       prefs.setInt('huntPoint', huntPoint);
-      prefs.setInt('fur', fur);
-      prefs.setInt('meat', meat);
       prefs.setInt('coin', coin);
     });
   }
@@ -124,58 +119,44 @@ class _ClickerSectionState extends State<ClickerSection> {
             {
               String animalName = "" ;
               game.hunt = true ;
-              int animal = _random() ;
-              print(animal);
+              int animal = _random(100) ;
               if(animal>=97)
                 {
                   animalName = "Ayı" ;
-                  if(fur + meat < 10 * carryCapacityMultiplier)
-                  {
-                    fur += 20 ;
-                    meat += 50 ;
-                    _finditem() ;
-                  }
+                  _finditem(_random(itemList.AllitemsList.length) , 1) ;
+                  _finditem(8 , _random(15)+7) ;
+                  _finditem(9 , _random(20)+10) ;
                 }
               else if(animal >= 90)
                 {
                   animalName = "Geyik" ;
-                  if(fur + meat < 10 * carryCapacityMultiplier)
-                  {
-                    fur += 10 ;
-                    meat += 20 ;
-                    _finditem() ;
-                  }
+                  _finditem(_random(itemList.AllitemsList.length) , 1) ;
+                  _finditem(8 , _random(10)+3) ;
+                  _finditem(9 , _random(12)+5) ;
                 }
               else if(animal >= 80)
                 {
                   animalName = "Domuz" ;
-                  if(fur + meat < 10 * carryCapacityMultiplier)
-                  {
-                    fur += 5 ;
-                    meat += 10 ;
-                    _finditem() ;
-                  }
+                  _finditem(_random(itemList.AllitemsList.length) , 1) ;
+                  _finditem(8 , _random(8)+3) ;
+                  _finditem(9 , _random(10)+2) ;
                 }
               else if(animal >= 30)
                 {
                   animalName = "Ördek" ;
-                  if(fur + meat < 10 * carryCapacityMultiplier)
-                  {
-                    fur += 1 ;
-                    meat += 1 ;
-                    _finditem() ;
-                  }
+                  _finditem(_random(itemList.AllitemsList.length) , 1);
+                  _finditem(8 , _random(2)+1) ;
+                  _finditem(9 , _random(2)+1) ;
                 }
               else
                 {
                   animalName = "Tavşan" ;
-                  if(fur + meat < 10 * carryCapacityMultiplier)
-                  {
-                    fur += 1 ;
-                    meat += 1 ;
-                    _finditem() ;
-                  }
+                  _finditem(_random(itemList.AllitemsList.length) , 1) ;
+                  _finditem(8 , _random(2)+1) ;
+                  _finditem(9 , _random(2)+1) ;
+
                 }
+              print("all items lenght random :"+_random(itemList.AllitemsList.length).toString()) ;
 
               final snackBar = SnackBar(
                   duration: const Duration(milliseconds: 150),
@@ -191,13 +172,18 @@ class _ClickerSectionState extends State<ClickerSection> {
     });
 
   }
-  void _finditem() async {
+  void _finditem(int ID  , int amount) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String> items = (prefs.getStringList("items") ?? []) ;
-    int founditem = _random() ;
-    print("Found item $founditem") ;
+    print("all items lenght"+ itemList.AllitemsList.length.toString()) ;
+    if(ID > itemList.AllitemsList.length)
+      {
+        print("ERROR ID IS BIGGER THAN LENGHT") ;
+      }
+    for( var i = amount ; i >= 1; i-- ) {
+      items.add(ID.toString()) ;
+    }
     setState(() {
-      items.add(founditem.toString());
       prefs.setStringList("items", items) ;
     });
   }
@@ -213,9 +199,9 @@ class _ClickerSectionState extends State<ClickerSection> {
       return false ;
     }
   }
-  int _random(){
+  int _random(int Range){
     Random dice = Random() ;
-    return dice.nextInt(100) ;
+    return dice.nextInt(Range) ;
   }
 
 
@@ -260,13 +246,6 @@ class _ClickerSectionState extends State<ClickerSection> {
                             ),
                           ),
                           Text('$huntPoint Avlanılabilecek alan bulundu'),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Text('$meat Kilo et'),
-                              Text('$fur Parça Kürk'),
-                            ],
-                          ),
                           Text('$coin Altın'),
                           Row(
                             children: [
@@ -489,4 +468,9 @@ class BasicAnimations extends BaseGame {
 
 
 }
+
+
+
+
+
 
