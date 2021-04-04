@@ -98,7 +98,7 @@ class _ClickerSectionState extends State<ClickerSection> {
     setState(() {
       _metreRun += (1 * speed  * speedMod).toInt();
       _metreRunTemp += (1 * speed  * speedMod).toInt() ;
-      if(_metreRunTemp >= 231 && _rollaDice(luckOfFind))
+      if(_metreRunTemp >= 231 && _rollaDice(100-luckOfFind))
         {
           huntPoint += 1 ;
           _metreRunTemp = 0 ;
@@ -117,7 +117,7 @@ class _ClickerSectionState extends State<ClickerSection> {
       if(huntPoint > 0 )
         {
           huntPoint -= 1 ;
-          if(_rollaDice(luckOfHunt.toInt()))
+          if(_rollaDice(100-luckOfHunt.toInt()))
             {
               String animalName = "" ;
               game.hunt = true ;
@@ -125,40 +125,39 @@ class _ClickerSectionState extends State<ClickerSection> {
               if(animal>=97)
                 {
                   animalName = "Ayı" ;
-                  _finditem(_random(itemList.AllitemsList.length) , 1) ;
+                  _finditem(_random(itemList.AllitemsList.length-1) , 1) ;
                   _finditem(8 , _random(15)+7) ;
                   _finditem(9 , _random(20)+10) ;
                 }
               else if(animal >= 90)
                 {
                   animalName = "Geyik" ;
-                  _finditem(_random(itemList.AllitemsList.length) , 1) ;
+                  _finditem(_random(itemList.AllitemsList.length-1) , 1) ;
                   _finditem(8 , _random(10)+3) ;
                   _finditem(9 , _random(12)+5) ;
                 }
               else if(animal >= 80)
                 {
                   animalName = "Domuz" ;
-                  _finditem(_random(itemList.AllitemsList.length) , 1) ;
+                  _finditem(_random(itemList.AllitemsList.length-1) , 1) ;
                   _finditem(8 , _random(8)+3) ;
                   _finditem(9 , _random(10)+2) ;
                 }
               else if(animal >= 30)
                 {
                   animalName = "Ördek" ;
-                  _finditem(_random(itemList.AllitemsList.length) , 1);
+                  _finditem(_random(itemList.AllitemsList.length-1) , 1);
                   _finditem(8 , _random(2)+1) ;
                   _finditem(9 , _random(2)+1) ;
                 }
               else
                 {
                   animalName = "Tavşan" ;
-                  _finditem(_random(itemList.AllitemsList.length) , 1) ;
+                  _finditem(_random(itemList.AllitemsList.length-1) , 1) ;
                   _finditem(8 , _random(2)+1) ;
                   _finditem(9 , _random(2)+1) ;
 
                 }
-              print("all items lenght random :"+_random(itemList.AllitemsList.length).toString()) ;
 
               final snackBar = SnackBar(
                   duration: const Duration(milliseconds: 150),
@@ -177,17 +176,14 @@ class _ClickerSectionState extends State<ClickerSection> {
   void _finditem(int ID  , int amount) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String> items = (prefs.getStringList("items") ?? []) ;
-    print("all items lenght"+ itemList.AllitemsList.length.toString()) ;
-    if(ID > itemList.AllitemsList.length)
-      {
-        print("ERROR ID IS BIGGER THAN LENGHT") ;
+    if(!(items.length >= 10*carryCapacityMultiplier)) {
+      for (var i = amount; i >= 1; i--) {
+        items.add(ID.toString());
       }
-    for( var i = amount ; i >= 1; i-- ) {
-      items.add(ID.toString()) ;
+      setState(() {
+        prefs.setStringList("items", items);
+      });
     }
-    setState(() {
-      prefs.setStringList("items", items) ;
-    });
   }
 
   bool _rollaDice(int roll){

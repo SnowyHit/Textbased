@@ -45,7 +45,6 @@ class _clickerInventoryState extends State<clickerInventory> {
   _unequip( int Type ,String ID) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     isLoaded = true;
-
     equippedItems[Type] = "-1" ;
     items.add(ID) ;
     setState(() {
@@ -70,23 +69,30 @@ class _clickerInventoryState extends State<clickerInventory> {
   }
   _equipItem(int Type , String ID) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    if(int.parse(equippedItems[Type])>= 0 ) { _unequip(Type , equippedItems[Type]) ; }
     isLoaded = true;
-    equippedItems[Type] = ID ;
-    setState(() {
-     prefs.setStringList('equippedItems', equippedItems) ;
-     prefs.setStringList('items', items) ;
-     items.remove(ID) ;
-     inventory[ID] -= 1 ;
-     if(inventory[ID] <= 0)
-     {
-       inventory.remove(ID);
-     }
-     luckOfFind = _getItem(equippedItems[3]).power;
-     luckOfHunt = _getItem(equippedItems[2]).power;
-     carryCapacityMultiplier = _getItem(equippedItems[1]).power;
-     speedMod = _getItem(equippedItems[0]).power;
-    });
+    print(ID);
+    print(equippedItems[Type]);
+    if(ID !=  equippedItems[Type]){
+      if(int.parse(equippedItems[Type])>= 0 )
+        {
+          _unequip(Type, equippedItems[Type]) ;
+        }
+      equippedItems[Type] = ID ;
+      setState(() {
+        prefs.setStringList('equippedItems', equippedItems) ;
+        prefs.setStringList('items', items) ;
+        items.remove(ID) ;
+        inventory[ID] -= 1 ;
+        if(inventory[ID] <= 0)
+        {
+          inventory.remove(ID);
+        }
+        luckOfFind = _getItem(equippedItems[3]).power;
+        luckOfHunt = _getItem(equippedItems[2]).power;
+        carryCapacityMultiplier = _getItem(equippedItems[1]).power;
+        speedMod = _getItem(equippedItems[0]).power;
+      });
+    }
   }
 
   int _selectedIndex = 0;
