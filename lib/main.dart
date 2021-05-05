@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'Games/Clicker.dart';
 import 'Games/QuestionAlgorithm.dart';
 import 'package:provider/provider.dart';
 import 'ui_elements/ad_unit.dart';
@@ -111,6 +110,12 @@ class _HomeState extends State<Home> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      // Navigator.push(
+      //   context,
+      //   MaterialPageRoute(builder: (context) {
+      //     return Scaffold(body : ClickerSection()) ;
+      //   }),
+      // );
     });
   }
 

@@ -64,7 +64,7 @@
 42-->[androidx.core:core:1.2.0] C:\Users\merto\.gradle\caches\transforms-2\files-2.1\de77e1e9fa8694fe2078119a1bd351b7\core-1.2.0\AndroidManifest.xml:24:18-86
 43        android:icon="@mipmap/ic_launcher"
 43-->C:\D\Flutter_projects\textbased\android\app\src\main\AndroidManifest.xml:11:9-43
-44        android:label="textbased" >
+44        android:label="Araştırma" >
 44-->C:\D\Flutter_projects\textbased\android\app\src\main\AndroidManifest.xml:10:9-34
 45        <activity
 45-->C:\D\Flutter_projects\textbased\android\app\src\main\AndroidManifest.xml:12:9-40:20

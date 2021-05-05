@@ -69,29 +69,20 @@ class _ClickerSectionState extends State<ClickerSection> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     isLoaded = true;
     setState(() {
-      print("Loading.. ") ;
+      print("Loading.. ");
       _metreRun = (prefs.getInt('clicks') ?? 0);
-      game.metre = _metreRun.toString() ;
+      game.metre = _metreRun.toString();
       clickerflag = (prefs.getBool('clickerflag') ?? false);
-      equippedItems = (prefs.getStringList('equippedItems') ?? ["0" , "1" , "2" , "3"]);
+      equippedItems =
+      (prefs.getStringList('equippedItems') ?? ["0", "1", "2", "3"]);
       huntPoint = (prefs.getInt('huntPoint') ?? 0);
       luckOfFind = _getItem(equippedItems[3]).power;
       luckOfHunt = _getItem(equippedItems[2]).power;
       carryCapacityMultiplier = _getItem(equippedItems[1]).power;
       speedMod = _getItem(equippedItems[0]).power;
       coin = (prefs.getInt('coin') ?? 0);
-
     });
   }
-
-  _Leave() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      prefs.setBool('clickerflag', true);
-      flag = true ;
-    });
-  }
-
 
   void _incrementClicks(int speed) async{
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -211,116 +202,115 @@ class _ClickerSectionState extends State<ClickerSection> {
     }
     else {
       return !isLoaded ? Container() : Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(
-                height : 300 ,
-                child: GameWidget(game: game)),
+        child: Container(
+          color: Colors.black12 ,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              SizedBox(
+                  height : 300 ,
+                  child: GameWidget(game: game)),
 
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                               Text('${townNames[(_metreRun ~/10000) % townNames.length]} '),
-                               Expanded(child: LinearProgressIndicator(
-                                 value: 1- ((10000 - (_metreRun % 10000 ))/10000),
-                                 minHeight: 20,
-                               ),
-                               ),
-                               Text(' ${townNames[((_metreRun ~/10000) + 1) % townNames.length]}(${10000 - (_metreRun % 10000 )})'),
-                              ],
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                 Text('${townNames[(_metreRun ~/10000) % townNames.length]} '),
+                                 Expanded(child: LinearProgressIndicator(
+                                   value: 1- ((10000 - (_metreRun % 10000 ))/10000),
+                                   minHeight: 20,
+                                 ),
+                                 ),
+                                 Text(' ${townNames[((_metreRun ~/10000) + 1) % townNames.length]}(${10000 - (_metreRun % 10000 )})'),
+                                ],
+                              ),
                             ),
-                          ),
-                          Text('$huntPoint Avlanılabilecek alan bulundu'),
-                          Text('$coin Altın'),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Card(
-                                  color : Colors.white10,
-                                  child: TextButton(onPressed: ((){
-                                    setState(() {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => clickerMarketSection(),),
-                                      ).then((value) {
-                                        _loadCounter();
+                            Text('$huntPoint Avlanılabilecek alan bulundu'),
+                            Text('$coin Altın'),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Card(
+                                    color : Colors.white10,
+                                    child: TextButton(onPressed: ((){
+                                      setState(() {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(builder: (context) => clickerMarketSection(),),
+                                        ).then((value) {
+                                          _loadCounter();
+                                        });
                                       });
-                                    });
-                                  }), child: Text("Market")),
+                                    }), child: Text("Market")),
+                                  ),
                                 ),
-                              ),
-                              Expanded(
-                                child: Card(
-                                  color : Colors.white10,
-                                  child: TextButton(onPressed: ((){
-                                    setState(() {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => clickerInventory(),),
-                                      ).then((value) {
-                                        _loadCounter();
+                                Expanded(
+                                  child: Card(
+                                    color : Colors.white10,
+                                    child: TextButton(onPressed: ((){
+                                      setState(() {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(builder: (context) => clickerInventory(),),
+                                        ).then((value) {
+                                          _loadCounter();
+                                        });
                                       });
-                                    });
-                                  }), child: Text("Çanta")),
+                                    }), child: Text("Çanta")),
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ) ,
-                        ],
+                              ],
+                            ) ,
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: SizedBox(
-                    height: 100,
-                    child: TextButton(onPressed: ((){
-                      _Hunt();
-                    }), child: Text("A V L A N")),
+              Row(
+                children: [
+                  Expanded(
+                    child: SizedBox(
+                      height: 100,
+                      child: TextButton(onPressed: ((){
+                        _Hunt();
+                      }), child: Text("A V L A N")),
+                    ),
                   ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: SizedBox(
-                    height: 100,
-                    child: TextButton(onPressed: ((){
-                      game.speedModifier += 4.0 ;
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: SizedBox(
+                      height: 100,
+                      child: TextButton(onPressed: ((){
+                        game.speedModifier += 4.0 ;
+                        _incrementClicks(game.speedModifier.toInt());
 
-                      if(game.speedModifier > 25.0)
-                      {game.speedModifier = 25.0 ; }
-
-                      _incrementClicks(game.speedModifier.toInt());
-
-                    }), child: Text("K O Ş")),
+                      }), child: Text("K O Ş")),
+                    ),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 50 ,
-                child: Container()
-            ),
-          ],
+                ],
+              ),
+              SizedBox(
+                height: 50 ,
+                  child: Container()
+              ),
+            ],
+          ),
         ),
       );
     }
@@ -330,6 +320,7 @@ class _ClickerSectionState extends State<ClickerSection> {
 
 class BasicAnimations extends BaseGame {
   String metre ;
+  double speed ;
   TextComponent _metresRun ;
   var speedModifier = 1.0 ;
   var tempSpeedModifier = 1.0 ;
@@ -360,20 +351,22 @@ class BasicAnimations extends BaseGame {
   @override
   void update(double dt) {
 
+    if(speedModifier > 100.0)
+    {speedModifier = 100.0 ; }
     super.update(dt);
-
+    speed = 1 - (0.01 * speedModifier) ;
     _metresRun.text = metre ;
-    playerAnim(speedModifier) ;
-
-    if (0.8 - (0.02 * speedModifier) > 0.1 )
-    {
-      animationRun.stepTime = 0.6 - (0.02 * speedModifier) ;
-    }
+    playerAnim(speed) ;
+    if(speed >= 0.001)
+      {
+        print(speed);
+        animationRun.stepTime = speed ;
+      }
     if(speedModifier > 0 )
     {
-      speedModifier -= 0.5 ;
+      speedModifier -= 0.3 ;
     }
-    parallax.parallax.baseVelocity.setValues(0.035*speedModifier, 0 ) ;
+    parallax.parallax.baseVelocity.setValues(0.003*speedModifier, 0 ) ;
   }
   @override
   void onResize(Vector2 canvasSize) {
@@ -440,11 +433,27 @@ class BasicAnimations extends BaseGame {
 
   void playerAnim(double speed)
   {
-    if(speed > 0)
+    if(speed <= 1.0)
     {
       this.anim.animation = animationRun ;
        // if(this.anim.position.x < 150)
        // {this.anim.position.x  += speed * 0.2 ;}
+      if(speed <= 0.30)
+        {
+          this.anim.position.x += 1 ;
+          if(this.anim.position.x >= 500)
+            {
+              this.anim.position.x = -100 ;
+            }
+        }
+      if(speed <= 0.05)
+      {
+        this.anim.position.x += 5 ;
+        if(this.anim.position.x >= 500)
+        {
+          this.anim.position.x = -100 ;
+        }
+      }
     }
     else
     {

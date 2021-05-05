@@ -75,7 +75,7 @@ class _clickerMarketSectionState extends State<clickerMarketSection> {
     return dice.nextInt(Range);
   }
 
-  void _buy(String ID) async {
+  void _buy(String ID) async { //TODO amount of items in market
     SharedPreferences prefs = await SharedPreferences.getInstance();
     Item selectedItem = _getItem(ID);
     List<String> equippedItems = (prefs.getStringList('equippedItems') ?? ["0" , "1" , "2" , "3"]);
