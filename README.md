@@ -2,11 +2,7 @@
 https://textbased-c467f.web.app/#/ Web page for this project.
 This is a Flutter project for a text based adventure game. It has firestore as it's backend , where you can see firestore documents. Hosting with firebase and using github actions made deploying process quite easy.
 
-Useful resources for Flutter
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-- [online documentation](https://flutter.dev/docs)
-- [Shared Preferences](https://flutter.dev/docs/cookbook/persistence/key-value)
+![Main Menu](https://github.com/SnowyHit/Textbased/blob/master/assets/Screenshots/Adventure-MainScreen.png)
 
 Shared_preferences used as saving cache . You can save basic types of variables to shared preferences and it is way faster than i imagined. İt is used in every start of a widget , as a gamestate .
 
